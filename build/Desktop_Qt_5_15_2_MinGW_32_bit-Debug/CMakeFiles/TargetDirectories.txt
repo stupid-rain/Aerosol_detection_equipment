@@ -1,9 +1,0 @@
-D:/Work/Qt_Project/Aerosol_detection_equipment/build/Desktop_Qt_5_15_2_MinGW_32_bit-Debug/CMakeFiles/Aerosol_detection_equipment.dir
-D:/Work/Qt_Project/Aerosol_detection_equipment/build/Desktop_Qt_5_15_2_MinGW_32_bit-Debug/CMakeFiles/edit_cache.dir
-D:/Work/Qt_Project/Aerosol_detection_equipment/build/Desktop_Qt_5_15_2_MinGW_32_bit-Debug/CMakeFiles/rebuild_cache.dir
-D:/Work/Qt_Project/Aerosol_detection_equipment/build/Desktop_Qt_5_15_2_MinGW_32_bit-Debug/CMakeFiles/list_install_components.dir
-D:/Work/Qt_Project/Aerosol_detection_equipment/build/Desktop_Qt_5_15_2_MinGW_32_bit-Debug/CMakeFiles/install.dir
-D:/Work/Qt_Project/Aerosol_detection_equipment/build/Desktop_Qt_5_15_2_MinGW_32_bit-Debug/CMakeFiles/install/local.dir
-D:/Work/Qt_Project/Aerosol_detection_equipment/build/Desktop_Qt_5_15_2_MinGW_32_bit-Debug/CMakeFiles/install/strip.dir
-D:/Work/Qt_Project/Aerosol_detection_equipment/build/Desktop_Qt_5_15_2_MinGW_32_bit-Debug/CMakeFiles/Aerosol_detection_equipment_autogen_timestamp_deps.dir
-D:/Work/Qt_Project/Aerosol_detection_equipment/build/Desktop_Qt_5_15_2_MinGW_32_bit-Debug/CMakeFiles/Aerosol_detection_equipment_autogen.dir
