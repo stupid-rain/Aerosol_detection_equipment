@@ -6,14 +6,4252 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1496</width>
+    <height>1100</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Widget</string>
   </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1491</width>
+     <height>1101</height>
+    </rect>
+   </property>
+   <property name="whatsThis">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1111&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="currentIndex">
+    <number>2</number>
+   </property>
+   <widget class="QWidget" name="tab_cmd">
+    <attribute name="title">
+     <string>操作</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>140</y>
+       <width>1181</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>操作模式</string>
+     </property>
+     <widget class="QRadioButton" name="btn_mode_heat">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>90</y>
+        <width>121</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>裁纸</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="btn_mode_cold">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>30</y>
+        <width>121</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>再次取料-放料</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="btn_mode_hold">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>取料</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="btn_mode_get_temp">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>放料</string>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="btn_mode_self_circle">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>取样</string>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="btn_mode_cold_2">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>30</y>
+        <width>121</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>装盒</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="btn_mode_cold_3">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>90</y>
+        <width>121</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>旋盖</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="btn_Axi_ALL_Reset_6">
+     <property name="geometry">
+      <rect>
+       <x>730</x>
+       <y>420</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>复位</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_Axi_All_Stop">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>420</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>停止</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_Axi_All_Start">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>420</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>启动</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_set_param">
+    <attribute name="title">
+     <string>电机操作</string>
+    </attribute>
+    <widget class="QGroupBox" name="Axi1">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>441</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>模组1X轴</string>
+     </property>
+     <widget class="QPushButton" name="btn_Axi_SetPosition_1">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>130</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>位置定位</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_SetVel_1">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>170</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_Reset_1">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>240</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>复位</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_Stop_1">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>240</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>停止</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_SetVel_1">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>170</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>速度设定</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_GoHome_1">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>130</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>回原点</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_SetPosition_1">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>130</y>
+        <width>61</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_Enable_1">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>170</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>使能</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_SetHome_1">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>240</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>设为原点</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_AxiStatus_1">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>30</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_CurPositon_1">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>30</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>当前位置</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_AxiPosLimit_1">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>60</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_PosLimit_1">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>60</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>正限位</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_AxiNegLimit_1">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>90</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_NegLimit_1">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>90</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>负限位</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_Enable_1">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>170</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_GoHome_1">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>130</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Axi1_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>430</y>
+       <width>441</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>模组2Z轴</string>
+     </property>
+     <widget class="QPushButton" name="btn_Axi_SetPosition_2">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>130</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>位置定位</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_SetVel_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>170</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_Reset_2">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>240</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>复位</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_Stop_2">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>240</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>停止</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_SetVel_2">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>170</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>速度设定</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_GoHome_2">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>130</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>回原点</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_SetPosition_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>130</y>
+        <width>61</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_Enable_2">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>170</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>使能</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_SetHome_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>240</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>设为原点</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_AxiStatus_2">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>30</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_CurPositon_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>30</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>当前位置</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_AxiPosLimit_2">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>60</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_PosLimit_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>60</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>正限位</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_AxiNegLimit_2">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>90</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_NegLimit_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>90</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>负限位</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_Enable_2">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>170</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_GoHome_2">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>130</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Axi1_3">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>30</y>
+       <width>441</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>模组3X轴</string>
+     </property>
+     <widget class="QPushButton" name="btn_Axi_SetPosition_3">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>130</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>位置定位</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_SetVel_3">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>170</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_Reset_3">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>240</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>复位</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_Stop_3">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>240</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>停止</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_SetVel_3">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>170</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>速度设定</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_GoHome_3">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>130</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>回原点</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_SetPosition_3">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>130</y>
+        <width>61</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_Enable_3">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>170</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>使能</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_SetHome_3">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>240</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>设为原点</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_AxiStatus_3">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>30</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_CurPositon_3">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>30</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>当前位置</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_AxiPosLimit_3">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>60</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_PosLimit_3">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>60</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>正限位</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_AxiNegLimit_3">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>90</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_NegLimit_3">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>90</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>负限位</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_Enable_3">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>170</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_GoHome_3">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>130</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Axi1_4">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>430</y>
+       <width>441</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>模组4Y轴</string>
+     </property>
+     <widget class="QPushButton" name="btn_Axi_SetPosition_4">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>130</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>位置定位</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_SetVel_4">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>170</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_Reset_4">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>240</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>复位</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_Stop_4">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>240</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>停止</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_SetVel_4">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>170</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>速度设定</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_GoHome_4">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>130</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>回原点</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_SetPosition_4">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>130</y>
+        <width>61</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_Enable_4">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>170</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>使能</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_SetHome_4">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>240</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>设为原点</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_AxiStatus_4">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>30</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_CurPositon_4">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>30</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>当前位置</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_AxiPosLimit_4">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>60</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_PosLimit_4">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>60</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>正限位</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_AxiNegLimit_4">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>90</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_NegLimit_4">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>90</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>负限位</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_Enable_4">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>170</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_GoHome_4">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>130</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Axi1_5">
+     <property name="geometry">
+      <rect>
+       <x>930</x>
+       <y>30</y>
+       <width>441</width>
+       <height>301</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>旋转轴</string>
+     </property>
+     <widget class="QPushButton" name="btn_Axi_SetPosition_5">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>130</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>位置定位</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_SetVel_5">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>170</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_Reset_5">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>240</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>复位</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_Stop_5">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>240</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>停止</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_SetVel_5">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>170</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>速度设定</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_GoHome_5">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>130</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>回原点</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_SetPosition_5">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>130</y>
+        <width>61</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_Enable_5">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>170</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>使能</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_SetHome_5">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>240</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>设为原点</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_AxiStatus_5">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>30</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_CurPositon_5">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>30</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>当前位置</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_AxiPosLimit_5">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>60</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_PosLimit_5">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>60</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>正限位</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_AxiNegLimit_5">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>90</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_NegLimit_5">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>90</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>负限位</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_Enable_5">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>170</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_GoHome_5">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>130</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_state">
+    <attribute name="title">
+     <string>气缸</string>
+    </attribute>
+    <widget class="QGroupBox" name="Cylinder_1">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>10</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸1</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_1">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_1">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_1">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_1">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_2">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>100</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸2</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_2">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_2">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_2">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_3">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>190</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸3</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_3">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_3">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_3">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_4">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>280</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸4</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_4">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_4">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_4">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_5">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>370</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸5</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_5">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_5">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_5">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_6">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>460</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸6</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_6">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_6">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_6">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_7">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>550</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸7</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_7">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_7">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_7">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_7">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_8">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>640</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸8</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_8">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_8">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_8">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_8">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_9">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>730</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸9</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_9">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_9">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_9">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_9">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_10">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>820</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸10</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_10">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_10">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_10">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_10">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_11">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>10</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸11</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_11">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_11">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_11">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_11">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_12">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>100</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸12</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_12">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_12">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_12">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_12">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_13">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>190</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸13</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_13">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_13">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_13">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_13">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_14">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>280</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸14</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_14">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_14">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_14">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_14">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_15">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>370</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸15</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_15">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_15">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_15">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_15">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_16">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>460</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸16</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_16">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_16">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_16">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_16">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_17">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>550</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸17</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_17">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_17">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_17">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_17">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_18">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>640</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸18</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_18">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_18">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_18">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_18">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_19">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>730</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸19</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_19">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_19">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_19">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_19">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_20">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>820</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸20</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_20">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_20">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_20">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_20">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_21">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>10</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸21</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_21">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_21">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_21">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_21">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_22">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>100</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸22</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_22">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_22">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_22">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_22">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_23">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>190</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸23</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_23">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_23">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_23">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_23">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_24">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>280</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸24</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_24">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_24">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_24">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_24">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_25">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>370</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸25</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_25">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_25">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_25">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_25">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_26">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>460</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸26</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_26">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_26">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_26">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_26">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_27">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>550</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸27</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_27">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_27">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_27">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_27">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_28">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>640</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸28</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_28">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_28">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_28">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_28">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_29">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>730</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸29</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_29">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_29">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_29">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_29">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_30">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>820</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸30</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_30">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_30">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_30">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_30">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_31">
+     <property name="geometry">
+      <rect>
+       <x>890</x>
+       <y>10</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸31</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_31">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_31">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_31">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_31">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_32">
+     <property name="geometry">
+      <rect>
+       <x>890</x>
+       <y>100</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸32</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_32">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_32">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_32">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_32">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_33">
+     <property name="geometry">
+      <rect>
+       <x>890</x>
+       <y>190</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸33</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_33">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_33">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_33">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_33">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_34">
+     <property name="geometry">
+      <rect>
+       <x>890</x>
+       <y>280</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸34</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_34">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_34">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_34">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_34">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_35">
+     <property name="geometry">
+      <rect>
+       <x>890</x>
+       <y>370</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸35</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_35">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_35">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_35">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_35">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_36">
+     <property name="geometry">
+      <rect>
+       <x>890</x>
+       <y>460</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸36</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_36">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_36">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_36">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_36">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_37">
+     <property name="geometry">
+      <rect>
+       <x>890</x>
+       <y>550</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸37</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_37">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_37">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_37">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_37">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_38">
+     <property name="geometry">
+      <rect>
+       <x>890</x>
+       <y>640</y>
+       <width>208</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸38</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_38">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>47</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_38">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_38">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>133</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_38">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_alarm">
+    <attribute name="title">
+     <string>报警</string>
+    </attribute>
+   </widget>
+  </widget>
  </widget>
  <resources/>
  <connections/>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>10</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>10</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
 </ui>
