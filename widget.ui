@@ -2,13 +2,28 @@
 <ui version="4.0">
  <class>Widget</class>
  <widget class="QWidget" name="Widget">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1496</width>
-    <height>1100</height>
+    <width>960</width>
+    <height>720</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>960</width>
+    <height>720</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>960</width>
+    <height>720</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Widget</string>
@@ -19,139 +34,38 @@
    </property>
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>-10</x>
      <y>0</y>
-     <width>1491</width>
-     <height>1101</height>
+     <width>960</width>
+     <height>720</height>
     </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>960</width>
+     <height>720</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>960</width>
+     <height>720</height>
+    </size>
    </property>
    <property name="whatsThis">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1111&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab_cmd">
     <attribute name="title">
      <string>操作</string>
     </attribute>
-    <widget class="QGroupBox" name="groupBox">
-     <property name="geometry">
-      <rect>
-       <x>130</x>
-       <y>140</y>
-       <width>1181</width>
-       <height>161</height>
-      </rect>
-     </property>
-     <property name="title">
-      <string>操作模式</string>
-     </property>
-     <widget class="QRadioButton" name="btn_mode_heat">
-      <property name="geometry">
-       <rect>
-        <x>350</x>
-        <y>90</y>
-        <width>121</width>
-        <height>19</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>裁纸</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="btn_mode_cold">
-      <property name="geometry">
-       <rect>
-        <x>350</x>
-        <y>30</y>
-        <width>121</width>
-        <height>19</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>再次取料-放料</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="btn_mode_hold">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>20</y>
-        <width>47</width>
-        <height>19</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>取料</string>
-      </property>
-      <property name="checked">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="btn_mode_get_temp">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>50</y>
-        <width>81</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>放料</string>
-      </property>
-      <property name="checked">
-       <bool>false</bool>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="btn_mode_self_circle">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>90</y>
-        <width>81</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>取样</string>
-      </property>
-      <property name="checked">
-       <bool>false</bool>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="btn_mode_cold_2">
-      <property name="geometry">
-       <rect>
-        <x>510</x>
-        <y>30</y>
-        <width>121</width>
-        <height>19</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>装盒</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="btn_mode_cold_3">
-      <property name="geometry">
-       <rect>
-        <x>510</x>
-        <y>90</y>
-        <width>121</width>
-        <height>19</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>旋盖</string>
-      </property>
-     </widget>
-    </widget>
     <widget class="QPushButton" name="btn_Axi_ALL_Reset_6">
      <property name="geometry">
       <rect>
-       <x>730</x>
+       <x>660</x>
        <y>420</y>
        <width>75</width>
        <height>23</height>
@@ -164,7 +78,7 @@
     <widget class="QPushButton" name="btn_Axi_All_Stop">
      <property name="geometry">
       <rect>
-       <x>480</x>
+       <x>450</x>
        <y>420</y>
        <width>75</width>
        <height>23</height>
@@ -177,7 +91,7 @@
     <widget class="QPushButton" name="btn_Axi_All_Start">
      <property name="geometry">
       <rect>
-       <x>240</x>
+       <x>220</x>
        <y>420</y>
        <width>75</width>
        <height>23</height>
@@ -187,6 +101,281 @@
       <string>启动</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="btn_GetPaper">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>220</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>取纸</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_GetPaperStatus">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>220</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="Plc">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>80</y>
+       <width>751</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>751</width>
+       <height>91</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>PLC</string>
+     </property>
+     <widget class="QPushButton" name="btn_get_plc_state">
+      <property name="geometry">
+       <rect>
+        <x>142</x>
+        <y>42</y>
+        <width>80</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>获取PLC</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_plc_state">
+      <property name="geometry">
+       <rect>
+        <x>339</x>
+        <y>38</y>
+        <width>30</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_plc_state">
+      <property name="geometry">
+       <rect>
+        <x>485</x>
+        <y>43</y>
+        <width>142</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="btn_SetPaper">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>260</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>放纸</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_SetPaperStatus">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>260</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_CutPaper">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>220</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>裁纸</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_CutPaperStatus">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>220</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_CutPaperStatus_2">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>260</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_SetBox">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>260</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>装盒</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_CutPaperStatus_3">
+     <property name="geometry">
+      <rect>
+       <x>710</x>
+       <y>220</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_SetBox_2">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>220</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>旋转盖子</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="Ads">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>0</y>
+       <width>751</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>751</width>
+       <height>91</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>ADS</string>
+     </property>
+     <widget class="QPushButton" name="btn_connect_plc">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>42</y>
+        <width>80</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>连接PLC</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_plc_state_2">
+      <property name="geometry">
+       <rect>
+        <x>339</x>
+        <y>38</y>
+        <width>30</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_plc_connect_status">
+      <property name="geometry">
+       <rect>
+        <x>485</x>
+        <y>43</y>
+        <width>142</width>
+        <height>27</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_plc_addr">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>40</y>
+        <width>142</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>127.0.0.1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_plc_addr">
+      <property name="geometry">
+       <rect>
+        <x>9</x>
+        <y>40</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>地址</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
    </widget>
    <widget class="QWidget" name="tab_set_param">
     <attribute name="title">
@@ -195,19 +384,31 @@
     <widget class="QGroupBox" name="Axi1">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>30</y>
-       <width>441</width>
-       <height>301</height>
+       <x>60</x>
+       <y>0</y>
+       <width>400</width>
+       <height>250</height>
       </rect>
      </property>
+     <property name="minimumSize">
+      <size>
+       <width>400</width>
+       <height>250</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>400</width>
+       <height>250</height>
+      </size>
+     </property>
      <property name="title">
-      <string>模组1X轴</string>
+      <string>滤纸转运X轴</string>
      </property>
      <widget class="QPushButton" name="btn_Axi_SetPosition_1">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>100</x>
         <y>130</y>
         <width>75</width>
         <height>23</height>
@@ -220,7 +421,7 @@
      <widget class="QLineEdit" name="lineEdit_Axi_SetVel_1">
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>20</x>
         <y>170</y>
         <width>61</width>
         <height>21</height>
@@ -233,8 +434,8 @@
      <widget class="QPushButton" name="btn_Axi_Reset_1">
       <property name="geometry">
        <rect>
-        <x>270</x>
-        <y>240</y>
+        <x>210</x>
+        <y>210</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -246,8 +447,8 @@
      <widget class="QPushButton" name="btn_Axi_Stop_1">
       <property name="geometry">
        <rect>
-        <x>160</x>
-        <y>240</y>
+        <x>120</x>
+        <y>210</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -259,7 +460,7 @@
      <widget class="QPushButton" name="btn_Axi_SetVel_1">
       <property name="geometry">
        <rect>
-        <x>110</x>
+        <x>100</x>
         <y>170</y>
         <width>75</width>
         <height>23</height>
@@ -272,7 +473,7 @@
      <widget class="QPushButton" name="btn_Axi_GoHome_1">
       <property name="geometry">
        <rect>
-        <x>300</x>
+        <x>270</x>
         <y>130</y>
         <width>75</width>
         <height>23</height>
@@ -285,7 +486,7 @@
      <widget class="QLineEdit" name="lineEdit_Axi_SetPosition_1">
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>20</x>
         <y>130</y>
         <width>61</width>
         <height>23</height>
@@ -298,7 +499,7 @@
      <widget class="QPushButton" name="btn_Axi_Enable_1">
       <property name="geometry">
        <rect>
-        <x>300</x>
+        <x>270</x>
         <y>170</y>
         <width>75</width>
         <height>23</height>
@@ -311,8 +512,8 @@
      <widget class="QPushButton" name="btn_Axi_SetHome_1">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>240</y>
+        <x>20</x>
+        <y>210</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -324,9 +525,9 @@
      <widget class="QLineEdit" name="lineEdit_AxiStatus_1">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>90</x>
         <y>30</y>
-        <width>133</width>
+        <width>81</width>
         <height>21</height>
        </rect>
       </property>
@@ -337,7 +538,7 @@
      <widget class="QLabel" name="label_Axi_CurPositon_1">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>0</x>
         <y>30</y>
         <width>91</width>
         <height>21</height>
@@ -353,9 +554,9 @@
      <widget class="QLineEdit" name="lineEdit_AxiPosLimit_1">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>90</x>
         <y>60</y>
-        <width>133</width>
+        <width>81</width>
         <height>21</height>
        </rect>
       </property>
@@ -366,7 +567,7 @@
      <widget class="QLabel" name="label_Axi_PosLimit_1">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>0</x>
         <y>60</y>
         <width>91</width>
         <height>21</height>
@@ -382,9 +583,9 @@
      <widget class="QLineEdit" name="lineEdit_AxiNegLimit_1">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>90</x>
         <y>90</y>
-        <width>133</width>
+        <width>81</width>
         <height>21</height>
        </rect>
       </property>
@@ -395,7 +596,7 @@
      <widget class="QLabel" name="label_Axi_NegLimit_1">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>0</x>
         <y>90</y>
         <width>91</width>
         <height>21</height>
@@ -411,7 +612,7 @@
      <widget class="QLineEdit" name="lineEdit_Axi_Enable_1">
       <property name="geometry">
        <rect>
-        <x>210</x>
+        <x>190</x>
         <y>170</y>
         <width>61</width>
         <height>21</height>
@@ -424,7 +625,7 @@
      <widget class="QLineEdit" name="lineEdit_Axi_GoHome_1">
       <property name="geometry">
        <rect>
-        <x>210</x>
+        <x>190</x>
         <y>130</y>
         <width>61</width>
         <height>21</height>
@@ -434,18 +635,144 @@
        <string/>
       </property>
      </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_WorkPostion_1_1">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>30</y>
+        <width>61</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_WorkPostion_1_2">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>60</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_WorkPostion_1_3">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>90</y>
+        <width>61</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_SetWorkPostion_1_1">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>30</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>定位</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_SetWorkPostion_1_2">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>60</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>定位</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_SetWorkPostion_1_3">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>90</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>定位</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_WorkStation_1_1">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>30</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>工位1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_WorkStation_1_2">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>60</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>工位2</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_WorkStation_1_3">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>90</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>工位3</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
     </widget>
-    <widget class="QGroupBox" name="Axi1_2">
+    <widget class="QGroupBox" name="Axi2">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>430</y>
-       <width>441</width>
-       <height>301</height>
+       <x>60</x>
+       <y>260</y>
+       <width>400</width>
+       <height>250</height>
       </rect>
      </property>
      <property name="title">
-      <string>模组2Z轴</string>
+      <string>滤纸转运Z轴</string>
      </property>
      <widget class="QPushButton" name="btn_Axi_SetPosition_2">
       <property name="geometry">
@@ -477,7 +804,7 @@
       <property name="geometry">
        <rect>
         <x>270</x>
-        <y>240</y>
+        <y>210</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -490,7 +817,7 @@
       <property name="geometry">
        <rect>
         <x>160</x>
-        <y>240</y>
+        <y>210</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -555,7 +882,7 @@
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>240</y>
+        <y>210</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -567,9 +894,9 @@
      <widget class="QLineEdit" name="lineEdit_AxiStatus_2">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>90</x>
         <y>30</y>
-        <width>133</width>
+        <width>81</width>
         <height>21</height>
        </rect>
       </property>
@@ -580,7 +907,7 @@
      <widget class="QLabel" name="label_Axi_CurPositon_2">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>0</x>
         <y>30</y>
         <width>91</width>
         <height>21</height>
@@ -596,9 +923,9 @@
      <widget class="QLineEdit" name="lineEdit_AxiPosLimit_2">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>90</x>
         <y>60</y>
-        <width>133</width>
+        <width>81</width>
         <height>21</height>
        </rect>
       </property>
@@ -609,7 +936,7 @@
      <widget class="QLabel" name="label_Axi_PosLimit_2">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>0</x>
         <y>60</y>
         <width>91</width>
         <height>21</height>
@@ -625,9 +952,9 @@
      <widget class="QLineEdit" name="lineEdit_AxiNegLimit_2">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>90</x>
         <y>90</y>
-        <width>133</width>
+        <width>81</width>
         <height>21</height>
        </rect>
       </property>
@@ -638,7 +965,7 @@
      <widget class="QLabel" name="label_Axi_NegLimit_2">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>0</x>
         <y>90</y>
         <width>91</width>
         <height>21</height>
@@ -677,18 +1004,156 @@
        <string/>
       </property>
      </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_WorkPostion_2_3">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>90</y>
+        <width>61</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_SetWorkPostion_2_3">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>90</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>定位</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_WorkStation_2_3">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>90</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>工位3</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_WorkStation_2_1">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>30</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>工位1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_WorkPostion_2_2">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>60</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_SetWorkPostion_2_2">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>60</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>定位</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_SetWorkPostion_2_1">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>30</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>定位</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_WorkPostion_2_1">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>30</y>
+        <width>61</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_WorkStation_2_2">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>60</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>工位2</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
     </widget>
-    <widget class="QGroupBox" name="Axi1_3">
+    <widget class="QGroupBox" name="Axi3">
      <property name="geometry">
       <rect>
-       <x>480</x>
-       <y>30</y>
-       <width>441</width>
-       <height>301</height>
+       <x>470</x>
+       <y>0</y>
+       <width>400</width>
+       <height>250</height>
       </rect>
      </property>
+     <property name="minimumSize">
+      <size>
+       <width>400</width>
+       <height>250</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>400</width>
+       <height>250</height>
+      </size>
+     </property>
      <property name="title">
-      <string>模组3X轴</string>
+      <string>冲压模组X轴</string>
      </property>
      <widget class="QPushButton" name="btn_Axi_SetPosition_3">
       <property name="geometry">
@@ -720,7 +1185,7 @@
       <property name="geometry">
        <rect>
         <x>270</x>
-        <y>240</y>
+        <y>210</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -733,7 +1198,7 @@
       <property name="geometry">
        <rect>
         <x>160</x>
-        <y>240</y>
+        <y>210</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -798,7 +1263,7 @@
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>240</y>
+        <y>210</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -810,9 +1275,9 @@
      <widget class="QLineEdit" name="lineEdit_AxiStatus_3">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>90</x>
         <y>30</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -823,7 +1288,7 @@
      <widget class="QLabel" name="label_Axi_CurPositon_3">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>-10</x>
         <y>30</y>
         <width>91</width>
         <height>21</height>
@@ -839,9 +1304,9 @@
      <widget class="QLineEdit" name="lineEdit_AxiPosLimit_3">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>90</x>
         <y>60</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -852,7 +1317,7 @@
      <widget class="QLabel" name="label_Axi_PosLimit_3">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>-10</x>
         <y>60</y>
         <width>91</width>
         <height>21</height>
@@ -868,9 +1333,9 @@
      <widget class="QLineEdit" name="lineEdit_AxiNegLimit_3">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>90</x>
         <y>90</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -881,7 +1346,7 @@
      <widget class="QLabel" name="label_Axi_NegLimit_3">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>-10</x>
         <y>90</y>
         <width>91</width>
         <height>21</height>
@@ -920,18 +1385,114 @@
        <string/>
       </property>
      </widget>
+     <widget class="QPushButton" name="btn_Axi_SetWorkPostion_3_2">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>60</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>定位</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_WorkPostion_3_1">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>30</y>
+        <width>61</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_SetWorkPostion_3_1">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>30</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>定位</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_WorkStation_3_2">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>60</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>工位2</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_WorkPostion_3_2">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>60</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_WorkStation_3_1">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>30</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>工位1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
     </widget>
-    <widget class="QGroupBox" name="Axi1_4">
+    <widget class="QGroupBox" name="Axi4">
      <property name="geometry">
       <rect>
-       <x>480</x>
-       <y>430</y>
-       <width>441</width>
-       <height>301</height>
+       <x>470</x>
+       <y>260</y>
+       <width>400</width>
+       <height>250</height>
       </rect>
      </property>
+     <property name="minimumSize">
+      <size>
+       <width>400</width>
+       <height>250</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>400</width>
+       <height>250</height>
+      </size>
+     </property>
      <property name="title">
-      <string>模组4Y轴</string>
+      <string>冲压模组Y轴</string>
      </property>
      <widget class="QPushButton" name="btn_Axi_SetPosition_4">
       <property name="geometry">
@@ -963,7 +1524,7 @@
       <property name="geometry">
        <rect>
         <x>270</x>
-        <y>240</y>
+        <y>210</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -976,7 +1537,7 @@
       <property name="geometry">
        <rect>
         <x>160</x>
-        <y>240</y>
+        <y>210</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -1041,7 +1602,7 @@
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>240</y>
+        <y>210</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -1053,9 +1614,9 @@
      <widget class="QLineEdit" name="lineEdit_AxiStatus_4">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>90</x>
         <y>30</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -1066,7 +1627,7 @@
      <widget class="QLabel" name="label_Axi_CurPositon_4">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>-10</x>
         <y>30</y>
         <width>91</width>
         <height>21</height>
@@ -1082,9 +1643,9 @@
      <widget class="QLineEdit" name="lineEdit_AxiPosLimit_4">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>90</x>
         <y>60</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -1095,7 +1656,7 @@
      <widget class="QLabel" name="label_Axi_PosLimit_4">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>-10</x>
         <y>60</y>
         <width>91</width>
         <height>21</height>
@@ -1111,9 +1672,9 @@
      <widget class="QLineEdit" name="lineEdit_AxiNegLimit_4">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>90</x>
         <y>90</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -1124,7 +1685,7 @@
      <widget class="QLabel" name="label_Axi_NegLimit_4">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>-10</x>
         <y>90</y>
         <width>91</width>
         <height>21</height>
@@ -1163,24 +1724,108 @@
        <string/>
       </property>
      </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_WorkPostion_4_2">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>60</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_SetWorkPostion_4_1">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>30</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>定位</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_WorkStation_4_1">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>30</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>工位1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_SetWorkPostion_4_2">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>60</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>定位</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_WorkStation_4_2">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>60</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>工位2</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_WorkPostion_4_1">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>30</y>
+        <width>61</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
     </widget>
-    <widget class="QGroupBox" name="Axi1_5">
+    <widget class="QGroupBox" name="Axi5">
      <property name="geometry">
       <rect>
-       <x>930</x>
-       <y>30</y>
-       <width>441</width>
-       <height>301</height>
+       <x>60</x>
+       <y>520</y>
+       <width>811</width>
+       <height>150</height>
       </rect>
      </property>
      <property name="title">
-      <string>旋转轴</string>
+      <string>拧瓶盖旋转轴</string>
      </property>
      <widget class="QPushButton" name="btn_Axi_SetPosition_5">
       <property name="geometry">
        <rect>
-        <x>110</x>
-        <y>130</y>
+        <x>450</x>
+        <y>40</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -1192,8 +1837,8 @@
      <widget class="QLineEdit" name="lineEdit_Axi_SetVel_5">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>170</y>
+        <x>370</x>
+        <y>80</y>
         <width>61</width>
         <height>21</height>
        </rect>
@@ -1205,8 +1850,8 @@
      <widget class="QPushButton" name="btn_Axi_Reset_5">
       <property name="geometry">
        <rect>
-        <x>270</x>
-        <y>240</y>
+        <x>470</x>
+        <y>120</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -1218,8 +1863,8 @@
      <widget class="QPushButton" name="btn_Axi_Stop_5">
       <property name="geometry">
        <rect>
-        <x>160</x>
-        <y>240</y>
+        <x>360</x>
+        <y>120</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -1231,8 +1876,8 @@
      <widget class="QPushButton" name="btn_Axi_SetVel_5">
       <property name="geometry">
        <rect>
-        <x>110</x>
-        <y>170</y>
+        <x>450</x>
+        <y>80</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -1244,8 +1889,8 @@
      <widget class="QPushButton" name="btn_Axi_GoHome_5">
       <property name="geometry">
        <rect>
-        <x>300</x>
-        <y>130</y>
+        <x>640</x>
+        <y>40</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -1257,8 +1902,8 @@
      <widget class="QLineEdit" name="lineEdit_Axi_SetPosition_5">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>130</y>
+        <x>370</x>
+        <y>40</y>
         <width>61</width>
         <height>23</height>
        </rect>
@@ -1270,8 +1915,8 @@
      <widget class="QPushButton" name="btn_Axi_Enable_5">
       <property name="geometry">
        <rect>
-        <x>300</x>
-        <y>170</y>
+        <x>640</x>
+        <y>80</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -1283,8 +1928,8 @@
      <widget class="QPushButton" name="btn_Axi_SetHome_5">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>240</y>
+        <x>250</x>
+        <y>120</y>
         <width>75</width>
         <height>23</height>
        </rect>
@@ -1383,8 +2028,8 @@
      <widget class="QLineEdit" name="lineEdit_Axi_Enable_5">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>170</y>
+        <x>550</x>
+        <y>80</y>
         <width>61</width>
         <height>21</height>
        </rect>
@@ -1396,8 +2041,8 @@
      <widget class="QLineEdit" name="lineEdit_Axi_GoHome_5">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>130</y>
+        <x>550</x>
+        <y>40</y>
         <width>61</width>
         <height>21</height>
        </rect>
@@ -1415,10 +2060,10 @@
     <widget class="QGroupBox" name="Cylinder_1">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>10</y>
-       <width>208</width>
-       <height>85</height>
+       <x>0</x>
+       <y>0</y>
+       <width>151</width>
+       <height>81</height>
       </rect>
      </property>
      <property name="title">
@@ -1432,7 +2077,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -1451,7 +2096,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -1464,12 +2109,15 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
       <property name="text">
-       <string/>
+       <string>伸出到位</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="label_CylinderStatus_1">
@@ -1492,9 +2140,9 @@
     <widget class="QGroupBox" name="Cylinder_2">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>100</y>
-       <width>208</width>
+       <x>0</x>
+       <y>90</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -1506,7 +2154,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -1525,7 +2173,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -1538,7 +2186,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -1566,9 +2214,9 @@
     <widget class="QGroupBox" name="Cylinder_3">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>190</y>
-       <width>208</width>
+       <x>0</x>
+       <y>180</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -1580,7 +2228,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -1599,7 +2247,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -1612,7 +2260,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -1640,9 +2288,9 @@
     <widget class="QGroupBox" name="Cylinder_4">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>280</y>
-       <width>208</width>
+       <x>0</x>
+       <y>270</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -1654,7 +2302,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -1673,7 +2321,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -1686,7 +2334,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -1714,9 +2362,9 @@
     <widget class="QGroupBox" name="Cylinder_5">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>370</y>
-       <width>208</width>
+       <x>0</x>
+       <y>360</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -1728,7 +2376,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -1747,7 +2395,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -1760,7 +2408,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -1788,9 +2436,9 @@
     <widget class="QGroupBox" name="Cylinder_6">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>460</y>
-       <width>208</width>
+       <x>0</x>
+       <y>450</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -1802,7 +2450,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -1821,7 +2469,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -1834,7 +2482,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -1862,9 +2510,9 @@
     <widget class="QGroupBox" name="Cylinder_7">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>550</y>
-       <width>208</width>
+       <x>0</x>
+       <y>540</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -1876,7 +2524,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -1895,7 +2543,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -1908,7 +2556,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -1936,9 +2584,9 @@
     <widget class="QGroupBox" name="Cylinder_8">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>640</y>
-       <width>208</width>
+       <x>160</x>
+       <y>0</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -1950,7 +2598,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -1969,7 +2617,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -1982,7 +2630,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2010,9 +2658,9 @@
     <widget class="QGroupBox" name="Cylinder_9">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>730</y>
-       <width>208</width>
+       <x>160</x>
+       <y>90</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -2024,7 +2672,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -2043,7 +2691,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2056,7 +2704,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2081,86 +2729,12 @@
       </property>
      </widget>
     </widget>
-    <widget class="QGroupBox" name="Cylinder_10">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>820</y>
-       <width>208</width>
-       <height>85</height>
-      </rect>
-     </property>
-     <property name="title">
-      <string>气缸10</string>
-     </property>
-     <widget class="QCheckBox" name="check_OpenCylinder_10">
-      <property name="geometry">
-       <rect>
-        <x>11</x>
-        <y>27</y>
-        <width>47</width>
-        <height>19</height>
-       </rect>
-      </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="text">
-       <string>伸出</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_CylinderCmd_10">
-      <property name="geometry">
-       <rect>
-        <x>70</x>
-        <y>26</y>
-        <width>133</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_CylinderStatus_10">
-      <property name="geometry">
-       <rect>
-        <x>70</x>
-        <y>54</y>
-        <width>133</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_CylinderStatus_10">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>54</y>
-        <width>51</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>状态</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </widget>
     <widget class="QGroupBox" name="Cylinder_11">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>10</y>
-       <width>208</width>
+       <x>160</x>
+       <y>270</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -2172,7 +2746,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -2191,7 +2765,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2204,7 +2778,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2232,9 +2806,9 @@
     <widget class="QGroupBox" name="Cylinder_12">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>100</y>
-       <width>208</width>
+       <x>160</x>
+       <y>360</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -2246,7 +2820,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -2265,7 +2839,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2278,7 +2852,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2306,9 +2880,9 @@
     <widget class="QGroupBox" name="Cylinder_13">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>190</y>
-       <width>208</width>
+       <x>160</x>
+       <y>450</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -2320,7 +2894,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -2339,7 +2913,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2352,7 +2926,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2380,9 +2954,9 @@
     <widget class="QGroupBox" name="Cylinder_14">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>280</y>
-       <width>208</width>
+       <x>160</x>
+       <y>540</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -2394,7 +2968,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -2413,7 +2987,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2426,7 +3000,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2454,9 +3028,9 @@
     <widget class="QGroupBox" name="Cylinder_15">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>370</y>
-       <width>208</width>
+       <x>330</x>
+       <y>0</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -2468,7 +3042,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -2487,7 +3061,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2500,7 +3074,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2528,9 +3102,9 @@
     <widget class="QGroupBox" name="Cylinder_16">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>460</y>
-       <width>208</width>
+       <x>330</x>
+       <y>90</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -2542,7 +3116,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -2561,7 +3135,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2574,7 +3148,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2602,40 +3176,21 @@
     <widget class="QGroupBox" name="Cylinder_17">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>550</y>
-       <width>208</width>
+       <x>330</x>
+       <y>180</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
      <property name="title">
       <string>气缸17</string>
      </property>
-     <widget class="QCheckBox" name="check_OpenCylinder_17">
-      <property name="geometry">
-       <rect>
-        <x>11</x>
-        <y>27</y>
-        <width>47</width>
-        <height>19</height>
-       </rect>
-      </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="text">
-       <string>伸出</string>
-      </property>
-     </widget>
      <widget class="QLineEdit" name="lineEdit_CylinderCmd_17">
       <property name="geometry">
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2648,7 +3203,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2672,25 +3227,12 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-    </widget>
-    <widget class="QGroupBox" name="Cylinder_18">
-     <property name="geometry">
-      <rect>
-       <x>280</x>
-       <y>640</y>
-       <width>208</width>
-       <height>85</height>
-      </rect>
-     </property>
-     <property name="title">
-      <string>气缸18</string>
-     </property>
-     <widget class="QCheckBox" name="check_OpenCylinder_18">
+     <widget class="QCheckBox" name="check_OpenCylinder_17">
       <property name="geometry">
        <rect>
-        <x>11</x>
-        <y>27</y>
-        <width>47</width>
+        <x>10</x>
+        <y>30</y>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -2704,55 +3246,13 @@
        <string>伸出</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_CylinderCmd_18">
-      <property name="geometry">
-       <rect>
-        <x>70</x>
-        <y>26</y>
-        <width>133</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_CylinderStatus_18">
-      <property name="geometry">
-       <rect>
-        <x>70</x>
-        <y>54</y>
-        <width>133</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_CylinderStatus_18">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>54</y>
-        <width>51</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>状态</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
     </widget>
     <widget class="QGroupBox" name="Cylinder_19">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>730</y>
-       <width>208</width>
+       <x>330</x>
+       <y>360</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -2764,7 +3264,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -2783,7 +3283,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2796,7 +3296,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2824,9 +3324,9 @@
     <widget class="QGroupBox" name="Cylinder_20">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>820</y>
-       <width>208</width>
+       <x>330</x>
+       <y>450</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -2838,7 +3338,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -2857,7 +3357,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2870,7 +3370,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2898,9 +3398,9 @@
     <widget class="QGroupBox" name="Cylinder_21">
      <property name="geometry">
       <rect>
-       <x>650</x>
-       <y>10</y>
-       <width>208</width>
+       <x>330</x>
+       <y>540</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -2912,7 +3412,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -2931,7 +3431,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2944,7 +3444,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -2972,9 +3472,9 @@
     <widget class="QGroupBox" name="Cylinder_22">
      <property name="geometry">
       <rect>
-       <x>650</x>
-       <y>100</y>
-       <width>208</width>
+       <x>490</x>
+       <y>0</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -2986,7 +3486,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -3005,7 +3505,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3018,7 +3518,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3046,9 +3546,9 @@
     <widget class="QGroupBox" name="Cylinder_23">
      <property name="geometry">
       <rect>
-       <x>650</x>
-       <y>190</y>
-       <width>208</width>
+       <x>490</x>
+       <y>90</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -3060,7 +3560,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -3079,7 +3579,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3092,7 +3592,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3120,9 +3620,9 @@
     <widget class="QGroupBox" name="Cylinder_24">
      <property name="geometry">
       <rect>
-       <x>650</x>
-       <y>280</y>
-       <width>208</width>
+       <x>490</x>
+       <y>180</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -3134,7 +3634,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -3153,7 +3653,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3166,7 +3666,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3194,9 +3694,9 @@
     <widget class="QGroupBox" name="Cylinder_25">
      <property name="geometry">
       <rect>
-       <x>650</x>
-       <y>370</y>
-       <width>208</width>
+       <x>490</x>
+       <y>270</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -3208,7 +3708,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -3227,7 +3727,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3240,7 +3740,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3268,9 +3768,9 @@
     <widget class="QGroupBox" name="Cylinder_26">
      <property name="geometry">
       <rect>
-       <x>650</x>
-       <y>460</y>
-       <width>208</width>
+       <x>490</x>
+       <y>360</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -3282,7 +3782,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -3301,7 +3801,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3314,7 +3814,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3342,9 +3842,9 @@
     <widget class="QGroupBox" name="Cylinder_27">
      <property name="geometry">
       <rect>
-       <x>650</x>
-       <y>550</y>
-       <width>208</width>
+       <x>490</x>
+       <y>450</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -3356,7 +3856,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -3375,7 +3875,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3388,7 +3888,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3416,9 +3916,9 @@
     <widget class="QGroupBox" name="Cylinder_28">
      <property name="geometry">
       <rect>
-       <x>650</x>
-       <y>640</y>
-       <width>208</width>
+       <x>490</x>
+       <y>540</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -3430,7 +3930,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -3449,7 +3949,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3462,7 +3962,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3487,86 +3987,12 @@
       </property>
      </widget>
     </widget>
-    <widget class="QGroupBox" name="Cylinder_29">
-     <property name="geometry">
-      <rect>
-       <x>650</x>
-       <y>730</y>
-       <width>208</width>
-       <height>85</height>
-      </rect>
-     </property>
-     <property name="title">
-      <string>气缸29</string>
-     </property>
-     <widget class="QCheckBox" name="check_OpenCylinder_29">
-      <property name="geometry">
-       <rect>
-        <x>11</x>
-        <y>27</y>
-        <width>47</width>
-        <height>19</height>
-       </rect>
-      </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="text">
-       <string>伸出</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_CylinderCmd_29">
-      <property name="geometry">
-       <rect>
-        <x>70</x>
-        <y>26</y>
-        <width>133</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_CylinderStatus_29">
-      <property name="geometry">
-       <rect>
-        <x>70</x>
-        <y>54</y>
-        <width>133</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_CylinderStatus_29">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>54</y>
-        <width>51</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>状态</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </widget>
     <widget class="QGroupBox" name="Cylinder_30">
      <property name="geometry">
       <rect>
        <x>650</x>
-       <y>820</y>
-       <width>208</width>
+       <y>90</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -3578,7 +4004,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -3597,7 +4023,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3610,7 +4036,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3638,9 +4064,9 @@
     <widget class="QGroupBox" name="Cylinder_31">
      <property name="geometry">
       <rect>
-       <x>890</x>
-       <y>10</y>
-       <width>208</width>
+       <x>650</x>
+       <y>180</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -3652,7 +4078,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -3671,7 +4097,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3684,7 +4110,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3712,9 +4138,9 @@
     <widget class="QGroupBox" name="Cylinder_32">
      <property name="geometry">
       <rect>
-       <x>890</x>
-       <y>100</y>
-       <width>208</width>
+       <x>650</x>
+       <y>270</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -3726,7 +4152,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -3745,7 +4171,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3758,7 +4184,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3786,9 +4212,9 @@
     <widget class="QGroupBox" name="Cylinder_33">
      <property name="geometry">
       <rect>
-       <x>890</x>
-       <y>190</y>
-       <width>208</width>
+       <x>650</x>
+       <y>360</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -3800,7 +4226,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -3819,7 +4245,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3832,7 +4258,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3860,9 +4286,9 @@
     <widget class="QGroupBox" name="Cylinder_34">
      <property name="geometry">
       <rect>
-       <x>890</x>
-       <y>280</y>
-       <width>208</width>
+       <x>650</x>
+       <y>450</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -3874,7 +4300,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -3893,7 +4319,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3906,7 +4332,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3934,9 +4360,9 @@
     <widget class="QGroupBox" name="Cylinder_35">
      <property name="geometry">
       <rect>
-       <x>890</x>
-       <y>370</y>
-       <width>208</width>
+       <x>650</x>
+       <y>540</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -3948,7 +4374,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -3967,7 +4393,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -3980,7 +4406,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -4008,9 +4434,9 @@
     <widget class="QGroupBox" name="Cylinder_36">
      <property name="geometry">
       <rect>
-       <x>890</x>
-       <y>460</y>
-       <width>208</width>
+       <x>810</x>
+       <y>0</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -4022,7 +4448,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -4041,7 +4467,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -4054,7 +4480,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -4082,9 +4508,9 @@
     <widget class="QGroupBox" name="Cylinder_37">
      <property name="geometry">
       <rect>
-       <x>890</x>
-       <y>550</y>
-       <width>208</width>
+       <x>810</x>
+       <y>90</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -4096,7 +4522,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -4115,7 +4541,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -4128,7 +4554,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -4156,9 +4582,9 @@
     <widget class="QGroupBox" name="Cylinder_38">
      <property name="geometry">
       <rect>
-       <x>890</x>
-       <y>640</y>
-       <width>208</width>
+       <x>810</x>
+       <y>180</y>
+       <width>151</width>
        <height>85</height>
       </rect>
      </property>
@@ -4170,7 +4596,7 @@
        <rect>
         <x>11</x>
         <y>27</y>
-        <width>47</width>
+        <width>61</width>
         <height>19</height>
        </rect>
       </property>
@@ -4189,7 +4615,7 @@
        <rect>
         <x>70</x>
         <y>26</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -4202,7 +4628,7 @@
        <rect>
         <x>70</x>
         <y>54</y>
-        <width>133</width>
+        <width>71</width>
         <height>21</height>
        </rect>
       </property>
@@ -4211,6 +4637,228 @@
       </property>
      </widget>
      <widget class="QLabel" name="label_CylinderStatus_38">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_10">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>180</y>
+       <width>151</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸10</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_10">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>61</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_10">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_10">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_10">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_18">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>270</y>
+       <width>151</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸18</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_18">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>61</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_18">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_18">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_18">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>54</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="Cylinder_29">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>0</y>
+       <width>151</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>气缸29</string>
+     </property>
+     <widget class="QCheckBox" name="check_OpenCylinder_29">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>27</y>
+        <width>61</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>伸出</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderCmd_29">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>26</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_CylinderStatus_29">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>54</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_CylinderStatus_29">
       <property name="geometry">
        <rect>
         <x>10</x>
