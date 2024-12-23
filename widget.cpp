@@ -96,8 +96,8 @@ void Widget::on_btn_connect_plc_clicked()
         {
             ui->lineEdit_plc_connect_status->setText("已连接");
             _pTimerUpdate = new QTimer();
-            connect(_pTimerUpdate, SIGNAL(timeout()), this, SLOT(get_plc_state_by_modbus()));
-            _pTimerUpdate->start(3000);
+            //connect(_pTimerUpdate, SIGNAL(timeout()), this, SLOT(get_plc_state_by_modbus()));
+            //_pTimerUpdate->start(3000);
 
         }
     }
@@ -113,31 +113,31 @@ void Widget::on_btn_connect_plc_clicked()
 void Widget::readData()
 {
     // 读取整型数据 (假设地址 0 和 1 存储 16 位整型)
-    QModbusDataUnit readUnit(QModbusDataUnit::HoldingRegisters, 0, 2);  // 地址0，2个寄存器
+    QModbusDataUnit readUnit(QModbusDataUnit::HoldingRegisters, 1, 1);  // 地址0，2个寄存器
     auto reply = modbusClient->sendReadRequest(readUnit, 1);  // 设备地址为 1
     if (reply) {
-        connect(reply, &QModbusReply::finished, this, &Widget::onReadFinished);
+        qDebug() << reply->result().values();
     } else {
         qDebug() << "Failed to send read request for integer.";
     }
 
-    // 读取字符数据 (假设地址 2 存储字符数据)
-    QModbusDataUnit readCharUnit(QModbusDataUnit::HoldingRegisters, 2, 1);  // 地址2，1个寄存器
-    reply = modbusClient->sendReadRequest(readCharUnit, 1);  // 设备地址为 1
-    if (reply) {
-        connect(reply, &QModbusReply::finished, this, &Widget::onReadFinished);
-    } else {
-        qDebug() << "Failed to send read request for character.";
-    }
+//     // 读取字符数据 (假设地址 2 存储字符数据)
+//     QModbusDataUnit readCharUnit(QModbusDataUnit::HoldingRegisters, 2, 1);  // 地址2，1个寄存器
+//     reply = modbusClient->sendReadRequest(readCharUnit, 1);  // 设备地址为 1
+//     if (reply) {
+//         connect(reply, &QModbusReply::finished, this, &Widget::onReadFinished);
+//     } else {
+//         qDebug() << "Failed to send read request for character.";
+//     }
 
-    // 读取字符串数据 (假设地址 3 和 4 存储字符串数据)
-    QModbusDataUnit readStringUnit(QModbusDataUnit::HoldingRegisters, 3, 2);  // 地址3，2个寄存器
-    reply = modbusClient->sendReadRequest(readStringUnit, 1);  // 设备地址为 1
-    if (reply) {
-        connect(reply, &QModbusReply::finished, this, &Widget::onReadFinished);
-    } else {
-        qDebug() << "Failed to send read request for string.";
-    }
+//     // 读取字符串数据 (假设地址 3 和 4 存储字符串数据)
+//     QModbusDataUnit readStringUnit(QModbusDataUnit::HoldingRegisters, 3, 2);  // 地址3，2个寄存器
+//     reply = modbusClient->sendReadRequest(readStringUnit, 1);  // 设备地址为 1
+//     if (reply) {
+//         connect(reply, &QModbusReply::finished, this, &Widget::onReadFinished);
+//     } else {
+//         qDebug() << "Failed to send read request for string.";
+//     }
 }
 
 void Widget::writeData()
