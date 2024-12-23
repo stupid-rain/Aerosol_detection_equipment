@@ -33,8 +33,10 @@ public:
     void onReadFinished();
     void onWriteFinished();
 
+
 private slots:
     void on_btn_get_plc_state_clicked();// 获取PLC状态
+    void get_plc_state_by_modbus();
 
     void on_btn_connect_plc_clicked();  // 连接PLC
 
@@ -44,29 +46,174 @@ private slots:
 
 
 
+    void on_btn_Axi1_SetStandbyPosition_clicked();  // 设置待机位置
+
+    void on_btn_Axi1_SetWorkPostion_1_clicked();    // 设置工作位置1
+
+    void on_btn_Axi1_SetWorkPostion_2_clicked();    // 设置工作位置2
+
+    void on_btn_Axi_SetPosition_1_clicked();        // 设置位置
+
+    void on_btn_Axi_SetVel_1_clicked();             //设置速度
+
+    void on_btn_Axi_Enable_1_clicked();             // 设置使能
+
+    void on_btn_Axi_GoHome_1_clicked();             // 回原点
+
+    void on_btn_Axi_SetHome_1_clicked();            // 设置原点
+
+    void on_btn_Axi_Reset_1_clicked();              // 复位
+
+    void on_btn_Axi_Stop_1_clicked();               // 停止
+
+
+
+    void on_btn_Axi2_SetStandbyPosition_clicked();  // 设置待机位置
+
+    void on_btn_Axi2_SetWorkPostion_1_clicked();    // 设置工作位置1
+
+    void on_btn_Axi2_SetWorkPostion_2_clicked();    // 设置工作位置2
+
+    void on_btn_Axi2_SetWorkPostion_3_clicked();
+
+    void on_btn_Axi_SetPosition_2_clicked();        // 设置位置
+
+    void on_btn_Axi_SetVel_2_clicked();             //设置速度
+
+    void on_btn_Axi_Enable_2_clicked();             // 设置使能
+
+    void on_btn_Axi_GoHome_2_clicked();             // 回原点
+
+    void on_btn_Axi_SetHome_2_clicked();            // 设置原点
+
+    void on_btn_Axi_Reset_2_clicked();              // 复位
+
+    void on_btn_Axi_Stop_2_clicked();               // 停止
+
+
+    void on_btn_Axi3_SetStandbyPosition_clicked();  // 设置待机位置
+
+    void on_btn_Axi3_SetWorkPostion_1_clicked();    // 设置工作位置1
+
+
+    void on_btn_Axi_SetPosition_3_clicked();        // 设置位置
+
+    void on_btn_Axi_SetVel_3_clicked();             //设置速度
+
+    void on_btn_Axi_Enable_3_clicked();             // 设置使能
+
+    void on_btn_Axi_GoHome_3_clicked();             // 回原点
+
+    void on_btn_Axi_SetHome_3_clicked();            // 设置原点
+
+    void on_btn_Axi_Reset_3_clicked();              // 复位
+
+    void on_btn_Axi_Stop_3_clicked();               // 停止
+
+
+
+    void on_btn_Axi4_SetStandbyPosition_clicked();  // 设置待机位置
+
+    void on_btn_Axi4_SetWorkPostion_1_clicked();    // 设置工作位置1
+
+
+    void on_btn_Axi_SetPosition_4_clicked();        // 设置位置
+
+    void on_btn_Axi_SetVel_4_clicked();             //设置速度
+
+    void on_btn_Axi_Enable_4_clicked();             // 设置使能
+
+    void on_btn_Axi_GoHome_4_clicked();             // 回原点
+
+    void on_btn_Axi_SetHome_4_clicked();            // 设置原点
+
+    void on_btn_Axi_Reset_4_clicked();              // 复位
+
+    void on_btn_Axi_Stop_4_clicked();               // 停止
+
+
+
+    void on_btn_Axi5_SetStandbyPosition_clicked();  // 设置待机位置
+
+    void on_btn_Axi5_SetWorkPostion_1_clicked();    // 设置工作位置1
+
+
+    void on_btn_Axi_SetPosition_5_clicked();        // 设置位置
+
+    void on_btn_Axi_SetVel_5_clicked();             //设置速度
+
+    void on_btn_Axi_Enable_5_clicked();             // 设置使能
+
+    void on_btn_Axi_GoHome_5_clicked();             // 回原点
+
+    void on_btn_Axi_SetHome_5_clicked();            // 设置原点
+
+    void on_btn_Axi_Reset_5_clicked();              // 复位
+
+    void on_btn_Axi_Stop_5_clicked();               // 停止
+
+
+
+    void on_check_OpenCylinder_1_clicked(bool checked); //气缸1
+    void on_check_OpenCylinder_2_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_3_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_4_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_5_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_6_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_7_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_8_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_9_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_10_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_11_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_12_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_13_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_14_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_15_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_16_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_17_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_18_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_19_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_20_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_21_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_22_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_23_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_24_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_25_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_26_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_27_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_28_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_29_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_30_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_31_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_32_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_33_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_34_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_35_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_36_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_37_clicked(bool checked); //气缸
+    void on_check_OpenCylinder_38_clicked(bool checked); //气缸
+
+
+
+
+    void on_btn_Axi_All_Start_clicked();
+
+    void on_btn_Axi_All_GoHome_clicked();
+
+    void on_btn_Axi_ALL_Reset_clicked();
+
+    void on_btn_Axi_All_Stop_clicked();
+
+    void on_btn_Axi_All_GoPreparePosition_clicked();
+
 private:
     Ui::Widget *ui;
-
     // Modbus tcp
-
     QModbusClient *modbusClient = nullptr;
     QTimer timer;
     QTimer writeTimer;
-
-    // // 倍福ADS
-    // AmsAddr  Addr;//定义AMS地址变量
-    // PAmsAddr pAddr;//定义端口地址变量
-    // long nPort;
-    // USHORT  nAdsState;	//PLC状态信息
-    // USHORT  nDeviceState;
-    // bool BOOL1;
-    // PlcStruct_Read *plc_read;
-
     // 定时器
     QTimer *_pTimerUpdate,*_pTimerUpdate1;
     QTimer *_pTimerUpdate2;// 保存数据定时器
-    QTimer *_pTimerUpdate3;// 定时读取串口定时器
-    QTimer *_pTimerUpdate4;// 定时上传数据定时器
-    QElapsedTimer _elapsedTimer;        //之间计时
 };
 #endif // WIDGET_H
