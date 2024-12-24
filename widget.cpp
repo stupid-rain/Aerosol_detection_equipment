@@ -83,7 +83,7 @@ void Widget::on_btn_connect_plc_clicked()
     if (modbusClient->state() != QModbusDevice::ConnectedState)
     {
         modbusClient->setConnectionParameter(QModbusTcpClient::NetworkAddressParameter,ui->lineEdit_plc_addr->text()); // 服务器IP
-        modbusClient->setConnectionParameter(QModbusTcpClient::NetworkPortParameter, 502); // 默认Modbus TCP端口
+        modbusClient->setConnectionParameter(QModbusTcpClient::NetworkPortParameter, 510); // 默认Modbus TCP端口
 
         //设置超时时间
         modbusClient->setTimeout(1000); //1秒
@@ -113,39 +113,35 @@ void Widget::on_btn_connect_plc_clicked()
 void Widget::readData()
 {
     // 读取整型数据 (假设地址 0 和 1 存储 16 位整型)
-    QModbusDataUnit readUnit(QModbusDataUnit::HoldingRegisters, 1, 1);  // 地址0，2个寄存器
-    auto reply = modbusClient->sendReadRequest(readUnit, 1);  // 设备地址为 1
-    if (reply) {
-        qDebug() << reply->result().values();
-    } else {
-        qDebug() << "Failed to send read request for integer.";
+    QModbusDataUnit readUnit1(QModbusDataUnit::HoldingRegisters, 2769, 100);  // 地址1，1个寄存器
+    auto reply = modbusClient->sendReadRequest(readUnit1, 0x1);  // 设备地址为 1
+    if(nullptr==reply)
+    {
+        qDebug() << "读取数据失败";
+    }
+    else
+    {
+        qDebug() << "读取数据成功";
+        if(!reply->isFinished())
+        {
+            qDebug() << "!reply->isFinished()";
+            connect(reply, &QModbusReply::finished, this, &Widget::onReadFinished);
+        }
+        else
+        {
+            qDebug() << "reply->isFinished()";
+        }
     }
 
-//     // 读取字符数据 (假设地址 2 存储字符数据)
-//     QModbusDataUnit readCharUnit(QModbusDataUnit::HoldingRegisters, 2, 1);  // 地址2，1个寄存器
-//     reply = modbusClient->sendReadRequest(readCharUnit, 1);  // 设备地址为 1
-//     if (reply) {
-//         connect(reply, &QModbusReply::finished, this, &Widget::onReadFinished);
-//     } else {
-//         qDebug() << "Failed to send read request for character.";
-//     }
 
-//     // 读取字符串数据 (假设地址 3 和 4 存储字符串数据)
-//     QModbusDataUnit readStringUnit(QModbusDataUnit::HoldingRegisters, 3, 2);  // 地址3，2个寄存器
-//     reply = modbusClient->sendReadRequest(readStringUnit, 1);  // 设备地址为 1
-//     if (reply) {
-//         connect(reply, &QModbusReply::finished, this, &Widget::onReadFinished);
-//     } else {
-//         qDebug() << "Failed to send read request for string.";
-//     }
 }
 
 void Widget::writeData()
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 5, 2);  // 地址5，2个寄存器
-    writeUnit.setValue(0, 12345);  // 设置整型值
-    writeUnit.setValue(1, 65432);  // 设置整型值的第二部分
+    writeUnit.setValue(0, 1234);  // 设置整型值
+    writeUnit.setValue(1, 6543);  // 设置整型值的第二部分
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
@@ -190,7 +186,7 @@ void Widget::onReadFinished()
     // 处理读取的Modbus数据
     if (reply->error() == QModbusDevice::NoError)
     {
-        QModbusDataUnit unit = reply->result();
+        const QModbusDataUnit unit = reply->result();
 
         // 电机1
 
@@ -500,6 +496,8 @@ void Widget::onReadFinished()
 
 
     }
+
+
 
 
 
@@ -1304,7 +1302,7 @@ void Widget::on_btn_Axi_Reset_5_clicked()       // 复位
 
 void Widget::on_check_OpenCylinder_1_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32971, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2971, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1325,7 +1323,7 @@ void Widget::on_check_OpenCylinder_1_clicked(bool checked) //气缸
 
 void Widget::on_check_OpenCylinder_2_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32972, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2972, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1346,7 +1344,7 @@ void Widget::on_check_OpenCylinder_2_clicked(bool checked) //气缸
 void Widget::on_check_OpenCylinder_3_clicked(bool checked) //气缸
 {
 
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32973, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2973, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1367,7 +1365,7 @@ void Widget::on_check_OpenCylinder_3_clicked(bool checked) //气缸
 }
 void Widget::on_check_OpenCylinder_4_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32974, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2974, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1388,7 +1386,7 @@ void Widget::on_check_OpenCylinder_4_clicked(bool checked) //气缸
 
 void Widget::on_check_OpenCylinder_5_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32975, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2975, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1409,7 +1407,7 @@ void Widget::on_check_OpenCylinder_5_clicked(bool checked) //气缸
 void Widget::on_check_OpenCylinder_6_clicked(bool checked) //气缸
 {
 
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32976, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2976, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1430,7 +1428,7 @@ void Widget::on_check_OpenCylinder_6_clicked(bool checked) //气缸
 }
 void Widget::on_check_OpenCylinder_7_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32977, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2977, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1451,7 +1449,7 @@ void Widget::on_check_OpenCylinder_7_clicked(bool checked) //气缸
 
 void Widget::on_check_OpenCylinder_8_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32978, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2978, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1472,7 +1470,7 @@ void Widget::on_check_OpenCylinder_8_clicked(bool checked) //气缸
 void Widget::on_check_OpenCylinder_9_clicked(bool checked) //气缸
 {
 
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32979, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2979, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1494,7 +1492,7 @@ void Widget::on_check_OpenCylinder_9_clicked(bool checked) //气缸
 
 void Widget::on_check_OpenCylinder_10_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32980, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2980, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1514,7 +1512,7 @@ void Widget::on_check_OpenCylinder_10_clicked(bool checked) //气缸
 }
 void Widget::on_check_OpenCylinder_11_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32981, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2981, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1534,7 +1532,7 @@ void Widget::on_check_OpenCylinder_11_clicked(bool checked) //气缸
 }
 void Widget::on_check_OpenCylinder_12_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32982, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2982, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1555,7 +1553,7 @@ void Widget::on_check_OpenCylinder_12_clicked(bool checked) //气缸
 void Widget::on_check_OpenCylinder_13_clicked(bool checked) //气缸
 {
 
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32983, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2983, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1576,7 +1574,7 @@ void Widget::on_check_OpenCylinder_13_clicked(bool checked) //气缸
 }
 void Widget::on_check_OpenCylinder_14_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32984, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2984, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1597,7 +1595,7 @@ void Widget::on_check_OpenCylinder_14_clicked(bool checked) //气缸
 
 void Widget::on_check_OpenCylinder_15_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32985, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2985, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1618,7 +1616,7 @@ void Widget::on_check_OpenCylinder_15_clicked(bool checked) //气缸
 void Widget::on_check_OpenCylinder_16_clicked(bool checked) //气缸
 {
 
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32986, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2986, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1639,7 +1637,7 @@ void Widget::on_check_OpenCylinder_16_clicked(bool checked) //气缸
 }
 void Widget::on_check_OpenCylinder_17_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32987, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2987, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1660,7 +1658,7 @@ void Widget::on_check_OpenCylinder_17_clicked(bool checked) //气缸
 
 void Widget::on_check_OpenCylinder_18_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32988, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2988, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1681,7 +1679,7 @@ void Widget::on_check_OpenCylinder_18_clicked(bool checked) //气缸
 void Widget::on_check_OpenCylinder_19_clicked(bool checked) //气缸
 {
 
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32989, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2989, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1703,7 +1701,7 @@ void Widget::on_check_OpenCylinder_19_clicked(bool checked) //气缸
 void Widget::on_check_OpenCylinder_20_clicked(bool checked) //气缸
 {
 
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32990, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2990, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1727,7 +1725,7 @@ void Widget::on_check_OpenCylinder_20_clicked(bool checked) //气缸
 
 void Widget::on_check_OpenCylinder_21_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32991, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2991, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1748,7 +1746,7 @@ void Widget::on_check_OpenCylinder_21_clicked(bool checked) //气缸
 
 void Widget::on_check_OpenCylinder_22_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32992, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2992, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1769,7 +1767,7 @@ void Widget::on_check_OpenCylinder_22_clicked(bool checked) //气缸
 void Widget::on_check_OpenCylinder_23_clicked(bool checked) //气缸
 {
 
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32993, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2993, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1790,7 +1788,7 @@ void Widget::on_check_OpenCylinder_23_clicked(bool checked) //气缸
 }
 void Widget::on_check_OpenCylinder_24_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32994, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2994, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1811,7 +1809,7 @@ void Widget::on_check_OpenCylinder_24_clicked(bool checked) //气缸
 
 void Widget::on_check_OpenCylinder_25_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32995, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2995, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1832,7 +1830,7 @@ void Widget::on_check_OpenCylinder_25_clicked(bool checked) //气缸
 void Widget::on_check_OpenCylinder_26_clicked(bool checked) //气缸
 {
 
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32996, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2996, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1853,7 +1851,7 @@ void Widget::on_check_OpenCylinder_26_clicked(bool checked) //气缸
 }
 void Widget::on_check_OpenCylinder_27_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32997, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2997, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1874,7 +1872,7 @@ void Widget::on_check_OpenCylinder_27_clicked(bool checked) //气缸
 
 void Widget::on_check_OpenCylinder_28_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32998, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2998, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1895,7 +1893,7 @@ void Widget::on_check_OpenCylinder_28_clicked(bool checked) //气缸
 void Widget::on_check_OpenCylinder_29_clicked(bool checked) //气缸
 {
 
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32999, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 2999, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1917,7 +1915,7 @@ void Widget::on_check_OpenCylinder_29_clicked(bool checked) //气缸
 
 void Widget::on_check_OpenCylinder_30_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33000, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 3000, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1939,7 +1937,7 @@ void Widget::on_check_OpenCylinder_30_clicked(bool checked) //气缸
 
 void Widget::on_check_OpenCylinder_31_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33001, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 3001, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1960,7 +1958,7 @@ void Widget::on_check_OpenCylinder_31_clicked(bool checked) //气缸
 
 void Widget::on_check_OpenCylinder_32_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33002, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 3002, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -1981,7 +1979,7 @@ void Widget::on_check_OpenCylinder_32_clicked(bool checked) //气缸
 void Widget::on_check_OpenCylinder_33_clicked(bool checked) //气缸
 {
 
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33003, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 3003, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -2002,7 +2000,7 @@ void Widget::on_check_OpenCylinder_33_clicked(bool checked) //气缸
 }
 void Widget::on_check_OpenCylinder_34_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33004, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 3004, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -2023,7 +2021,7 @@ void Widget::on_check_OpenCylinder_34_clicked(bool checked) //气缸
 
 void Widget::on_check_OpenCylinder_35_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33005, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 3005, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -2044,7 +2042,7 @@ void Widget::on_check_OpenCylinder_35_clicked(bool checked) //气缸
 void Widget::on_check_OpenCylinder_36_clicked(bool checked) //气缸
 {
 
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33006, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 3006, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -2065,7 +2063,7 @@ void Widget::on_check_OpenCylinder_36_clicked(bool checked) //气缸
 }
 void Widget::on_check_OpenCylinder_37_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33007, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 3007, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -2086,7 +2084,7 @@ void Widget::on_check_OpenCylinder_37_clicked(bool checked) //气缸
 
 void Widget::on_check_OpenCylinder_38_clicked(bool checked) //气缸
 {
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33008, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 3008, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
@@ -2108,7 +2106,7 @@ void Widget::on_check_OpenCylinder_38_clicked(bool checked) //气缸
 void Widget::on_btn_Axi_All_Start_clicked()
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33009, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 3009, 1);  // 地址5，2个寄存器
     writeUnit.setValue(0, 1);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
@@ -2124,7 +2122,7 @@ void Widget::on_btn_Axi_All_Start_clicked()
 void Widget::on_btn_Axi_All_GoHome_clicked()
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33010, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 3010, 1);  // 地址5，2个寄存器
     writeUnit.setValue(0, 1);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
@@ -2140,7 +2138,7 @@ void Widget::on_btn_Axi_All_GoHome_clicked()
 void Widget::on_btn_Axi_ALL_Reset_clicked()
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33011, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 3011, 1);  // 地址5，2个寄存器
     writeUnit.setValue(0, 1);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
@@ -2156,7 +2154,7 @@ void Widget::on_btn_Axi_ALL_Reset_clicked()
 void Widget::on_btn_Axi_All_Stop_clicked()
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33012, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 3012, 1);  // 地址5，2个寄存器
     writeUnit.setValue(0, 1);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
@@ -2172,7 +2170,7 @@ void Widget::on_btn_Axi_All_Stop_clicked()
 void Widget::on_btn_Axi_All_GoPreparePosition_clicked()
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33013, 1);  // 地址5，2个寄存器
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 3013, 1);  // 地址5，2个寄存器
     writeUnit.setValue(0, 1);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
