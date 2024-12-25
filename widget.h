@@ -30,7 +30,10 @@ public:
     ~Widget();
 
     void    onModbusStateChanged(int);
-    void onReadFinished();
+    void onReadFinished1();
+    void onReadFinished2();
+    void onReadFinished3();
+
     void onWriteFinished();
 
 
@@ -56,7 +59,9 @@ private slots:
 
     void on_btn_Axi_SetVel_1_clicked();             //设置速度
 
-    void on_btn_Axi_Enable_1_clicked();             // 设置使能
+
+
+    void on_check_Axi_Enable_1_clicked(bool checked);             // 设置使能
 
     void on_btn_Axi_GoHome_1_clicked();             // 回原点
 
@@ -65,6 +70,12 @@ private slots:
     void on_btn_Axi_Reset_1_clicked();              // 复位
 
     void on_btn_Axi_Stop_1_clicked();               // 停止
+    void on_btn_Axi_GoHome_1_pressed();
+    void on_btn_Axi_Reset_1_pressed();
+    void on_btn_Axi_SetHome_1_pressed();
+    void on_btn_Axi_Stop_1_pressed();
+
+
 
 
 
@@ -80,7 +91,7 @@ private slots:
 
     void on_btn_Axi_SetVel_2_clicked();             //设置速度
 
-    void on_btn_Axi_Enable_2_clicked();             // 设置使能
+    void on_check_Axi_Enable_2_clicked(bool checked);             // 设置使能
 
     void on_btn_Axi_GoHome_2_clicked();             // 回原点
 
@@ -89,6 +100,12 @@ private slots:
     void on_btn_Axi_Reset_2_clicked();              // 复位
 
     void on_btn_Axi_Stop_2_clicked();               // 停止
+    void on_btn_Axi_GoHome_2_pressed();
+    void on_btn_Axi_Reset_2_pressed();
+    void on_btn_Axi_SetHome_2_pressed();
+    void on_btn_Axi_Stop_2_pressed();
+
+
 
 
     void on_btn_Axi3_SetStandbyPosition_clicked();  // 设置待机位置
@@ -100,7 +117,7 @@ private slots:
 
     void on_btn_Axi_SetVel_3_clicked();             //设置速度
 
-    void on_btn_Axi_Enable_3_clicked();             // 设置使能
+    void on_check_Axi_Enable_3_clicked(bool checked);             // 设置使能
 
     void on_btn_Axi_GoHome_3_clicked();             // 回原点
 
@@ -109,6 +126,10 @@ private slots:
     void on_btn_Axi_Reset_3_clicked();              // 复位
 
     void on_btn_Axi_Stop_3_clicked();               // 停止
+    void on_btn_Axi_GoHome_3_pressed();
+    void on_btn_Axi_Reset_3_pressed();
+    void on_btn_Axi_SetHome_3_pressed();
+    void on_btn_Axi_Stop_3_pressed();
 
 
 
@@ -121,7 +142,7 @@ private slots:
 
     void on_btn_Axi_SetVel_4_clicked();             //设置速度
 
-    void on_btn_Axi_Enable_4_clicked();             // 设置使能
+    void on_check_Axi_Enable_4_clicked(bool checked);             // 设置使能
 
     void on_btn_Axi_GoHome_4_clicked();             // 回原点
 
@@ -130,6 +151,11 @@ private slots:
     void on_btn_Axi_Reset_4_clicked();              // 复位
 
     void on_btn_Axi_Stop_4_clicked();               // 停止
+
+    void on_btn_Axi_GoHome_4_pressed();
+    void on_btn_Axi_Reset_4_pressed();
+    void on_btn_Axi_SetHome_4_pressed();
+    void on_btn_Axi_Stop_4_pressed();
 
 
 
@@ -142,7 +168,7 @@ private slots:
 
     void on_btn_Axi_SetVel_5_clicked();             //设置速度
 
-    void on_btn_Axi_Enable_5_clicked();             // 设置使能
+    void on_check_Axi_Enable_5_clicked(bool checked);            // 设置使能
 
     void on_btn_Axi_GoHome_5_clicked();             // 回原点
 
@@ -151,6 +177,10 @@ private slots:
     void on_btn_Axi_Reset_5_clicked();              // 复位
 
     void on_btn_Axi_Stop_5_clicked();               // 停止
+    void on_btn_Axi_GoHome_5_pressed();
+    void on_btn_Axi_Reset_5_pressed();
+    void on_btn_Axi_SetHome_5_pressed();
+    void on_btn_Axi_Stop_5_pressed();
 
 
 
@@ -205,6 +235,40 @@ private slots:
     void on_btn_Axi_All_Stop_clicked();
 
     void on_btn_Axi_All_GoPreparePosition_clicked();
+
+
+
+    void on_btn_Axi_All_Start_pressed();
+
+    void on_btn_Axi_All_GoHome_pressed();
+
+    void on_btn_Axi_ALL_Reset_pressed();
+
+    void on_btn_Axi_All_Stop_pressed();
+
+    void on_btn_Axi_All_GoPreparePosition_pressed();
+
+
+
+    void on_btn_GetPaper_pressed();
+
+    void on_btn_GetPaper_clicked();
+
+    void on_btn_Collect_pressed();
+
+    void on_btn_Collect_clicked();
+
+    void on_btn_SetPaper_pressed();
+
+    void on_btn_SetPaper_clicked();
+
+    void on_btn_CutPaper_pressed();
+
+    void on_btn_CutPaper_clicked();
+
+    void on_btn_SetBox_pressed();
+
+    void on_btn_SetBox_clicked();
 
 private:
     Ui::Widget *ui;
