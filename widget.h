@@ -235,9 +235,6 @@ private slots:
 
     void on_btn_Axi_All_Stop_clicked();
 
-    void on_btn_Axi_All_GoPreparePosition_clicked();
-
-
 
     void on_btn_Axi_All_Start_pressed();
 
@@ -247,9 +244,9 @@ private slots:
 
     void on_btn_Axi_All_Stop_pressed();
 
-    void on_btn_Axi_All_GoPreparePosition_pressed();
+    void Set_On_Auto();
 
-
+    void Set_On_Manu();
 
     void on_btn_GetPaper_pressed();
 
@@ -313,6 +310,8 @@ private slots:
     void on_btn_Axi_Jog_Neg_4_pressed();
 
     void on_btn_Axi_Jog_Pos_4_clicked();
+    void on_btn_Axi_Mode_Switch_clicked();
+
 private:
     Ui::Widget *ui;
     // Modbus tcp

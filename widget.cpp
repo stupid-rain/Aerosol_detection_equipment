@@ -2744,14 +2744,15 @@ void Widget::on_btn_Axi_All_Stop_clicked()
 }
 
 
-void Widget::on_btn_Axi_All_GoPreparePosition_clicked()
+void Widget::Set_On_Auto()
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33013, 1);  // 地址5，2个寄存器
-    writeUnit.setValue(0, 0);  // 设置整型值
+    writeUnit.setValue(0, 1);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
+        ui->lineEdit_Mode->setText("切换为手动");
 
     } else
     {
@@ -2759,7 +2760,21 @@ void Widget::on_btn_Axi_All_GoPreparePosition_clicked()
     }
 }
 
+void Widget::Set_On_Manu()
+{
+    // 写入整型数据 (假设地址 5 存储整型数据)
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33013, 1);  // 地址5，2个寄存器
+    writeUnit.setValue(0, 0);  // 设置整型值
+    auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
+    if (reply) {
+        connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
+        ui->lineEdit_Mode->setText("切换为自动");
 
+    } else
+    {
+        qDebug() << "Failed to send write request for integer.";
+    }
+}
 
 
 
@@ -2826,21 +2841,6 @@ void Widget::on_btn_Axi_All_Stop_pressed()
     }
 }
 
-
-void Widget::on_btn_Axi_All_GoPreparePosition_pressed()
-{
-    // 写入整型数据 (假设地址 5 存储整型数据)
-    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33013, 1);  // 地址5，2个寄存器
-    writeUnit.setValue(0, 1);  // 设置整型值
-    auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
-    if (reply) {
-        connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
-
-    } else
-    {
-        qDebug() << "Failed to send write request for integer.";
-    }
-}
 
 
 
@@ -3390,5 +3390,19 @@ void Widget::set_plc_state_by_modbus()
 
 
 
+}
+
+
+void Widget::on_btn_Axi_Mode_Switch_clicked()
+{
+    if (ui->lineEdit_Mode->text()=="手动")
+    {
+         qDebug() << "ui->lineEdit_Mode->text()==\"手动\"";
+        Set_On_Auto();
+    }
+    else
+    {
+        Set_On_Manu();
+    }
 }
 

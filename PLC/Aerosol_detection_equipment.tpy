@@ -2,9 +2,9 @@
 <!--This file is created by the TCatPlcCtrl automatically. Manually changes will be overwritten!-->
 <PlcProjectInfo xmlns:p="http://www.beckhoff.com/2002/01/TcPlcProjectDesc">
 	<ProjectInfo>
-		<Path>D:\Work\Qt_Project\Aerosol_detection_equipment\PLC\Aerosol_detection_equipment.pro</Path>
+		<Path>D:\Qt_Project\Aerosol_detection_equipment\PLC\Aerosol_detection_equipment.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2025-01-09T18:26:45</ChangeDate>
+		<ChangeDate>2025-01-10T02:13:04</ChangeDate>
 		<Library>
 			<Name>TcFloatPC.lib</Name>
 			<Path>C:\TwinCAT\PLC\LIB\TcFloatPC.lib</Path>
@@ -18,7 +18,7 @@
 		<Library>
 			<Name>TcEtherCAT.lib</Name>
 			<Path>C:\TwinCAT\PLC\LIB\TcEtherCAT.lib</Path>
-			<ChangeDate>2022-08-15T11:50:34</ChangeDate>
+			<ChangeDate>2016-11-30T19:52:18</ChangeDate>
 		</Library>
 		<Library>
 			<Name>TcTestAndSet.lib</Name>
@@ -70,9 +70,6 @@
 		<AdsInfo>
 			<NetId>192.168.1.10.1.1</NetId>
 			<Port>801</Port>
-			<TargetName>
-				<![CDATA[Target: CP-104E78 (192.168.1.10.1.1), Run Time: 1]]>
-			</TargetName>
 		</AdsInfo>
 	</RoutingInfo>
 	<CompilerInfo>
@@ -371,7 +368,7 @@
 			</FbInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="30000272" Crc32="4150941735" LastChange="2025-01-09T17:07:12">EM_State</Name>
+			<Name Decoration="30000272" Crc32="4150941735" LastChange="2025-01-09T22:32:34">EM_State</Name>
 			<Type>INT</Type>
 			<BitSize>16</BitSize>
 			<EnumInfo>
@@ -419,16 +416,10 @@
 		<DataType>
 			<Name Decoration="20011E30">ARRAY [1..20] OF TON</Name>
 			<Type Decoration="10060D24">TON</Type>
+			<Comment>
+				<![CDATA[信号滤波]]>
+			</Comment>
 			<BitSize>2400</BitSize>
-			<ArrayInfo>
-				<LBound>1</LBound>
-				<Elements>20</Elements>
-			</ArrayInfo>
-		</DataType>
-		<DataType>
-			<Name Decoration="2001171B">ARRAY [1..20] OF R_TRIG</Name>
-			<Type Decoration="1003051C">R_TRIG</Type>
-			<BitSize>480</BitSize>
 			<ArrayInfo>
 				<LBound>1</LBound>
 				<Elements>20</Elements>
@@ -2104,6 +2095,15 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
+			<Name Decoration="2001171B">ARRAY [1..20] OF R_TRIG</Name>
+			<Type Decoration="1003051C">R_TRIG</Type>
+			<BitSize>480</BitSize>
+			<ArrayInfo>
+				<LBound>1</LBound>
+				<Elements>20</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
 			<Name Decoration="20011E26">ARRAY [1..10] OF TON</Name>
 			<Type Decoration="10060D24">TON</Type>
 			<BitSize>1200</BitSize>
@@ -2176,15 +2176,6 @@
 			<ArrayInfo>
 				<LBound>0</LBound>
 				<Elements>256</Elements>
-			</ArrayInfo>
-		</DataType>
-		<DataType>
-			<Name Decoration="2001024E">ARRAY [1..255] OF WORD</Name>
-			<Type>WORD</Type>
-			<BitSize>4080</BitSize>
-			<ArrayInfo>
-				<LBound>1</LBound>
-				<Elements>255</Elements>
 			</ArrayInfo>
 		</DataType>
 		<DataType>
@@ -25695,237 +25686,6 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1047D907" Crc32="3314086314" LastChange="2025-01-09T13:54:05">PRG_Auto</Name>
-			<PrgInfo>
-				<CodeIndex>1265</CodeIndex>
-				<ActionInfo>
-					<Name>Act_Modbus_TCP</Name>
-					<CodeIndex>1266</CodeIndex>
-				</ActionInfo>
-				<ActionInfo>
-					<Name>Act_Prepare</Name>
-					<CodeIndex>1267</CodeIndex>
-				</ActionInfo>
-				<ActionInfo>
-					<Name>Act_Run</Name>
-					<CodeIndex>1268</CodeIndex>
-				</ActionInfo>
-				<Symbol>
-					<Name>PRG_Auto.eRuningStep</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.eStopStep</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.trAutoRuning</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.tResetAutoSignal</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.rTrigGlobalError</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.rTrigEstop</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.rTrigstop</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.rTrigSwitchManual</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.rTrigStart</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.tStopDelay</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.fbHaltMain</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.fbMoveMain</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.fTempDistanceInCycle_L</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.fTempDistanceInCycle_R</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.fRecordMainPos</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.iTest400</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.iTest500</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.itest1</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.itest2</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.itest3</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.itest4</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.iXStep1</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.iXStep2</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.iZStep1</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.iZStep2</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.iX2Step1</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.iX2Step2</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.iY2Step1</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.iY2Step2</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.iRStep1</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.iRStep2</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.iRStep3</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.iRStep4</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.iHorizontalStep1</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.iHorizontalStep2</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.iRotaryStep1</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.iRotaryStep2</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.iCollimationStep1</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.iCollimationStep2</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.fPos_X_Axis</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.fPos_Z_Axis</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.fPos_X2_Axis</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.fPos_Y2_Axis</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.fPos_R_Axis</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.fPos_CollimationAxis</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.fPos_HorizontalAxis</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.fPos_RotaryAxis</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.rPutPermit_Cmd</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.rGetPermit_Cmd</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.iPutStep</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.iGetStep</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.tDelayMC_AbsAlarm</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.r_TRIG_Cmd</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.bX_Axis_Abs</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.bX_Axis_Stop</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.bZ_Axis_Abs</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.bZ_Axis_Stop</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.bX2_Axis_Abs</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.bX2_Axis_Stop</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.bY2_Axis_Abs</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.bY2_Axis_Stop</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.bR_Axis_Abs</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.bR_Axis_Stop</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.bHorizontal_Axis_Abs</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.bHorizontal_Axis_Stop</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.bRotary_Axis_Abs</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.bRotary_Axis_Stop</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.bCollimationAxis_Abs</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.bCollimationAxis_Stop</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.bR_Axis_Velo</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Auto.bR_Axis_Stop1</Name>
-				</Symbol>
-			</PrgInfo>
-		</Program>
-		<Program>
 			<Name Decoration="10074CF3" Crc32="3918586567" LastChange="2025-01-07T16:10:54">PRG_AutoPreparation</Name>
 			<PrgInfo>
 				<CodeIndex>1269</CodeIndex>
@@ -25962,7 +25722,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="10064859" Crc32="3474062518" LastChange="2025-01-09T16:47:00">PRG_GoHomeTogether</Name>
+			<Name Decoration="10064859" Crc32="0670889861" LastChange="2025-01-09T22:46:29">PRG_GoHomeTogether</Name>
 			<PrgInfo>
 				<CodeIndex>1280</CodeIndex>
 				<Symbol>
@@ -25998,7 +25758,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1009AE7F" Crc32="1908504851" LastChange="2025-01-08T16:39:34">PRG_IO</Name>
+			<Name Decoration="1009AE7F" Crc32="3992947378" LastChange="2025-01-09T22:27:10">PRG_IO</Name>
 			<PrgInfo>
 				<CodeIndex>1282</CodeIndex>
 				<ActionInfo>
@@ -26051,7 +25811,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="10147620" Crc32="1616128779" LastChange="2025-01-09T13:54:05">PRG_Manual</Name>
+			<Name Decoration="10147620" Crc32="3076177430" LastChange="2025-01-09T23:49:47">PRG_Manual</Name>
 			<PrgInfo>
 				<CodeIndex>1286</CodeIndex>
 				<Symbol>
@@ -26117,7 +25877,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1003054F" Crc32="0001417375" LastChange="2025-01-09T18:26:45">PRG_Modbus_TCP</Name>
+			<Name Decoration="1003054F" Crc32="3130511986" LastChange="2025-01-10T01:09:18">PRG_Modbus_TCP</Name>
 			<PrgInfo>
 				<CodeIndex>1287</CodeIndex>
 				<ActionInfo>
@@ -26125,8 +25885,8 @@
 					<CodeIndex>1288</CodeIndex>
 				</ActionInfo>
 				<ActionInfo>
-					<Name>Modbus_TCP_Write_AutoMode</Name>
-					<CodeIndex>1289</CodeIndex>
+					<Name>Modbus_TCP_Write_In_AutoMode</Name>
+					<CodeIndex>529</CodeIndex>
 				</ActionInfo>
 				<ActionInfo>
 					<Name>Modbus_TCP_Write_ManulMode</Name>
@@ -26144,7 +25904,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="100204AF" Crc32="3874371105" LastChange="2025-01-07T16:10:54">PRG_Monitor</Name>
+			<Name Decoration="100204AF" Crc32="2153789884" LastChange="2025-01-10T01:56:30">PRG_Monitor</Name>
 			<PrgInfo>
 				<CodeIndex>1291</CodeIndex>
 				<Symbol>
@@ -26165,7 +25925,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1018E4CF" Crc32="3594073310" LastChange="2025-01-09T13:17:45">PRG_PTP</Name>
+			<Name Decoration="1018E4CF" Crc32="3594073310" LastChange="2025-01-10T01:28:46">PRG_PTP</Name>
 			<PrgInfo>
 				<CodeIndex>1293</CodeIndex>
 				<ActionInfo>
@@ -26263,7 +26023,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1046DEBD" Crc32="3825655842" LastChange="2025-01-09T17:09:38">PRG_AutoWork</Name>
+			<Name Decoration="1046DEBD" Crc32="4220576965" LastChange="2025-01-10T00:28:44">PRG_AutoWork</Name>
 			<PrgInfo>
 				<CodeIndex>1270</CodeIndex>
 				<ActionInfo>
@@ -26287,8 +26047,16 @@
 					<CodeIndex>1315</CodeIndex>
 				</ActionInfo>
 				<ActionInfo>
+					<Name>Act_Run</Name>
+					<CodeIndex>528</CodeIndex>
+				</ActionInfo>
+				<ActionInfo>
 					<Name>Act_SetBox</Name>
 					<CodeIndex>1276</CodeIndex>
+				</ActionInfo>
+				<ActionInfo>
+					<Name>Act_Status</Name>
+					<CodeIndex>526</CodeIndex>
 				</ActionInfo>
 				<ActionInfo>
 					<Name>Act_Step</Name>
@@ -26507,7 +26275,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1007686E" Crc32="2947771089" LastChange="2025-01-09T17:00:04">PRG_GoResetTogether</Name>
+			<Name Decoration="1007686E" Crc32="1893546811" LastChange="2025-01-10T00:33:23">PRG_GoResetTogether</Name>
 			<PrgInfo>
 				<CodeIndex>1251</CodeIndex>
 				<Symbol>
@@ -26530,18 +26298,6 @@
 				</Symbol>
 				<Symbol>
 					<Name>PRG_GoResetTogether.tDelay1</Name>
-				</Symbol>
-			</PrgInfo>
-		</Program>
-		<Program>
-			<Name Decoration="10020336" Crc32="1008137541" LastChange="2025-01-09T14:12:16">PRG_Estop</Name>
-			<PrgInfo>
-				<CodeIndex>1279</CodeIndex>
-				<Symbol>
-					<Name>PRG_Estop.i</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_Estop.j</Name>
 				</Symbol>
 			</PrgInfo>
 		</Program>
@@ -26570,7 +26326,247 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="10297FA8" Crc32="1887461177" LastChange="2025-01-09T17:52:25">MAIN</Name>
+			<Name Decoration="1001019B" Crc32="0199832229" LastChange="2025-01-09T22:09:36">PRG_Estop</Name>
+			<PrgInfo>
+				<CodeIndex>1279</CodeIndex>
+				<Symbol>
+					<Name>PRG_Estop.i</Name>
+				</Symbol>
+			</PrgInfo>
+		</Program>
+		<Program>
+			<Name Decoration="1047D907" Crc32="1897177364" LastChange="2025-01-10T00:44:40">PRG_Debug_Mode</Name>
+			<PrgInfo>
+				<CodeIndex>524</CodeIndex>
+				<ActionInfo>
+					<Name>Act_Modbus_TCP</Name>
+					<CodeIndex>525</CodeIndex>
+				</ActionInfo>
+				<ActionInfo>
+					<Name>Act_Reset</Name>
+					<CodeIndex>564</CodeIndex>
+				</ActionInfo>
+				<ActionInfo>
+					<Name>Act_Run</Name>
+					<CodeIndex>527</CodeIndex>
+				</ActionInfo>
+				<Symbol>
+					<Name>PRG_Debug_Mode.eRuningStep</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.eStopStep</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.trAutoRuning</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.tResetAutoSignal</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.rTrigGlobalError</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.rTrigEstop</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.rTrigstop</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.rTrigSwitchManual</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.rTrigStart</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.tStopDelay</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.fbHaltMain</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.fbMoveMain</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.fTempDistanceInCycle_L</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.fTempDistanceInCycle_R</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.fRecordMainPos</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.iTest400</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.iTest500</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.itest1</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.itest2</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.itest3</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.itest4</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.iXStep1</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.iXStep2</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.iZStep1</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.iZStep2</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.iX2Step1</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.iX2Step2</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.iY2Step1</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.iY2Step2</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.iRStep1</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.iRStep2</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.iRStep3</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.iRStep4</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.iHorizontalStep1</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.iHorizontalStep2</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.iRotaryStep1</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.iRotaryStep2</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.iCollimationStep1</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.iCollimationStep2</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.fPos_X_Axis</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.fPos_Z_Axis</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.fPos_X2_Axis</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.fPos_Y2_Axis</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.fPos_R_Axis</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.fPos_CollimationAxis</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.fPos_HorizontalAxis</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.fPos_RotaryAxis</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.rPutPermit_Cmd</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.rGetPermit_Cmd</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.iPutStep</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.iGetStep</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.tDelayMC_AbsAlarm</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.r_TRIG_Cmd</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.bX_Axis_Abs</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.bX_Axis_Stop</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.bZ_Axis_Abs</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.bZ_Axis_Stop</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.bX2_Axis_Abs</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.bX2_Axis_Stop</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.bY2_Axis_Abs</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.bY2_Axis_Stop</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.bR_Axis_Abs</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.bR_Axis_Stop</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.bHorizontal_Axis_Abs</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.bHorizontal_Axis_Stop</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.bRotary_Axis_Abs</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.bRotary_Axis_Stop</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.bCollimationAxis_Abs</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.bCollimationAxis_Stop</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.bR_Axis_Velo</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_Debug_Mode.bR_Axis_Stop1</Name>
+				</Symbol>
+			</PrgInfo>
+		</Program>
+		<Program>
+			<Name Decoration="10297C80" Crc32="3573733451" LastChange="2025-01-10T01:08:04">MAIN</Name>
 			<PrgInfo>
 				<CodeIndex>1255</CodeIndex>
 				<ActionInfo>
@@ -26698,7 +26694,7 @@
 					<Name>MAIN.auto_finished_flag</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.riGoAutoTogether_Cmd</Name>
+					<Name>MAIN.riGoWork_Cmd</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.testmode</Name>
@@ -26711,6 +26707,33 @@
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.gocmd</Name>
+				</Symbol>
+			</PrgInfo>
+		</Program>
+		<Program>
+			<Name Decoration="1007686E" Crc32="0344595628" LastChange="2025-01-10T00:48:04">PRG_GoWork</Name>
+			<PrgInfo>
+				<CodeIndex>565</CodeIndex>
+				<Symbol>
+					<Name>PRG_GoWork.i</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_GoWork.iPullAxisHomeStep</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_GoWork.rTrig</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_GoWork.iStep</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_GoWork.bAxisNotMoving</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_GoWork.tDelay</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_GoWork.tDelay1</Name>
 				</Symbol>
 			</PrgInfo>
 		</Program>
@@ -26763,576 +26786,6 @@
 			<Type Decoration="10060D24">TON</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>6815</IOffset>
-			<BitSize>120</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.eRuningStep</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>6830</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.eStopStep</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>6832</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.trAutoRuning</Name>
-			<Type Decoration="1003051C">R_TRIG</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>6834</IOffset>
-			<BitSize>24</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.tResetAutoSignal</Name>
-			<Type Decoration="10060D24">TON</Type>
-			<Comment>
-				<![CDATA[trigers]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>6837</IOffset>
-			<BitSize>120</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.rTrigGlobalError</Name>
-			<Type Decoration="1003051C">R_TRIG</Type>
-			<Comment>
-				<![CDATA[需要停机的错误，触发后不退出自动，复位错误后，可以继续运行]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>6852</IOffset>
-			<BitSize>24</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.rTrigEstop</Name>
-			<Type Decoration="1003051C">R_TRIG</Type>
-			<Comment>
-				<![CDATA[需要停机，并且完成后进入急停]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>6855</IOffset>
-			<BitSize>24</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.rTrigstop</Name>
-			<Type Decoration="1003051C">R_TRIG</Type>
-			<Comment>
-				<![CDATA[需要停机，停完后，点启动可以继续跑]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>6858</IOffset>
-			<BitSize>24</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.rTrigSwitchManual</Name>
-			<Type Decoration="1003051C">R_TRIG</Type>
-			<Comment>
-				<![CDATA[需要停机，停完后切到手动]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>6861</IOffset>
-			<BitSize>24</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.rTrigStart</Name>
-			<Type Decoration="1003051C">R_TRIG</Type>
-			<Comment>
-				<![CDATA[启动]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>6864</IOffset>
-			<BitSize>24</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.tStopDelay</Name>
-			<Type Decoration="10060D24">TON</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>6867</IOffset>
-			<BitSize>120</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.fbHaltMain</Name>
-			<Type Decoration="101073B8">MC_Halt</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>6882</IOffset>
-			<BitSize>5992</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.fbMoveMain</Name>
-			<Type Decoration="10138030">MC_MoveRelative</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>7631</IOffset>
-			<BitSize>6184</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.fTempDistanceInCycle_L</Name>
-			<Type>REAL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8404</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.fTempDistanceInCycle_R</Name>
-			<Type>REAL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8408</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.fRecordMainPos</Name>
-			<Type>REAL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8412</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.iTest400</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8416</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.iTest500</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8418</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.itest1</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8420</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.itest2</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8422</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.itest3</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8424</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.itest4</Name>
-			<Type>UINT</Type>
-			<Comment>
-				<![CDATA[***************************Modbus_TCP******************************]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>8426</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.iXStep1</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8428</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.iXStep2</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8430</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.iZStep1</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8432</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.iZStep2</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8434</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.iX2Step1</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8436</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.iX2Step2</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8438</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.iY2Step1</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8440</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.iY2Step2</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8442</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.iRStep1</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8444</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.iRStep2</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8446</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.iRStep3</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8448</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.iRStep4</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8450</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.iHorizontalStep1</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8452</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.iHorizontalStep2</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8454</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.iRotaryStep1</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8456</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.iRotaryStep2</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8458</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.iCollimationStep1</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8460</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.iCollimationStep2</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8462</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.fPos_X_Axis</Name>
-			<Type>REAL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8464</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.fPos_Z_Axis</Name>
-			<Type>REAL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8468</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.fPos_X2_Axis</Name>
-			<Type>REAL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8472</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.fPos_Y2_Axis</Name>
-			<Type>REAL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8476</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.fPos_R_Axis</Name>
-			<Type>REAL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8480</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.fPos_CollimationAxis</Name>
-			<Type>REAL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8484</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.fPos_HorizontalAxis</Name>
-			<Type>REAL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8488</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.fPos_RotaryAxis</Name>
-			<Type>REAL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8492</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.rPutPermit_Cmd</Name>
-			<Type Decoration="1003051C">R_TRIG</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8496</IOffset>
-			<BitSize>24</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.rGetPermit_Cmd</Name>
-			<Type Decoration="1003051C">R_TRIG</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8499</IOffset>
-			<BitSize>24</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.iPutStep</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8502</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.iGetStep</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8504</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.tDelayMC_AbsAlarm</Name>
-			<Type Decoration="20011E30">ARRAY [1..20] OF TON</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8506</IOffset>
-			<BitSize>2400</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.r_TRIG_Cmd</Name>
-			<Type Decoration="2001171B">ARRAY [1..20] OF R_TRIG</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8806</IOffset>
-			<BitSize>480</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.bX_Axis_Abs</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8866</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.bX_Axis_Stop</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8867</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.bZ_Axis_Abs</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8868</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.bZ_Axis_Stop</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8869</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.bX2_Axis_Abs</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8870</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.bX2_Axis_Stop</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8871</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.bY2_Axis_Abs</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8872</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.bY2_Axis_Stop</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8873</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.bR_Axis_Abs</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8874</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Auto.bR_Axis_Stop</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8875</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.bHorizontal_Axis_Abs</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8876</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.bHorizontal_Axis_Stop</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8877</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.bRotary_Axis_Abs</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8878</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.bRotary_Axis_Stop</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8879</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.bCollimationAxis_Abs</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8880</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.bCollimationAxis_Stop</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8881</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.bR_Axis_Velo</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8882</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_Auto.bR_Axis_Stop1</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8883</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_AutoPreparation.iAutoHomeStep</Name>
-			<Type>INT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8884</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_AutoPreparation.i</Name>
-			<Type>INT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8886</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_AutoPreparation.iClearHomeStep</Name>
-			<Type>INT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8888</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_AutoPreparation.bClearHome</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[清除回原信号]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>8890</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_AutoPreparation.rTrig</Name>
-			<Type Decoration="1003051C">R_TRIG</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8891</IOffset>
-			<BitSize>24</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_AutoPreparation.bAxisNotMoving</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8894</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_AutoPreparation.tDelay</Name>
-			<Type Decoration="10060D24">TON</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>8895</IOffset>
 			<BitSize>120</BitSize>
 		</Symbol>
 		<Symbol>
@@ -28406,20 +27859,6 @@
 			<BitSize>120</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">PRG_Estop.i</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>12756</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_Estop.j</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>118213</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
 			<Name TaskPrio="1">PRG_GoStopTogether.i</Name>
 			<Type>UINT</Type>
 			<IGroup>16448</IGroup>
@@ -28460,6 +27899,531 @@
 			<IGroup>16448</IGroup>
 			<IOffset>118224</IOffset>
 			<BitSize>120</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Estop.i</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>12756</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.eRuningStep</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>5303</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.eStopStep</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>8938</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.trAutoRuning</Name>
+			<Type Decoration="1003051C">R_TRIG</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>8940</IOffset>
+			<BitSize>24</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.tResetAutoSignal</Name>
+			<Type Decoration="10060D24">TON</Type>
+			<Comment>
+				<![CDATA[trigers]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>8952</IOffset>
+			<BitSize>120</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.rTrigGlobalError</Name>
+			<Type Decoration="1003051C">R_TRIG</Type>
+			<Comment>
+				<![CDATA[需要停机的错误，触发后不退出自动，复位错误后，可以继续运行]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>8943</IOffset>
+			<BitSize>24</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.rTrigEstop</Name>
+			<Type Decoration="1003051C">R_TRIG</Type>
+			<Comment>
+				<![CDATA[需要停机，并且完成后进入急停]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>8946</IOffset>
+			<BitSize>24</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.rTrigstop</Name>
+			<Type Decoration="1003051C">R_TRIG</Type>
+			<Comment>
+				<![CDATA[需要停机，停完后，点启动可以继续跑]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>8967</IOffset>
+			<BitSize>24</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.rTrigSwitchManual</Name>
+			<Type Decoration="1003051C">R_TRIG</Type>
+			<Comment>
+				<![CDATA[需要停机，停完后切到手动]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>8970</IOffset>
+			<BitSize>24</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.rTrigStart</Name>
+			<Type Decoration="1003051C">R_TRIG</Type>
+			<Comment>
+				<![CDATA[启动]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>8973</IOffset>
+			<BitSize>24</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.tStopDelay</Name>
+			<Type Decoration="10060D24">TON</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>8976</IOffset>
+			<BitSize>120</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.fbHaltMain</Name>
+			<Type Decoration="101073B8">MC_Halt</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>8991</IOffset>
+			<BitSize>5992</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.fbMoveMain</Name>
+			<Type Decoration="10138030">MC_MoveRelative</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>9740</IOffset>
+			<BitSize>6184</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.fTempDistanceInCycle_L</Name>
+			<Type>REAL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10513</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.fTempDistanceInCycle_R</Name>
+			<Type>REAL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10517</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.fRecordMainPos</Name>
+			<Type>REAL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10521</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.iTest400</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10525</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.iTest500</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10527</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.itest1</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10529</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.itest2</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10531</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.itest3</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10533</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.itest4</Name>
+			<Type>UINT</Type>
+			<Comment>
+				<![CDATA[***************************Modbus_TCP******************************]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>10535</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.iXStep1</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10537</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.iXStep2</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10539</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.iZStep1</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10541</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.iZStep2</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10543</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.iX2Step1</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10545</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.iX2Step2</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10547</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.iY2Step1</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10549</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.iY2Step2</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10551</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.iRStep1</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10553</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.iRStep2</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10555</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.iRStep3</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10557</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.iRStep4</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10559</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.iHorizontalStep1</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10561</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.iHorizontalStep2</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10563</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.iRotaryStep1</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10565</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.iRotaryStep2</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10567</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.iCollimationStep1</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10569</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.iCollimationStep2</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10571</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.fPos_X_Axis</Name>
+			<Type>REAL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10573</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.fPos_Z_Axis</Name>
+			<Type>REAL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10577</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.fPos_X2_Axis</Name>
+			<Type>REAL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10581</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.fPos_Y2_Axis</Name>
+			<Type>REAL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10585</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.fPos_R_Axis</Name>
+			<Type>REAL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10589</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.fPos_CollimationAxis</Name>
+			<Type>REAL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10593</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.fPos_HorizontalAxis</Name>
+			<Type>REAL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10597</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.fPos_RotaryAxis</Name>
+			<Type>REAL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10601</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.rPutPermit_Cmd</Name>
+			<Type Decoration="1003051C">R_TRIG</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10605</IOffset>
+			<BitSize>24</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.rGetPermit_Cmd</Name>
+			<Type Decoration="1003051C">R_TRIG</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10608</IOffset>
+			<BitSize>24</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.iPutStep</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10611</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.iGetStep</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10613</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.tDelayMC_AbsAlarm</Name>
+			<Type Decoration="20011E30">ARRAY [1..20] OF TON</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10759</IOffset>
+			<BitSize>2400</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.r_TRIG_Cmd</Name>
+			<Type Decoration="2001171B">ARRAY [1..20] OF R_TRIG</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10615</IOffset>
+			<BitSize>480</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.bX_Axis_Abs</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>5305</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.bX_Axis_Stop</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>8949</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.bZ_Axis_Abs</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10675</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.bZ_Axis_Stop</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10676</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.bX2_Axis_Abs</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10677</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.bX2_Axis_Stop</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10678</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.bY2_Axis_Abs</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10679</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.bY2_Axis_Stop</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10680</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.bR_Axis_Abs</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10681</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_Debug_Mode.bR_Axis_Stop</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10682</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.bHorizontal_Axis_Abs</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10683</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.bHorizontal_Axis_Stop</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10684</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.bRotary_Axis_Abs</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10685</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.bRotary_Axis_Stop</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10686</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.bCollimationAxis_Abs</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10687</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.bCollimationAxis_Stop</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10688</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.bR_Axis_Velo</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10689</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_Debug_Mode.bR_Axis_Stop1</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10690</IOffset>
+			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.MainState</Name>
@@ -28745,10 +28709,10 @@
 			<BitSize>120</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">MAIN.riGoAutoTogether_Cmd</Name>
+			<Name TaskPrio="1">MAIN.riGoWork_Cmd</Name>
 			<Type Decoration="1003051C">R_TRIG</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>117367</IOffset>
+			<IOffset>10691</IOffset>
 			<BitSize>24</BitSize>
 		</Symbol>
 		<Symbol>
@@ -28778,6 +28742,1849 @@
 			<IGroup>16448</IGroup>
 			<IOffset>8935</IOffset>
 			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_GoWork.i</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10694</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_GoWork.iPullAxisHomeStep</Name>
+			<Type>INT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10696</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_GoWork.rTrig</Name>
+			<Type Decoration="1003051C">R_TRIG</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10698</IOffset>
+			<BitSize>24</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_GoWork.iStep</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10701</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_GoWork.bAxisNotMoving</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10703</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_GoWork.tDelay</Name>
+			<Type Decoration="10060D24">TON</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10704</IOffset>
+			<BitSize>120</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_GoWork.tDelay1</Name>
+			<Type Decoration="10060D24">TON</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>11059</IOffset>
+			<BitSize>120</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.stMachine</Name>
+			<Type Decoration="100D3758">ST_Machine</Type>
+			<Comment>
+				<![CDATA[Alarm]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>20993</IOffset>
+			<BitSize>104</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.arrAlarm</Name>
+			<Type Decoration="2001019C">ARRAY [1..100] OF BOOL</Type>
+			<Comment>
+				<![CDATA[报警号,以Excel为准]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>21006</IOffset>
+			<BitSize>800</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.arrWarning</Name>
+			<Type Decoration="2001019C">ARRAY [1..100] OF BOOL</Type>
+			<Comment>
+				<![CDATA[提示号,以Excel为准]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>21106</IOffset>
+			<BitSize>800</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.MSGList1</Name>
+			<Type Decoration="2001019C">ARRAY [1..100] OF BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>21206</IOffset>
+			<BitSize>800</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.MSGList1_Alarm</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[Info]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>21306</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.TaskInfo</Name>
+			<Type Decoration="100BA428">TaskInfoCtrl</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>21307</IOffset>
+			<BitSize>328</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.SysInfo</Name>
+			<Type Decoration="101C2810">SystemInfoCtrl</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>21348</IOffset>
+			<BitSize>18496</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.fPlcCycleTime_ms</Name>
+			<Type>LREAL</Type>
+			<Comment>
+				<![CDATA[Global pulse]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23660</IOffset>
+			<BitSize>64</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.Pulse</Name>
+			<Type Decoration="100D5DE1">PulseCtrl</Type>
+			<Comment>
+				<![CDATA[公共脉冲发生器]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23668</IOffset>
+			<BitSize>1832</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.nPlcTaskCycleTime_ms</Name>
+			<Type>UDINT</Type>
+			<Comment>
+				<![CDATA[PLC周期的毫秒数]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23897</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1" Static="MArea" TaskPrio="1">.SystemInfo</Name>
+			<Type Decoration="10066081">FW_SystemInfoType</Type>
+			<IGroup>16416</IGroup>
+			<IOffset>32768</IOffset>
+			<BitSize>320</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1" Static="MArea" TaskPrio="1">.SystemTaskInfoArr</Name>
+			<Type Decoration="20017A50">ARRAY [1..4] OF FW_SystemTaskInfoType</Type>
+			<IGroup>16416</IGroup>
+			<IOffset>32832</IOffset>
+			<BitSize>1056</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.sState</Name>
+			<Type Decoration="40000015">STRING(20)</Type>
+			<Comment>
+				<![CDATA[机台当前状态]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23901</IOffset>
+			<BitSize>168</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.sStatus</Name>
+			<Type Decoration="40000015">STRING(20)</Type>
+			<Comment>
+				<![CDATA[当前执行步骤]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23922</IOffset>
+			<BitSize>168</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bSysStart</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[这个start仅指进入自动模式的启动]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23943</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bSysStop</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>23944</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bSysReset</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>23945</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bSysEstop</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>23946</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bSwitchManualMode</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[打到了手动模式]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23947</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bSwitchAutoMode</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[打到了自动模式]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23948</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.bSysDryRunMode</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[空跑模式，在触摸屏上选择，不带物料，自动运行的机械检查]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23949</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bSystemInAutoMode</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[系统实际处于自动模式]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23950</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bSystemInManualMode</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[系统实际处于手动模式]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23951</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bAutoModeRunning</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[自动运行中]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23952</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bGlobalErrorMark</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[有报警，这个报警时会触发停机的！]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23953</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.bSysStopFlag</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[停止标记，标记出现，说明进入停机过程]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23954</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bStopFinished</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[停止完成]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23955</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bAutoStopFinished</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[停止完成]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>10719</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bResetOnce</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[单次复位]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23956</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bhasResetOnce</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[已经单次复位过了]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23957</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.bForceHomedFlag</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[强制写回参信号]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23958</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bBuzzerSilence</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[消音]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23959</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.eAutoStatus</Name>
+			<Type Decoration="300002D5">EM_Status</Type>
+			<Comment>
+				<![CDATA[自动模式的状态]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23960</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.bAllPowerOnOK</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[上电检查OK]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23962</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bDeviceStateOK</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[总线状态OK]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23963</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bDriveModeOK</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[驱动器模式OK]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23964</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bAutoReady</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[自动运行的位置条件OK]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23965</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bAllCylinderBase</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[所以气缸回到初始位]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23966</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iSysStatus</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[设备状态]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23967</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bAirPressureOk</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[空气压力是否到位]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23969</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.iActPos_X_Axis</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[X轴当前位置编码]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23970</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.iActPos_Z_Axis</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[Z轴当前位置编码]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23972</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.iActPos_R_Axis</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[R轴当前位置编码]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23974</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iWarnMoveAbs</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[定位警告信息]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23976</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iAlarmNetConnect</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[网络连接问题报警信息]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23978</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.iGoHomeTogether_Finish</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[一键回原点完成]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23980</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.iGoPrepareAuto_Finish</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[一键去准备位完成]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23982</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iPos_X_Axis</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[模组1	X轴目标位置]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23984</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iPos_Z_Axis</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[模组2	Z轴目标位置]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23986</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iPos_X2_Axis</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[模组3	X轴目标位置]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23988</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iPos_Y2_Axis</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[模组4	Y轴目标位置]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23990</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iPos_R_Axis</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[R轴目标位置]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23992</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iX_Axis_Cmd</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[模组1X轴目标位置运动命令]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23994</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iZ_Axis_Cmd</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[模组2Z轴目标位置运动命令]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23996</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iX2_Axis_Cmd</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[模组3X轴目标位置运动命令]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>23998</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iY2_Axis_Cmd</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[模组4Y轴目标位置运动命令]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24000</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iX_Axis_Stop_Cmd</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[模组1X轴停止运动命令]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24002</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iZ_Axis_Stop_Cmd</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[模组2Z轴停止运动命令]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24004</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iX2_Axis_Stop_Cmd</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[模组3X轴目标停止运动命令]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24006</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iY2_Axis_Stop_Cmd</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[模组4Y轴目标停止运动命令]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24008</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iR_Axis_Cmd</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[R轴目标位置运动命令]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24010</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iR_Axis_Stop_Cmd</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[R轴停止运动命令]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24012</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iGoHomeTogether_Cmd</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[一键回原点]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24014</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iGoPrepareAuto_Cmd</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[一键去准备位]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24016</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iGoResetTogether_Cmd</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[一键复位]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24018</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iGoAutoTogether_Cmd</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[一键启动]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24020</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iGoStopTogether_Cmd</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[一键停止]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24022</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iAuto_Cmd</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[自动切换]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24024</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iGoWork_Cmd</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[一键工作]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>10720</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bGoHomeTogether_Cmd</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[一键回原点]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24026</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bGoPrepareAuto_Cmd</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[一键去准备位]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24027</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bGoResetTogether_Cmd</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>12753</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bGoStopTogether_Cmd</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>118326</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bAuto_Cmd</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[自动切换]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24028</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bGoWork_Cmd</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[一键工作]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>11074</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bGet_Paper_Cmd</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[取纸]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24029</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bHasGot_Paper</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[取纸完成]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24030</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bCollect_Cmd</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[采集]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24031</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bHasCollected</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[采集完成]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24032</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bPut_Paper_Cmd</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[放纸]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24033</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bHasPut_Paper</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[放纸完成]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24034</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bCut_Paper_Cmd</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[裁纸]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24035</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bHasCut_Paper</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[裁纸完成]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24036</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bSet_Box_Cmd</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[装盒子]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24037</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bHasSet_Box</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[装盒子完成]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24038</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.CutWorkPos_X</Name>
+			<Type Decoration="20010142">ARRAY [1..25] OF REAL</Type>
+			<Comment>
+				<![CDATA[裁剪模组X轴工位]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24039</IOffset>
+			<BitSize>800</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.CutWorkPos_Y</Name>
+			<Type Decoration="20010142">ARRAY [1..25] OF REAL</Type>
+			<Comment>
+				<![CDATA[裁剪模组y轴工位]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24139</IOffset>
+			<BitSize>800</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.bwork_Cmd</Name>
+			<Type Decoration="20010151">ARRAY [1..25] OF BOOL</Type>
+			<Comment>
+				<![CDATA[剪裁指令]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24239</IOffset>
+			<BitSize>200</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.bwork_Status</Name>
+			<Type Decoration="20010151">ARRAY [1..25] OF BOOL</Type>
+			<Comment>
+				<![CDATA[剪裁状态]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24264</IOffset>
+			<BitSize>200</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.fPos_X_Axis</Name>
+			<Type>REAL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>24289</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.fPos_Z_Axis</Name>
+			<Type>REAL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>24293</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.fPos_X2_Axis</Name>
+			<Type>REAL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>24297</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.fPos_Y2_Axis</Name>
+			<Type>REAL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>24301</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.fPos_R_Axis</Name>
+			<Type>REAL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>24305</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.cutCylinder</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[气压不够智能通过断电的方式让其保压]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>117370</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bAxisMovingAbsAlarm</Name>
+			<Type Decoration="20010156">ARRAY [1..30] OF BOOL</Type>
+			<Comment>
+				<![CDATA[运行参数]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24319</IOffset>
+			<BitSize>240</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.fSetMainVelo_Auto</Name>
+			<Type>LREAL</Type>
+			<Comment>
+				<![CDATA[主轴自动速度]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24349</IOffset>
+			<BitSize>64</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.fSetMainVelo_Manu</Name>
+			<Type>LREAL</Type>
+			<Comment>
+				<![CDATA[主轴手动速度]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24357</IOffset>
+			<BitSize>64</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.bEnaleAll</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[一键使能]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24365</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bGoHomeTogether</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[一键回原点]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24366</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bGoPrepareAuto</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[一键初始化]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24367</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bGoResetTogether</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[一键复位]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24368</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.bGoAutoTogether</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[一键启动]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24369</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.bGoStopTogether</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[一键停止]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24370</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.bHeatAll</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[加热所有]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>24371</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.mb_Output_Registers</Name>
+			<Type Decoration="2001024D">ARRAY [0..255] OF WORD</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>24372</IOffset>
+			<BitSize>4096</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.mb_Input_Registers</Name>
+			<Type Decoration="2001024D">ARRAY [0..255] OF WORD</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>11075</IOffset>
+			<BitSize>4096</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Persistent="1" TaskPrio="1">.iAxisSoftLimitSwitch_Neg</Name>
+			<Type Decoration="2001013D">ARRAY [1..5] OF BOOL</Type>
+			<Comment>
+				<![CDATA[软限位正限开关]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>25394</IOffset>
+			<BitSize>40</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Persistent="1" TaskPrio="1">.iAxisSoftLimitSwitch_Pos</Name>
+			<Type Decoration="2001013D">ARRAY [1..5] OF BOOL</Type>
+			<Comment>
+				<![CDATA[软限位负限开关]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>25399</IOffset>
+			<BitSize>40</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Persistent="1" TaskPrio="1">.iAxisSoftLimitSwitch_Neg1</Name>
+			<Type Decoration="20010154">ARRAY [1..5] OF WORD</Type>
+			<Comment>
+				<![CDATA[软限位正限开关]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>25404</IOffset>
+			<BitSize>80</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Persistent="1" TaskPrio="1">.iAxisSoftLimitSwitch_Pos1</Name>
+			<Type Decoration="20010154">ARRAY [1..5] OF WORD</Type>
+			<Comment>
+				<![CDATA[软限位负限开关]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>25414</IOffset>
+			<BitSize>80</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Persistent="1" TaskPrio="1">.fSaveBias</Name>
+			<Type Decoration="2001012E">ARRAY [1..5] OF REAL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>25424</IOffset>
+			<BitSize>160</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iAxisSoftLimitSwitch_Neg_Old</Name>
+			<Type Decoration="2001013D">ARRAY [1..5] OF BOOL</Type>
+			<Comment>
+				<![CDATA[软限位正限开关]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>25444</IOffset>
+			<BitSize>40</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iAxisSoftLimitSwitch_Pos_Old</Name>
+			<Type Decoration="2001013D">ARRAY [1..5] OF BOOL</Type>
+			<Comment>
+				<![CDATA[软限位负限开关]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>25449</IOffset>
+			<BitSize>40</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.iMacStateForHmi</Name>
+			<Type>WORD</Type>
+			<Comment>
+				<![CDATA[机器状态给HMI]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>25454</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.AxisArr</Name>
+			<Type Decoration="2001D192">ARRAY [1..5] OF _FBAXIS_REF</Type>
+			<Comment>
+				<![CDATA[PTP轴]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>25456</IOffset>
+			<BitSize>35440</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.Axis_Interface</Name>
+			<Type Decoration="200125FD">ARRAY [1..5] OF ST_Axis</Type>
+			<Comment>
+				<![CDATA[轴的PTP控制接口]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>29886</IOffset>
+			<BitSize>8560</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.aMC_Power</Name>
+			<Type Decoration="2001BD4A">ARRAY [1..5] OF MC_Power</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>30956</IOffset>
+			<BitSize>2320</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.aMC_Jog</Name>
+			<Type Decoration="200192B6">ARRAY [1..5] OF MC_Jog</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>31246</IOffset>
+			<BitSize>155560</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.aMC_Reset</Name>
+			<Type Decoration="2001E1EC">ARRAY [1..5] OF MC_Reset</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>50691</IOffset>
+			<BitSize>6320</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.aMC_Halt</Name>
+			<Type Decoration="200185E6">ARRAY [1..5] OF MC_Halt</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>51481</IOffset>
+			<BitSize>29960</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.aMC_Stop</Name>
+			<Type Decoration="2001E428">ARRAY [1..5] OF MC_Stop</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>55226</IOffset>
+			<BitSize>35720</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.aMC_SetPos</Name>
+			<Type Decoration="20011DF9">ARRAY [1..5] OF MC_SetPosition</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>59691</IOffset>
+			<BitSize>7440</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.aMC_MoveAbsolute</Name>
+			<Type Decoration="200194DC">ARRAY [1..5] OF MC_MoveAbsolute</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>60621</IOffset>
+			<BitSize>30920</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.aMC_MoveRelative</Name>
+			<Type Decoration="200194CB">ARRAY [1..5] OF MC_MoveRelative</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>64486</IOffset>
+			<BitSize>30920</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.aMC_MoveVelocity</Name>
+			<Type Decoration="2001CCD7">ARRAY [1..5] OF MC_MoveVelocity</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>68351</IOffset>
+			<BitSize>30680</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.aMC_SetHomeFlag</Name>
+			<Type Decoration="2001DA97">ARRAY [1..5] OF MC_Home</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>72186</IOffset>
+			<BitSize>25160</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.aMC_Home</Name>
+			<Type Decoration="2001DA97">ARRAY [1..5] OF MC_Home</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>75331</IOffset>
+			<BitSize>25160</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.aMC_GearInDyn</Name>
+			<Type Decoration="2001A66F">ARRAY [1..5] OF MC_GearInDyn</Type>
+			<Comment>
+				<![CDATA[电子齿轮轮耦合]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>78476</IOffset>
+			<BitSize>16120</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.aMC_GearOut</Name>
+			<Type Decoration="2001FD30">ARRAY [1..5] OF MC_GearOut</Type>
+			<Comment>
+				<![CDATA[电子齿轮轮解耦合]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>80491</IOffset>
+			<BitSize>6560</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.aMC_SoeReset</Name>
+			<Type Decoration="2001CBC8">ARRAY [1..5] OF FB_SoEReset</Type>
+			<Comment>
+				<![CDATA[倍福驱动器复位]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>81311</IOffset>
+			<BitSize>20040</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.Axis_Has_error</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[任何一根轴有任何错误]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>83816</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.Axis_Homing</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[任何一根轴在回参]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>83817</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.All_Enable_OK</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[所有轴使能成功]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>83818</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.All_Homed_OK</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[所有轴回零成功]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>83819</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.bAllAxisAtZero</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[所有轴都在0位]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>83820</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.AllAxesStandStill</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[所有轴静止]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>83821</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.bEnableAll</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[使能所有轴]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>83822</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.stCtrlCylinder</Name>
+			<Type Decoration="20019ADD">ARRAY [1..38] OF ST_Cylinder_Ctrl</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>83823</IOffset>
+			<BitSize>16720</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.fbCylinder</Name>
+			<Type Decoration="2001474A">ARRAY [1..38] OF FB_Cylinder</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>85913</IOffset>
+			<BitSize>35872</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input" TaskPrio="1">.El1889s</Name>
+			<Type Decoration="2002014F">ARRAY [1..7, 1..16] OF BOOL</Type>
+			<Comment>
+				<![CDATA[数字量输出]]>
+			</Comment>
+			<IGroup>61472</IGroup>
+			<IOffset VarConfig="Changeable">0</IOffset>
+			<BitSize>896</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.El2889s</Name>
+			<Type Decoration="2002014B">ARRAY [1..3, 1..16] OF BOOL</Type>
+			<Comment>
+				<![CDATA[模拟量输入]]>
+			</Comment>
+			<IGroup>61488</IGroup>
+			<IOffset VarConfig="Changeable">0</IOffset>
+			<BitSize>384</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.El3064</Name>
+			<Type Decoration="200100F2">ARRAY [1..4] OF INT</Type>
+			<Comment>
+				<![CDATA[实际驱动器作为EtherCAT伺服的个数  ETHERCAT状态]]>
+			</Comment>
+			<IGroup>61472</IGroup>
+			<IOffset VarConfig="Changeable">112</IOffset>
+			<BitSize>64</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input" TaskPrio="1">.DrivesOP</Name>
+			<Type Decoration="20010158">ARRAY [1..5] OF UINT</Type>
+			<Comment>
+				<![CDATA[驱动器的模式输出，8为位置模式]]>
+			</Comment>
+			<IGroup>61472</IGroup>
+			<IOffset VarConfig="Changeable">120</IOffset>
+			<BitSize>80</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output">.iSetDriveMode</Name>
+			<Type Decoration="20010154">ARRAY [1..5] OF SINT</Type>
+			<Comment>
+				<![CDATA[驱动器返回的控制模式]]>
+			</Comment>
+			<IGroup>61488</IGroup>
+			<IOffset VarConfig="Changeable">48</IOffset>
+			<BitSize>40</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.iActDriveMode</Name>
+			<Type Decoration="20010154">ARRAY [1..5] OF SINT</Type>
+			<Comment>
+				<![CDATA[驱动器上的IO监控，EL2521不包含]]>
+			</Comment>
+			<IGroup>61472</IGroup>
+			<IOffset VarConfig="Changeable">130</IOffset>
+			<BitSize>40</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.iDriveDI</Name>
+			<Type Decoration="200100F3">ARRAY [1..5] OF INT</Type>
+			<Comment>
+				<![CDATA[驱动器上的电流监控，EL2521不包含]]>
+			</Comment>
+			<IGroup>61472</IGroup>
+			<IOffset VarConfig="Changeable">135</IOffset>
+			<BitSize>80</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.iMotorTorque</Name>
+			<Type Decoration="200100F3">ARRAY [1..5] OF INT</Type>
+			<IGroup>61472</IGroup>
+			<IOffset VarConfig="Changeable">145</IOffset>
+			<BitSize>80</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.stHmiCmd</Name>
+			<Type Decoration="10081B75">ST_HmiCmd</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>90722</IOffset>
+			<BitSize>64</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.stHmiAxisCmd</Name>
+			<Type Decoration="200140B6">ARRAY [1..5] OF ST_AxisCmd</Type>
+			<Comment>
+				<![CDATA[*******  显示 **********]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>90730</IOffset>
+			<BitSize>480</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.stHmiDisplay</Name>
+			<Type Decoration="10096C62">ST_HmiDisplay</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>90790</IOffset>
+			<BitSize>720</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.stAxisDisplay</Name>
+			<Type Decoration="20013B53">ARRAY [1..5] OF ST_AxisDisplay</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>90880</IOffset>
+			<BitSize>920</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Persistent="1" TaskPrio="1">.stAxisParam</Name>
+			<Type Decoration="20015D12">ARRAY [1..5] OF ST_AxisParam</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>90995</IOffset>
+			<BitSize>3600</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name IsDefinedInLibrary="1">.MAX_AVERAGE_MEASURES</Name>
+			<Type>INT</Type>
+			<Comment>
+				<![CDATA[2..100]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>91445</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name IsDefinedInLibrary="1">.GLOBAL_FORMAT_HASH_PREFIX_TYPE</Name>
+			<Type Decoration="3000052B">E_HashPrefixTypes</Type>
+			<Comment>
+				<![CDATA[IEC prefixes for binary, octal or hexadecimal type]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>91447</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name IsDefinedInLibrary="1">.GLOBAL_SBCS_TABLE</Name>
+			<Type Decoration="30000311">E_SBCSType</Type>
+			<Comment>
+				<![CDATA[Windows SBCS (Single Byte Character Set) Code Page Table]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>91449</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name IsDefinedInLibrary="1">.GLOBAL_DCF77_PULSE_SPLIT</Name>
+			<Type>TIME</Type>
+			<Comment>
+				<![CDATA[0 == pulse < 140ms, 1 == pulse > 140]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>91451</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name IsDefinedInLibrary="1">.GLOBAL_DCF77_SEQUENCE_CHECK</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[TRUE = Enable plausibility check (two telegrams are checked), FALSE = Disable check]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>91455</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name IsDefinedInLibrary="1">.DEFAULT_CSV_FIELD_SEP</Name>
+			<Type>BYTE</Type>
+			<Comment>
+				<![CDATA[semicolon (;) := 16#3B => german field separator, comma (,) := 16#2C => US field separator]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>91456</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.EMPTY_ROUTE_ENTRY</Name>
+			<Type Decoration="100614ED">ST_AmsRouteEntry</Type>
+			<Comment>
+				<![CDATA[System Service file functions]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>99141</IOffset>
+			<BitSize>1168</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.EMPTY_ARG_VALUE</Name>
+			<Type Decoration="10033D04">T_Arg</Type>
+			<Comment>
+				<![CDATA[Lower and upper case ASCII codes of hexadecimal digits]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>99287</IOffset>
+			<BitSize>80</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.FORMAT_HEXASC_CODES</Name>
+			<Type Decoration="20020156">ARRAY [0..1, 0..15] OF BYTE</Type>
+			<Comment>
+				<![CDATA[ASCII to decimal and decimal digits to ASCII codes]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>99297</IOffset>
+			<BitSize>256</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1" TaskPrio="1">.FORMAT_DECASC_CODES</Name>
+			<Type Decoration="2001014E">ARRAY [0..9] OF BYTE</Type>
+			<Comment>
+				<![CDATA[Default precision values ( -1 => disabled (prints all characters or has special function)]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>99329</IOffset>
+			<BitSize>80</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.FORMAT_DEFAULT_PRECISION</Name>
+			<Type Decoration="200100F8">ARRAY [0..11] OF INT</Type>
+			<Comment>
+				<![CDATA[plc var type support mask]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>99339</IOffset>
+			<BitSize>192</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.FORMAT_TYPE_SUPPORT_MASK</Name>
+			<Type Decoration="20020155">ARRAY [0..11, 0..18] OF BOOL</Type>
+			<Comment>
+				<![CDATA[TYPEFIELD_EL]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>99363</IOffset>
+			<BitSize>1824</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.FORMAT_PREFIX_SUPPORT_MASK</Name>
+			<Type Decoration="20020146">ARRAY [0..3, 0..11] OF BOOL</Type>
+			<Comment>
+				<![CDATA[PREFIXFLAG_HASH]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>99591</IOffset>
+			<BitSize>384</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.FORMAT_HASH_PREFIX_STRING</Name>
+			<Type Decoration="2002429F">ARRAY [0..1, 0..11] OF STRING(10)</Type>
+			<Comment>
+				<![CDATA[HASHPREFIX_STDC]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>99639</IOffset>
+			<BitSize>2112</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.ARGTYPE_IS_SIGNED_TYPE</Name>
+			<Type Decoration="20010149">ARRAY [0..18] OF BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>99903</IOffset>
+			<BitSize>152</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.ARGTYPE_IS_FLOAT_TYPE</Name>
+			<Type Decoration="20010149">ARRAY [0..18] OF BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>99922</IOffset>
+			<BitSize>152</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.ARGTYPE_IS_STRING_TYPE</Name>
+			<Type Decoration="20010149">ARRAY [0..18] OF BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>99941</IOffset>
+			<BitSize>152</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.ARGTYPE_IS_UNSIGNED_TYPE</Name>
+			<Type Decoration="20010149">ARRAY [0..18] OF BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>99960</IOffset>
+			<BitSize>152</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.ARGTYPE_IS_BIT_TYPE</Name>
+			<Type Decoration="20010149">ARRAY [0..18] OF BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>99979</IOffset>
+			<BitSize>152</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1" TaskPrio="1">.SYSTEMTIME_MAX_MONTHDAYS</Name>
+			<Type Decoration="2002015B">ARRAY [0..1, 1..12] OF WORD</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>99998</IOffset>
+			<BitSize>384</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.SYSTEMTIME_MAX_YEARSDAY</Name>
+			<Type Decoration="2002015B">ARRAY [0..1, 0..13] OF WORD</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>100046</IOffset>
+			<BitSize>448</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.SYSTEMTIME_TICKSPERMSEC</Name>
+			<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+			<Comment>
+				<![CDATA[Number of 100ns ticks per millisecond]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>100102</IOffset>
+			<BitSize>64</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.SYSTEMTIME_TICKSPERSEC</Name>
+			<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+			<Comment>
+				<![CDATA[Number of 100ns ticks per second]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>100110</IOffset>
+			<BitSize>64</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.SYSTEMTIME_TICKSPERDAY</Name>
+			<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+			<Comment>
+				<![CDATA[Number of 100ns ticks per day]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>100118</IOffset>
+			<BitSize>64</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.SYSTEMTIME_DATE_AND_TIME_MIN</Name>
+			<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+			<Comment>
+				<![CDATA[min. DT value as file time DT#1970-01-01-00:00:00]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>100126</IOffset>
+			<BitSize>64</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.SYSTEMTIME_DATE_AND_TIME_MAX</Name>
+			<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+			<Comment>
+				<![CDATA[max. DT value as file time DT#2106-02-06-06:28:15]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>100134</IOffset>
+			<BitSize>64</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.WEST_EUROPE_TZI</Name>
+			<Type Decoration="1007FC65">ST_TimeZoneInformation</Type>
+			<Comment>
+				<![CDATA[Windows SBCS tables]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>100142</IOffset>
+			<BitSize>864</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.SBCS_TABLES</Name>
+			<Type Decoration="2001635C">ARRAY [1..2] OF ST_SBCSTable</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>100250</IOffset>
+			<BitSize>4096</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.ImQn_TABLE</Name>
+			<Type Decoration="20010194">ARRAY [0..31] OF LREAL</Type>
+			<Comment>
+				<![CDATA[CRC16-CCITT lookup table ( 0x1021 as generator polynomial )]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>100762</IOffset>
+			<BitSize>2048</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.GLOBAL_CRC_CCITT_TABLE</Name>
+			<Type Decoration="2001024D">ARRAY [0..255] OF WORD</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>101018</IOffset>
+			<BitSize>4096</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.DWORD_DECADE_DIVIDER</Name>
+			<Type Decoration="2001019C">ARRAY [0..9] OF DWORD</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>115896</IOffset>
+			<BitSize>320</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.WORD_DECADE_DIVIDER</Name>
+			<Type Decoration="20010152">ARRAY [0..4] OF WORD</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>115936</IOffset>
+			<BitSize>80</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.BYTE_DECADE_DIVIDER</Name>
+			<Type Decoration="20010147">ARRAY [0..2] OF BYTE</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>115946</IOffset>
+			<BitSize>24</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.EMPTY_GUID_STRUCT</Name>
+			<Type Decoration="10042FD3">GUID</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>115949</IOffset>
+			<BitSize>128</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.EC_DCTIME_DELTA_OFFSET</Name>
+			<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+			<Comment>
+				<![CDATA[Number of 100ns ticks between 1.1.1601 and 1.1.2000]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>115965</IOffset>
+			<BitSize>64</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.EC_DCTIME_TICKSPERMSEC</Name>
+			<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+			<Comment>
+				<![CDATA[Number of nanosecond ticks per millisecond]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>115973</IOffset>
+			<BitSize>64</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.EC_DCTIME_TICKSPERSEC</Name>
+			<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+			<Comment>
+				<![CDATA[Number of nanosecond ticks per second]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>115981</IOffset>
+			<BitSize>64</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" IsDefinedInLibrary="1">.EC_DCTIME_TICKSPERDAY</Name>
+			<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+			<Comment>
+				<![CDATA[Number of nanosecond ticks per day]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>115989</IOffset>
+			<BitSize>64</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name IsDefinedInLibrary="1">.bSeqReadDrvAttrAndValue</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>115997</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name IsDefinedInLibrary="1">.eWatchdogConfig</Name>
+			<Type Decoration="30000698">E_WATCHDOG_TIME_CONFIG</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>116526</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name IsDefinedInLibrary="1">.nWatchdogTime</Name>
+			<Type>BYTE</Type>
+			<Comment>
+				<![CDATA[Watchdog time. Depending of eWatchdogConfig : seconds or minutes]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>116528</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name IsDefinedInLibrary="1" TaskPrio="1">.TcMcGlobal</Name>
+			<Type Decoration="1014BD9C">_TCMCGLOBAL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>116529</IOffset>
+			<BitSize>6488</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" TaskPrio="1">.MaxAlarms</Name>
@@ -28838,7 +30645,7 @@
 			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Constant="1" TaskPrio="1">.MinHomeAxis</Name>
+			<Name Constant="1">.MinHomeAxis</Name>
 			<Type>UINT</Type>
 			<Comment>
 				<![CDATA[最小回原点轴]]>
@@ -28848,7 +30655,7 @@
 			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Constant="1" TaskPrio="1">.MaxHomeAxis</Name>
+			<Name Constant="1">.MaxHomeAxis</Name>
 			<Type>UINT</Type>
 			<Comment>
 				<![CDATA[最大回原点轴]]>
@@ -31545,1770 +33352,6 @@
 			<IGroup>16448</IGroup>
 			<IOffset>2509</IOffset>
 			<BitSize>312</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.stMachine</Name>
-			<Type Decoration="100D3758">ST_Machine</Type>
-			<Comment>
-				<![CDATA[Alarm]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>20993</IOffset>
-			<BitSize>104</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.arrAlarm</Name>
-			<Type Decoration="2001019C">ARRAY [1..100] OF BOOL</Type>
-			<Comment>
-				<![CDATA[报警号,以Excel为准]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>21006</IOffset>
-			<BitSize>800</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.arrWarning</Name>
-			<Type Decoration="2001019C">ARRAY [1..100] OF BOOL</Type>
-			<Comment>
-				<![CDATA[提示号,以Excel为准]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>21106</IOffset>
-			<BitSize>800</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.MSGList1</Name>
-			<Type Decoration="2001019C">ARRAY [1..100] OF BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>21206</IOffset>
-			<BitSize>800</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.MSGList1_Alarm</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[Info]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>21306</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.TaskInfo</Name>
-			<Type Decoration="100BA428">TaskInfoCtrl</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>21307</IOffset>
-			<BitSize>328</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.SysInfo</Name>
-			<Type Decoration="101C2810">SystemInfoCtrl</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>21348</IOffset>
-			<BitSize>18496</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.fPlcCycleTime_ms</Name>
-			<Type>LREAL</Type>
-			<Comment>
-				<![CDATA[Global pulse]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23660</IOffset>
-			<BitSize>64</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.Pulse</Name>
-			<Type Decoration="100D5DE1">PulseCtrl</Type>
-			<Comment>
-				<![CDATA[公共脉冲发生器]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23668</IOffset>
-			<BitSize>1832</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.nPlcTaskCycleTime_ms</Name>
-			<Type>UDINT</Type>
-			<Comment>
-				<![CDATA[PLC周期的毫秒数]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23897</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1" Static="MArea" TaskPrio="1">.SystemInfo</Name>
-			<Type Decoration="10066081">FW_SystemInfoType</Type>
-			<IGroup>16416</IGroup>
-			<IOffset>32768</IOffset>
-			<BitSize>320</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1" Static="MArea" TaskPrio="1">.SystemTaskInfoArr</Name>
-			<Type Decoration="20017A50">ARRAY [1..4] OF FW_SystemTaskInfoType</Type>
-			<IGroup>16416</IGroup>
-			<IOffset>32832</IOffset>
-			<BitSize>1056</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.sState</Name>
-			<Type Decoration="40000015">STRING(20)</Type>
-			<Comment>
-				<![CDATA[机台当前状态]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23901</IOffset>
-			<BitSize>168</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.sStatus</Name>
-			<Type Decoration="40000015">STRING(20)</Type>
-			<Comment>
-				<![CDATA[当前执行步骤]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23922</IOffset>
-			<BitSize>168</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bSysStart</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[这个start仅指进入自动模式的启动]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23943</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bSysStop</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>23944</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bSysReset</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>23945</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bSysEstop</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>23946</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bSwitchManualMode</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[打到了手动模式]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23947</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bSwitchAutoMode</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[打到了自动模式]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23948</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.bSysDryRunMode</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[空跑模式，在触摸屏上选择，不带物料，自动运行的机械检查]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23949</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bSystemInAutoMode</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[系统实际处于自动模式]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23950</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bSystemInManualMode</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[系统实际处于手动模式]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23951</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bAutoModeRunning</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[自动运行中]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23952</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bGlobalErrorMark</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[有报警，这个报警时会触发停机的！]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23953</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.bSysStopFlag</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[停止标记，标记出现，说明进入停机过程]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23954</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bStopFinished</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[停止完成]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23955</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bResetOnce</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[单次复位]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23956</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bhasResetOnce</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[已经单次复位过了]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23957</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.bForceHomedFlag</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[强制写回参信号]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23958</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bBuzzerSilence</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[消音]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23959</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.eAutoStatus</Name>
-			<Type Decoration="300002D5">EM_Status</Type>
-			<Comment>
-				<![CDATA[自动模式的状态]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23960</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.bAllPowerOnOK</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[上电检查OK]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23962</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bDeviceStateOK</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[总线状态OK]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23963</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bDriveModeOK</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[驱动器模式OK]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23964</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bAutoReady</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[自动运行的位置条件OK]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23965</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bAllCylinderBase</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[所以气缸回到初始位]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23966</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iSysStatus</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[设备状态]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23967</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bAirPressureOk</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[空气压力是否到位]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23969</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.iActPos_X_Axis</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[X轴当前位置编码]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23970</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.iActPos_Z_Axis</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[Z轴当前位置编码]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23972</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.iActPos_R_Axis</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[R轴当前位置编码]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23974</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iWarnMoveAbs</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[定位警告信息]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23976</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iAlarmNetConnect</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[网络连接问题报警信息]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23978</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.iGoHomeTogether_Finish</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[一键回原点完成]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23980</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.iGoPrepareAuto_Finish</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[一键去准备位完成]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23982</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iPos_X_Axis</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[模组1	X轴目标位置]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23984</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iPos_Z_Axis</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[模组2	Z轴目标位置]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23986</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iPos_X2_Axis</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[模组3	X轴目标位置]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23988</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iPos_Y2_Axis</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[模组4	Y轴目标位置]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23990</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iPos_R_Axis</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[R轴目标位置]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23992</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iX_Axis_Cmd</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[模组1X轴目标位置运动命令]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23994</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iZ_Axis_Cmd</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[模组2Z轴目标位置运动命令]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23996</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iX2_Axis_Cmd</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[模组3X轴目标位置运动命令]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>23998</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iY2_Axis_Cmd</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[模组4Y轴目标位置运动命令]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24000</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iX_Axis_Stop_Cmd</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[模组1X轴停止运动命令]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24002</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iZ_Axis_Stop_Cmd</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[模组2Z轴停止运动命令]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24004</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iX2_Axis_Stop_Cmd</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[模组3X轴目标停止运动命令]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24006</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iY2_Axis_Stop_Cmd</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[模组4Y轴目标停止运动命令]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24008</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iR_Axis_Cmd</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[R轴目标位置运动命令]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24010</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iR_Axis_Stop_Cmd</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[R轴停止运动命令]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24012</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iGoHomeTogether_Cmd</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[一键回原点]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24014</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iGoPrepareAuto_Cmd</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[一键去准备位]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24016</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iGoResetTogether_Cmd</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[一键复位]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24018</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iGoAutoTogether_Cmd</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[一键启动]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24020</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iGoStopTogether_Cmd</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[一键停止]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24022</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iAuto_Cmd</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[自动切换]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24024</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bGoHomeTogether_Cmd</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[一键回原点]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24026</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bGoPrepareAuto_Cmd</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[一键去准备位]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24027</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bGoResetTogether_Cmd</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>12753</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bGoStopTogether_Cmd</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>118326</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bAuto_Cmd</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[自动切换]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24028</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bGet_Paper_Cmd</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[取纸]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24029</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bHasGot_Paper</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[取纸完成]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24030</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bCollect_Cmd</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[采集]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24031</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bHasCollected</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[采集完成]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24032</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bPut_Paper_Cmd</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[放纸]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24033</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bHasPut_Paper</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[放纸完成]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24034</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bCut_Paper_Cmd</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[裁纸]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24035</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bHasCut_Paper</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[裁纸完成]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24036</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bSet_Box_Cmd</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[装盒子]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24037</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bHasSet_Box</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[装盒子完成]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24038</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.CutWorkPos_X</Name>
-			<Type Decoration="20010142">ARRAY [1..25] OF REAL</Type>
-			<Comment>
-				<![CDATA[裁剪模组X轴工位]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24039</IOffset>
-			<BitSize>800</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.CutWorkPos_Y</Name>
-			<Type Decoration="20010142">ARRAY [1..25] OF REAL</Type>
-			<Comment>
-				<![CDATA[裁剪模组y轴工位]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24139</IOffset>
-			<BitSize>800</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.bwork_Cmd</Name>
-			<Type Decoration="20010151">ARRAY [1..25] OF BOOL</Type>
-			<Comment>
-				<![CDATA[剪裁指令]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24239</IOffset>
-			<BitSize>200</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.bwork_Status</Name>
-			<Type Decoration="20010151">ARRAY [1..25] OF BOOL</Type>
-			<Comment>
-				<![CDATA[剪裁状态]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24264</IOffset>
-			<BitSize>200</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.fPos_X_Axis</Name>
-			<Type>REAL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>24289</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.fPos_Z_Axis</Name>
-			<Type>REAL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>24293</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.fPos_X2_Axis</Name>
-			<Type>REAL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>24297</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.fPos_Y2_Axis</Name>
-			<Type>REAL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>24301</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.fPos_R_Axis</Name>
-			<Type>REAL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>24305</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.cutCylinder</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[气压不够智能通过断电的方式让其保压]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>117370</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bAxisMovingAbsAlarm</Name>
-			<Type Decoration="20010156">ARRAY [1..30] OF BOOL</Type>
-			<Comment>
-				<![CDATA[运行参数]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24319</IOffset>
-			<BitSize>240</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.fSetMainVelo_Auto</Name>
-			<Type>LREAL</Type>
-			<Comment>
-				<![CDATA[主轴自动速度]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24349</IOffset>
-			<BitSize>64</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.fSetMainVelo_Manu</Name>
-			<Type>LREAL</Type>
-			<Comment>
-				<![CDATA[主轴手动速度]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24357</IOffset>
-			<BitSize>64</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.bEnaleAll</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[一键使能]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24365</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bGoHomeTogether</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[一键回原点]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24366</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bGoPrepareAuto</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[一键初始化]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24367</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bGoResetTogether</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[一键复位]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24368</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.bGoAutoTogether</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[一键启动]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24369</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.bGoStopTogether</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[一键停止]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24370</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.bHeatAll</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[加热所有]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>24371</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.mb_Output_Registers</Name>
-			<Type Decoration="2001024D">ARRAY [0..255] OF WORD</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>24372</IOffset>
-			<BitSize>4096</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.mb_Input_Registers</Name>
-			<Type Decoration="2001024E">ARRAY [1..255] OF WORD</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>24884</IOffset>
-			<BitSize>4080</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Persistent="1" TaskPrio="1">.iAxisSoftLimitSwitch_Neg</Name>
-			<Type Decoration="2001013D">ARRAY [1..5] OF BOOL</Type>
-			<Comment>
-				<![CDATA[软限位正限开关]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>25394</IOffset>
-			<BitSize>40</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Persistent="1" TaskPrio="1">.iAxisSoftLimitSwitch_Pos</Name>
-			<Type Decoration="2001013D">ARRAY [1..5] OF BOOL</Type>
-			<Comment>
-				<![CDATA[软限位负限开关]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>25399</IOffset>
-			<BitSize>40</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Persistent="1" TaskPrio="1">.iAxisSoftLimitSwitch_Neg1</Name>
-			<Type Decoration="20010154">ARRAY [1..5] OF WORD</Type>
-			<Comment>
-				<![CDATA[软限位正限开关]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>25404</IOffset>
-			<BitSize>80</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Persistent="1" TaskPrio="1">.iAxisSoftLimitSwitch_Pos1</Name>
-			<Type Decoration="20010154">ARRAY [1..5] OF WORD</Type>
-			<Comment>
-				<![CDATA[软限位负限开关]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>25414</IOffset>
-			<BitSize>80</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Persistent="1" TaskPrio="1">.fSaveBias</Name>
-			<Type Decoration="2001012E">ARRAY [1..5] OF REAL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>25424</IOffset>
-			<BitSize>160</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iAxisSoftLimitSwitch_Neg_Old</Name>
-			<Type Decoration="2001013D">ARRAY [1..5] OF BOOL</Type>
-			<Comment>
-				<![CDATA[软限位正限开关]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>25444</IOffset>
-			<BitSize>40</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.iAxisSoftLimitSwitch_Pos_Old</Name>
-			<Type Decoration="2001013D">ARRAY [1..5] OF BOOL</Type>
-			<Comment>
-				<![CDATA[软限位负限开关]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>25449</IOffset>
-			<BitSize>40</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.iMacStateForHmi</Name>
-			<Type>WORD</Type>
-			<Comment>
-				<![CDATA[机器状态给HMI]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>25454</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.AxisArr</Name>
-			<Type Decoration="2001D192">ARRAY [1..5] OF _FBAXIS_REF</Type>
-			<Comment>
-				<![CDATA[PTP轴]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>25456</IOffset>
-			<BitSize>35440</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.Axis_Interface</Name>
-			<Type Decoration="200125FD">ARRAY [1..5] OF ST_Axis</Type>
-			<Comment>
-				<![CDATA[轴的PTP控制接口]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>29886</IOffset>
-			<BitSize>8560</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.aMC_Power</Name>
-			<Type Decoration="2001BD4A">ARRAY [1..5] OF MC_Power</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>30956</IOffset>
-			<BitSize>2320</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.aMC_Jog</Name>
-			<Type Decoration="200192B6">ARRAY [1..5] OF MC_Jog</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>31246</IOffset>
-			<BitSize>155560</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.aMC_Reset</Name>
-			<Type Decoration="2001E1EC">ARRAY [1..5] OF MC_Reset</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>50691</IOffset>
-			<BitSize>6320</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.aMC_Halt</Name>
-			<Type Decoration="200185E6">ARRAY [1..5] OF MC_Halt</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>51481</IOffset>
-			<BitSize>29960</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.aMC_Stop</Name>
-			<Type Decoration="2001E428">ARRAY [1..5] OF MC_Stop</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>55226</IOffset>
-			<BitSize>35720</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.aMC_SetPos</Name>
-			<Type Decoration="20011DF9">ARRAY [1..5] OF MC_SetPosition</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>59691</IOffset>
-			<BitSize>7440</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.aMC_MoveAbsolute</Name>
-			<Type Decoration="200194DC">ARRAY [1..5] OF MC_MoveAbsolute</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>60621</IOffset>
-			<BitSize>30920</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.aMC_MoveRelative</Name>
-			<Type Decoration="200194CB">ARRAY [1..5] OF MC_MoveRelative</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>64486</IOffset>
-			<BitSize>30920</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.aMC_MoveVelocity</Name>
-			<Type Decoration="2001CCD7">ARRAY [1..5] OF MC_MoveVelocity</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>68351</IOffset>
-			<BitSize>30680</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.aMC_SetHomeFlag</Name>
-			<Type Decoration="2001DA97">ARRAY [1..5] OF MC_Home</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>72186</IOffset>
-			<BitSize>25160</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.aMC_Home</Name>
-			<Type Decoration="2001DA97">ARRAY [1..5] OF MC_Home</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>75331</IOffset>
-			<BitSize>25160</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.aMC_GearInDyn</Name>
-			<Type Decoration="2001A66F">ARRAY [1..5] OF MC_GearInDyn</Type>
-			<Comment>
-				<![CDATA[电子齿轮轮耦合]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>78476</IOffset>
-			<BitSize>16120</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.aMC_GearOut</Name>
-			<Type Decoration="2001FD30">ARRAY [1..5] OF MC_GearOut</Type>
-			<Comment>
-				<![CDATA[电子齿轮轮解耦合]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>80491</IOffset>
-			<BitSize>6560</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.aMC_SoeReset</Name>
-			<Type Decoration="2001CBC8">ARRAY [1..5] OF FB_SoEReset</Type>
-			<Comment>
-				<![CDATA[倍福驱动器复位]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>81311</IOffset>
-			<BitSize>20040</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.Axis_Has_error</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[任何一根轴有任何错误]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>83816</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.Axis_Homing</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[任何一根轴在回参]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>83817</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.All_Enable_OK</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[所有轴使能成功]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>83818</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.All_Homed_OK</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[所有轴回零成功]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>83819</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.bAllAxisAtZero</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[所有轴都在0位]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>83820</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.AllAxesStandStill</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[所有轴静止]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>83821</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>.bEnableAll</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[使能所有轴]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>83822</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.stCtrlCylinder</Name>
-			<Type Decoration="20019ADD">ARRAY [1..38] OF ST_Cylinder_Ctrl</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>83823</IOffset>
-			<BitSize>16720</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.fbCylinder</Name>
-			<Type Decoration="2001474A">ARRAY [1..38] OF FB_Cylinder</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>85913</IOffset>
-			<BitSize>35872</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Input" TaskPrio="1">.El1889s</Name>
-			<Type Decoration="2002014F">ARRAY [1..7, 1..16] OF BOOL</Type>
-			<Comment>
-				<![CDATA[数字量输出]]>
-			</Comment>
-			<IGroup>61472</IGroup>
-			<IOffset VarConfig="Changeable">0</IOffset>
-			<BitSize>896</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Output" TaskPrio="1">.El2889s</Name>
-			<Type Decoration="2002014B">ARRAY [1..3, 1..16] OF BOOL</Type>
-			<Comment>
-				<![CDATA[模拟量输入]]>
-			</Comment>
-			<IGroup>61488</IGroup>
-			<IOffset VarConfig="Changeable">0</IOffset>
-			<BitSize>384</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Input">.El3064</Name>
-			<Type Decoration="200100F2">ARRAY [1..4] OF INT</Type>
-			<Comment>
-				<![CDATA[实际驱动器作为EtherCAT伺服的个数  ETHERCAT状态]]>
-			</Comment>
-			<IGroup>61472</IGroup>
-			<IOffset VarConfig="Changeable">112</IOffset>
-			<BitSize>64</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Input" TaskPrio="1">.DrivesOP</Name>
-			<Type Decoration="20010158">ARRAY [1..5] OF UINT</Type>
-			<Comment>
-				<![CDATA[驱动器的模式输出，8为位置模式]]>
-			</Comment>
-			<IGroup>61472</IGroup>
-			<IOffset VarConfig="Changeable">120</IOffset>
-			<BitSize>80</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Output">.iSetDriveMode</Name>
-			<Type Decoration="20010154">ARRAY [1..5] OF SINT</Type>
-			<Comment>
-				<![CDATA[驱动器返回的控制模式]]>
-			</Comment>
-			<IGroup>61488</IGroup>
-			<IOffset VarConfig="Changeable">48</IOffset>
-			<BitSize>40</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Input">.iActDriveMode</Name>
-			<Type Decoration="20010154">ARRAY [1..5] OF SINT</Type>
-			<Comment>
-				<![CDATA[驱动器上的IO监控，EL2521不包含]]>
-			</Comment>
-			<IGroup>61472</IGroup>
-			<IOffset VarConfig="Changeable">130</IOffset>
-			<BitSize>40</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Input">.iDriveDI</Name>
-			<Type Decoration="200100F3">ARRAY [1..5] OF INT</Type>
-			<Comment>
-				<![CDATA[驱动器上的电流监控，EL2521不包含]]>
-			</Comment>
-			<IGroup>61472</IGroup>
-			<IOffset VarConfig="Changeable">135</IOffset>
-			<BitSize>80</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Input">.iMotorTorque</Name>
-			<Type Decoration="200100F3">ARRAY [1..5] OF INT</Type>
-			<IGroup>61472</IGroup>
-			<IOffset VarConfig="Changeable">145</IOffset>
-			<BitSize>80</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.stHmiCmd</Name>
-			<Type Decoration="10081B75">ST_HmiCmd</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>90722</IOffset>
-			<BitSize>64</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.stHmiAxisCmd</Name>
-			<Type Decoration="200140B6">ARRAY [1..5] OF ST_AxisCmd</Type>
-			<Comment>
-				<![CDATA[*******  显示 **********]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>90730</IOffset>
-			<BitSize>480</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.stHmiDisplay</Name>
-			<Type Decoration="10096C62">ST_HmiDisplay</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>90790</IOffset>
-			<BitSize>720</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">.stAxisDisplay</Name>
-			<Type Decoration="20013B53">ARRAY [1..5] OF ST_AxisDisplay</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>90880</IOffset>
-			<BitSize>920</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Persistent="1" TaskPrio="1">.stAxisParam</Name>
-			<Type Decoration="20015D12">ARRAY [1..5] OF ST_AxisParam</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>90995</IOffset>
-			<BitSize>3600</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name IsDefinedInLibrary="1">.MAX_AVERAGE_MEASURES</Name>
-			<Type>INT</Type>
-			<Comment>
-				<![CDATA[2..100]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>91445</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name IsDefinedInLibrary="1">.GLOBAL_FORMAT_HASH_PREFIX_TYPE</Name>
-			<Type Decoration="3000052B">E_HashPrefixTypes</Type>
-			<Comment>
-				<![CDATA[IEC prefixes for binary, octal or hexadecimal type]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>91447</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name IsDefinedInLibrary="1">.GLOBAL_SBCS_TABLE</Name>
-			<Type Decoration="30000311">E_SBCSType</Type>
-			<Comment>
-				<![CDATA[Windows SBCS (Single Byte Character Set) Code Page Table]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>91449</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name IsDefinedInLibrary="1">.GLOBAL_DCF77_PULSE_SPLIT</Name>
-			<Type>TIME</Type>
-			<Comment>
-				<![CDATA[0 == pulse < 140ms, 1 == pulse > 140]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>91451</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name IsDefinedInLibrary="1">.GLOBAL_DCF77_SEQUENCE_CHECK</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[TRUE = Enable plausibility check (two telegrams are checked), FALSE = Disable check]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>91455</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name IsDefinedInLibrary="1">.DEFAULT_CSV_FIELD_SEP</Name>
-			<Type>BYTE</Type>
-			<Comment>
-				<![CDATA[semicolon (;) := 16#3B => german field separator, comma (,) := 16#2C => US field separator]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>91456</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.EMPTY_ROUTE_ENTRY</Name>
-			<Type Decoration="100614ED">ST_AmsRouteEntry</Type>
-			<Comment>
-				<![CDATA[System Service file functions]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>99141</IOffset>
-			<BitSize>1168</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.EMPTY_ARG_VALUE</Name>
-			<Type Decoration="10033D04">T_Arg</Type>
-			<Comment>
-				<![CDATA[Lower and upper case ASCII codes of hexadecimal digits]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>99287</IOffset>
-			<BitSize>80</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.FORMAT_HEXASC_CODES</Name>
-			<Type Decoration="20020156">ARRAY [0..1, 0..15] OF BYTE</Type>
-			<Comment>
-				<![CDATA[ASCII to decimal and decimal digits to ASCII codes]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>99297</IOffset>
-			<BitSize>256</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1" TaskPrio="1">.FORMAT_DECASC_CODES</Name>
-			<Type Decoration="2001014E">ARRAY [0..9] OF BYTE</Type>
-			<Comment>
-				<![CDATA[Default precision values ( -1 => disabled (prints all characters or has special function)]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>99329</IOffset>
-			<BitSize>80</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.FORMAT_DEFAULT_PRECISION</Name>
-			<Type Decoration="200100F8">ARRAY [0..11] OF INT</Type>
-			<Comment>
-				<![CDATA[plc var type support mask]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>99339</IOffset>
-			<BitSize>192</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.FORMAT_TYPE_SUPPORT_MASK</Name>
-			<Type Decoration="20020155">ARRAY [0..11, 0..18] OF BOOL</Type>
-			<Comment>
-				<![CDATA[TYPEFIELD_EL]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>99363</IOffset>
-			<BitSize>1824</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.FORMAT_PREFIX_SUPPORT_MASK</Name>
-			<Type Decoration="20020146">ARRAY [0..3, 0..11] OF BOOL</Type>
-			<Comment>
-				<![CDATA[PREFIXFLAG_HASH]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>99591</IOffset>
-			<BitSize>384</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.FORMAT_HASH_PREFIX_STRING</Name>
-			<Type Decoration="2002429F">ARRAY [0..1, 0..11] OF STRING(10)</Type>
-			<Comment>
-				<![CDATA[HASHPREFIX_STDC]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>99639</IOffset>
-			<BitSize>2112</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.ARGTYPE_IS_SIGNED_TYPE</Name>
-			<Type Decoration="20010149">ARRAY [0..18] OF BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>99903</IOffset>
-			<BitSize>152</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.ARGTYPE_IS_FLOAT_TYPE</Name>
-			<Type Decoration="20010149">ARRAY [0..18] OF BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>99922</IOffset>
-			<BitSize>152</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.ARGTYPE_IS_STRING_TYPE</Name>
-			<Type Decoration="20010149">ARRAY [0..18] OF BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>99941</IOffset>
-			<BitSize>152</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.ARGTYPE_IS_UNSIGNED_TYPE</Name>
-			<Type Decoration="20010149">ARRAY [0..18] OF BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>99960</IOffset>
-			<BitSize>152</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.ARGTYPE_IS_BIT_TYPE</Name>
-			<Type Decoration="20010149">ARRAY [0..18] OF BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>99979</IOffset>
-			<BitSize>152</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1" TaskPrio="1">.SYSTEMTIME_MAX_MONTHDAYS</Name>
-			<Type Decoration="2002015B">ARRAY [0..1, 1..12] OF WORD</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>99998</IOffset>
-			<BitSize>384</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.SYSTEMTIME_MAX_YEARSDAY</Name>
-			<Type Decoration="2002015B">ARRAY [0..1, 0..13] OF WORD</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>100046</IOffset>
-			<BitSize>448</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.SYSTEMTIME_TICKSPERMSEC</Name>
-			<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-			<Comment>
-				<![CDATA[Number of 100ns ticks per millisecond]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>100102</IOffset>
-			<BitSize>64</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.SYSTEMTIME_TICKSPERSEC</Name>
-			<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-			<Comment>
-				<![CDATA[Number of 100ns ticks per second]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>100110</IOffset>
-			<BitSize>64</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.SYSTEMTIME_TICKSPERDAY</Name>
-			<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-			<Comment>
-				<![CDATA[Number of 100ns ticks per day]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>100118</IOffset>
-			<BitSize>64</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.SYSTEMTIME_DATE_AND_TIME_MIN</Name>
-			<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-			<Comment>
-				<![CDATA[min. DT value as file time DT#1970-01-01-00:00:00]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>100126</IOffset>
-			<BitSize>64</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.SYSTEMTIME_DATE_AND_TIME_MAX</Name>
-			<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-			<Comment>
-				<![CDATA[max. DT value as file time DT#2106-02-06-06:28:15]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>100134</IOffset>
-			<BitSize>64</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.WEST_EUROPE_TZI</Name>
-			<Type Decoration="1007FC65">ST_TimeZoneInformation</Type>
-			<Comment>
-				<![CDATA[Windows SBCS tables]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>100142</IOffset>
-			<BitSize>864</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.SBCS_TABLES</Name>
-			<Type Decoration="2001635C">ARRAY [1..2] OF ST_SBCSTable</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>100250</IOffset>
-			<BitSize>4096</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.ImQn_TABLE</Name>
-			<Type Decoration="20010194">ARRAY [0..31] OF LREAL</Type>
-			<Comment>
-				<![CDATA[CRC16-CCITT lookup table ( 0x1021 as generator polynomial )]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>100762</IOffset>
-			<BitSize>2048</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.GLOBAL_CRC_CCITT_TABLE</Name>
-			<Type Decoration="2001024D">ARRAY [0..255] OF WORD</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>101018</IOffset>
-			<BitSize>4096</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.DWORD_DECADE_DIVIDER</Name>
-			<Type Decoration="2001019C">ARRAY [0..9] OF DWORD</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>115896</IOffset>
-			<BitSize>320</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.WORD_DECADE_DIVIDER</Name>
-			<Type Decoration="20010152">ARRAY [0..4] OF WORD</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>115936</IOffset>
-			<BitSize>80</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.BYTE_DECADE_DIVIDER</Name>
-			<Type Decoration="20010147">ARRAY [0..2] OF BYTE</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>115946</IOffset>
-			<BitSize>24</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.EMPTY_GUID_STRUCT</Name>
-			<Type Decoration="10042FD3">GUID</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>115949</IOffset>
-			<BitSize>128</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.EC_DCTIME_DELTA_OFFSET</Name>
-			<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-			<Comment>
-				<![CDATA[Number of 100ns ticks between 1.1.1601 and 1.1.2000]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>115965</IOffset>
-			<BitSize>64</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.EC_DCTIME_TICKSPERMSEC</Name>
-			<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-			<Comment>
-				<![CDATA[Number of nanosecond ticks per millisecond]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>115973</IOffset>
-			<BitSize>64</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.EC_DCTIME_TICKSPERSEC</Name>
-			<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-			<Comment>
-				<![CDATA[Number of nanosecond ticks per second]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>115981</IOffset>
-			<BitSize>64</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" IsDefinedInLibrary="1">.EC_DCTIME_TICKSPERDAY</Name>
-			<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-			<Comment>
-				<![CDATA[Number of nanosecond ticks per day]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>115989</IOffset>
-			<BitSize>64</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name IsDefinedInLibrary="1">.bSeqReadDrvAttrAndValue</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>115997</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name IsDefinedInLibrary="1">.eWatchdogConfig</Name>
-			<Type Decoration="30000698">E_WATCHDOG_TIME_CONFIG</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>116526</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name IsDefinedInLibrary="1">.nWatchdogTime</Name>
-			<Type>BYTE</Type>
-			<Comment>
-				<![CDATA[Watchdog time. Depending of eWatchdogConfig : seconds or minutes]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>116528</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name IsDefinedInLibrary="1" TaskPrio="1">.TcMcGlobal</Name>
-			<Type Decoration="1014BD9C">_TCMCGLOBAL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>116529</IOffset>
-			<BitSize>6488</BitSize>
 		</Symbol>
 	</Symbols>
 	<VarConfigs>
