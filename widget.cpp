@@ -99,6 +99,11 @@ void Widget::on_btn_connect_plc_clicked()
             connect(_pTimerUpdate, SIGNAL(timeout()), this, SLOT(get_plc_state_by_modbus()));
             _pTimerUpdate->start(3000);
 
+
+            _pTimerUpdate_setting = new QTimer();
+            connect(_pTimerUpdate_setting, SIGNAL(timeout()), this, SLOT(set_plc_state_by_modbus()));
+            _pTimerUpdate_setting->start(3000);
+
         }
     }
     else
@@ -226,7 +231,7 @@ void Widget::onReadFinished1()
             ui->lineEdit_AxiNegLimit_1->setText("未触发");
         }
 
-        ui->lineEdit_AxiStatus_1->setText(QString::number(unit.value(5))); // 轴的当前位置
+        ui->lineEdit_AxiStatus_1->setText(QString::number(unit.value(5)/10.0)); // 轴的当前位置
 
         if(unit.value(7))   // 轴的使能状态
         {
@@ -258,7 +263,7 @@ void Widget::onReadFinished1()
             ui->lineEdit_AxiNegLimit_2->setText("未触发");
         }
 
-        ui->lineEdit_AxiStatus_2->setText(QString::number(unit.value(13))); // 轴的当前位置
+        ui->lineEdit_AxiStatus_2->setText(QString::number(unit.value(13)/10.0)); // 轴的当前位置
 
         if(unit.value(15))   // 轴的使能状态
         {
@@ -288,7 +293,7 @@ void Widget::onReadFinished1()
             ui->lineEdit_AxiNegLimit_3->setText("未触发");
         }
 
-        ui->lineEdit_AxiStatus_3->setText(QString::number(unit.value(21))); // 轴的当前位置
+        ui->lineEdit_AxiStatus_3->setText(QString::number(unit.value(21)/10.0)); // 轴的当前位置
 
         if(unit.value(23))   // 轴的使能状态
         {
@@ -318,7 +323,7 @@ void Widget::onReadFinished1()
             ui->lineEdit_AxiNegLimit_4->setText("未触发");
         }
 
-        ui->lineEdit_AxiStatus_4->setText(QString::number(unit.value(29))); // 轴的当前位置
+        ui->lineEdit_AxiStatus_4->setText(QString::number(unit.value(29)/10.0)); // 轴的当前位置
 
         if(unit.value(31))   // 轴的使能状态
         {
@@ -348,7 +353,7 @@ void Widget::onReadFinished1()
             ui->lineEdit_AxiNegLimit_5->setText("未触发");
         }
 
-        ui->lineEdit_AxiStatus_5->setText(QString::number(unit.value(37))); // 轴的当前位置
+        ui->lineEdit_AxiStatus_5->setText(QString::number(unit.value(37)/10.0)); // 轴的当前位置
 
         if(unit.value(39))   // 轴的使能状态
         {
@@ -702,15 +707,12 @@ void Widget::get_plc_state_by_modbus()
 
 // 轴1
 
-
-
-
-void Widget::on_btn_Axi_SetPosition_1_clicked()         // 设置位置
+void Widget::on_btn_Axi_SetPosition_1_pressed()
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32923, 1);  // 地址5，2个寄存器
 
-    writeUnit.setValue(0, ui->lineEdit_Axi_SetPosition_1->text().toUShort());  // 设置整型值
+    writeUnit.setValue(0, ui->lineEdit_Axi_SetPosition_1->text().toDouble()*10);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
@@ -729,16 +731,32 @@ void Widget::on_btn_Axi_SetPosition_1_clicked()         // 设置位置
     } else {
         qDebug() << "Failed to send write request for integer.";
     }
-
-
 }
 
 
+
+
+
+
+void Widget::on_btn_Axi_SetPosition_1_clicked()         // 设置位置
+{
+    QModbusDataUnit writeUnit2(QModbusDataUnit::HoldingRegisters, 32927, 1);  // 地址5，2个寄存器
+    writeUnit2.setValue(0, 0);  // 设置整型值
+    auto reply2 = modbusClient->sendWriteRequest(writeUnit2, 1);  // 设备地址为 1
+    if (reply2)
+    {
+        connect(reply2, &QModbusReply::finished, this, &Widget::onWriteFinished);
+    }
+    else {
+        qDebug() << "Failed to send write request for integer.";
+    }
+
+}
 void Widget::on_btn_Axi1_SetStandbyPosition_clicked()   // 设置待机位置
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32924, 1);  // 地址5，2个寄存器
-    writeUnit.setValue(0, ui->lineEdit_Axi1_Standby->text().toUShort());  // 设置整型值
+    writeUnit.setValue(0, ui->lineEdit_Axi1_Standby->text().toDouble()*10);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
@@ -753,7 +771,7 @@ void Widget::on_btn_Axi1_SetWorkPostion_1_clicked()     //  设置工作位置1
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32925, 1);  // 地址5，2个寄存器
-    writeUnit.setValue(0, ui->lineEdit_Axi1_WorkStation_1->text().toUShort());  // 设置整型值
+    writeUnit.setValue(0, ui->lineEdit_Axi1_WorkStation_1->text().toDouble()*10);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
@@ -768,7 +786,7 @@ void Widget::on_btn_Axi1_SetWorkPostion_2_clicked()     //  设置工作位置2
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32926, 1);  // 地址5，2个寄存器
-    writeUnit.setValue(0, ui->lineEdit_Axi1_WorkStation_2->text().toUShort());  // 设置整型值
+    writeUnit.setValue(0, ui->lineEdit_Axi1_WorkStation_2->text().toDouble()*10);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
@@ -941,12 +959,12 @@ void Widget::on_btn_Axi_Reset_1_pressed()       // 复位
 
 
 
-void Widget::on_btn_Axi_SetPosition_2_clicked()         // 设置位置
+void Widget::on_btn_Axi_SetPosition_2_pressed()
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32933, 1);  // 地址5，2个寄存器
 
-    writeUnit.setValue(0, ui->lineEdit_Axi_SetPosition_2->text().toUShort());  // 设置整型值
+    writeUnit.setValue(0, ui->lineEdit_Axi_SetPosition_2->text().toDouble()*10);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
@@ -965,7 +983,24 @@ void Widget::on_btn_Axi_SetPosition_2_clicked()         // 设置位置
     } else {
         qDebug() << "Failed to send write request for integer.";
     }
+}
 
+
+
+
+void Widget::on_btn_Axi_SetPosition_2_clicked()         // 设置位置
+{
+
+    QModbusDataUnit writeUnit2(QModbusDataUnit::HoldingRegisters, 32938, 1);  // 地址5，2个寄存器
+    writeUnit2.setValue(0, 0);  // 设置整型值
+    auto reply2 = modbusClient->sendWriteRequest(writeUnit2, 1);  // 设备地址为 1
+    if (reply2)
+    {
+        connect(reply2, &QModbusReply::finished, this, &Widget::onWriteFinished);
+    }
+    else {
+        qDebug() << "Failed to send write request for integer.";
+    }
 
 }
 
@@ -974,7 +1009,7 @@ void Widget::on_btn_Axi2_SetStandbyPosition_clicked()   // 设置待机位置
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32934, 1);  // 地址5，2个寄存器
-    writeUnit.setValue(0, ui->lineEdit_Axi2_Standby->text().toUShort());  // 设置整型值
+    writeUnit.setValue(0, ui->lineEdit_Axi2_Standby->text().toDouble()*10);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
@@ -989,7 +1024,7 @@ void Widget::on_btn_Axi2_SetWorkPostion_1_clicked()     //  设置工作位置1
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32935, 1);  // 地址5，2个寄存器
-    writeUnit.setValue(0, ui->lineEdit_Axi2_WorkPostion_1->text().toUShort());  // 设置整型值
+    writeUnit.setValue(0, ui->lineEdit_Axi2_WorkPostion_1->text().toDouble()*10);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
@@ -1004,7 +1039,7 @@ void Widget::on_btn_Axi2_SetWorkPostion_2_clicked()     //  设置工作位置2
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32936, 1);  // 地址5，2个寄存器
-    writeUnit.setValue(0, ui->lineEdit_Axi2_WorkPostion_2->text().toUShort());  // 设置整型值
+    writeUnit.setValue(0, ui->lineEdit_Axi2_WorkPostion_2->text().toDouble()*10);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
@@ -1018,7 +1053,7 @@ void Widget::on_btn_Axi2_SetWorkPostion_3_clicked() //  设置工作位置3
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32937, 1);  // 地址5，2个寄存器
-    writeUnit.setValue(0, ui->lineEdit_Axi2_WorkPostion_3->text().toUShort());  // 设置整型值
+    writeUnit.setValue(0, ui->lineEdit_Axi2_WorkPostion_3->text().toDouble()*10);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
@@ -1180,12 +1215,15 @@ void Widget::on_btn_Axi_Reset_2_pressed()       // 复位
 // 轴3
 
 
-void Widget::on_btn_Axi_SetPosition_3_clicked()         // 设置位置
+
+
+
+void Widget::on_btn_Axi_SetPosition_3_pressed()
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32944, 1);  // 地址5，2个寄存器
 
-    writeUnit.setValue(0, ui->lineEdit_Axi_SetPosition_3->text().toUShort());  // 设置整型值
+    writeUnit.setValue(0, ui->lineEdit_Axi_SetPosition_3->text().toDouble()*10);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
@@ -1208,12 +1246,26 @@ void Widget::on_btn_Axi_SetPosition_3_clicked()         // 设置位置
 
 }
 
+void Widget::on_btn_Axi_SetPosition_3_clicked()         // 设置位置
+{
+    QModbusDataUnit writeUnit2(QModbusDataUnit::HoldingRegisters, 32947, 1);  // 地址5，2个寄存器
+    writeUnit2.setValue(0, 0);  // 设置整型值
+    auto reply2 = modbusClient->sendWriteRequest(writeUnit2, 1);  // 设备地址为 1
+    if (reply2)
+    {
+        connect(reply2, &QModbusReply::finished, this, &Widget::onWriteFinished);
+    }
+    else {
+        qDebug() << "Failed to send write request for integer.";
+    }
+}
+
 
 void Widget::on_btn_Axi3_SetStandbyPosition_clicked()   // 设置待机位置
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32945, 1);  // 地址5，2个寄存器
-    writeUnit.setValue(0, ui->lineEdit_Axi3_Standby->text().toUShort());  // 设置整型值
+    writeUnit.setValue(0, ui->lineEdit_Axi3_Standby->text().toDouble()*10);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
@@ -1228,7 +1280,7 @@ void Widget::on_btn_Axi3_SetWorkPostion_1_clicked()     //  设置工作位置1
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32946, 1);  // 地址5，2个寄存器
-    writeUnit.setValue(0, ui->lineEdit_Axi3_WorkStation_1->text().toUShort());  // 设置整型值
+    writeUnit.setValue(0, ui->lineEdit_Axi3_WorkStation_1->text().toDouble()*10);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
@@ -1383,13 +1435,12 @@ void Widget::on_btn_Axi_Reset_3_pressed()       // 复位
 
 // 轴4
 
-
-void Widget::on_btn_Axi_SetPosition_4_clicked()         // 设置位置
+void Widget::on_btn_Axi_SetPosition_4_pressed()
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32953, 1);  // 地址5，2个寄存器
 
-    writeUnit.setValue(0, ui->lineEdit_Axi_SetPosition_4->text().toUShort());  // 设置整型值
+    writeUnit.setValue(0, ui->lineEdit_Axi_SetPosition_4->text().toDouble()*10);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
@@ -1409,6 +1460,20 @@ void Widget::on_btn_Axi_SetPosition_4_clicked()         // 设置位置
         qDebug() << "Failed to send write request for integer.";
     }
 
+}
+
+void Widget::on_btn_Axi_SetPosition_4_clicked()         // 设置位置
+{
+    QModbusDataUnit writeUnit2(QModbusDataUnit::HoldingRegisters, 32956, 1);  // 地址5，2个寄存器
+    writeUnit2.setValue(0, 0);  // 设置整型值
+    auto reply2 = modbusClient->sendWriteRequest(writeUnit2, 1);  // 设备地址为 1
+    if (reply2)
+    {
+        connect(reply2, &QModbusReply::finished, this, &Widget::onWriteFinished);
+    }
+    else {
+        qDebug() << "Failed to send write request for integer.";
+    }
 
 }
 
@@ -1417,7 +1482,7 @@ void Widget::on_btn_Axi4_SetStandbyPosition_clicked()   // 设置待机位置
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32954, 1);  // 地址5，2个寄存器
-    writeUnit.setValue(0, ui->lineEdit_Axi4__Standby->text().toUShort());  // 设置整型值
+    writeUnit.setValue(0, ui->lineEdit_Axi4__Standby->text().toDouble()*10);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
@@ -1432,7 +1497,7 @@ void Widget::on_btn_Axi4_SetWorkPostion_1_clicked()     //  设置工作位置1
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32955, 1);  // 地址5，2个寄存器
-    writeUnit.setValue(0, ui->lineEdit_Axi4_WorkStation_1->text().toUShort());  // 设置整型值
+    writeUnit.setValue(0, ui->lineEdit_Axi4_WorkStation_1->text().toDouble()*10);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
@@ -1586,12 +1651,12 @@ void Widget::on_btn_Axi_Reset_4_pressed()       // 复位
 // 轴5
 
 
-void Widget::on_btn_Axi_SetPosition_5_clicked()         // 设置位置
+void Widget::on_btn_Axi_SetPosition_5_pressed()
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32962, 1);  // 地址5，2个寄存器
 
-    writeUnit.setValue(0, ui->lineEdit_Axi_SetPosition_5->text().toUShort());  // 设置整型值
+    writeUnit.setValue(0, ui->lineEdit_Axi_SetPosition_5->text().toDouble()*10);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
@@ -1611,6 +1676,22 @@ void Widget::on_btn_Axi_SetPosition_5_clicked()         // 设置位置
         qDebug() << "Failed to send write request for integer.";
     }
 
+}
+
+
+void Widget::on_btn_Axi_SetPosition_5_clicked()         // 设置位置
+{
+
+    QModbusDataUnit writeUnit2(QModbusDataUnit::HoldingRegisters, 32965, 1);  // 地址5，2个寄存器
+    writeUnit2.setValue(0, 0);  // 设置整型值
+    auto reply2 = modbusClient->sendWriteRequest(writeUnit2, 1);  // 设备地址为 1
+    if (reply2)
+    {
+        connect(reply2, &QModbusReply::finished, this, &Widget::onWriteFinished);
+    }
+    else {
+        qDebug() << "Failed to send write request for integer.";
+    }
 
 }
 
@@ -1619,7 +1700,7 @@ void Widget::on_btn_Axi5_SetStandbyPosition_clicked()   // 设置待机位置
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32963, 1);  // 地址5，2个寄存器
-    writeUnit.setValue(0, ui->lineEdit_Axi5__Standby->text().toUShort());  // 设置整型值
+    writeUnit.setValue(0, ui->lineEdit_Axi5__Standby->text().toDouble()*10);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
@@ -1634,7 +1715,7 @@ void Widget::on_btn_Axi5_SetWorkPostion_1_clicked()     //  设置工作位置1
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32964, 1);  // 地址5，2个寄存器
-    writeUnit.setValue(0, ui->lineEdit_Axi5_WorkStation_1->text().toUShort());  // 设置整型值
+    writeUnit.setValue(0, ui->lineEdit_Axi5_WorkStation_1->text().toDouble());  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
@@ -1789,10 +1870,14 @@ void Widget::on_btn_Axi_Reset_5_pressed()       // 复位
 
 void Widget::on_check_OpenCylinder_1_clicked(bool checked) //气缸
 {
+
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32971, 1);  // 地址5，2个寄存器
 
 
     quint16 j = checked? 1:0;
+
+    ui->check_OpenCylinder_2->setChecked(checked);
+
 
     writeUnit.setValue(0, j);  // 设置整型值
 
@@ -1813,10 +1898,10 @@ void Widget::on_check_OpenCylinder_2_clicked(bool checked) //气缸
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32972, 1);  // 地址5，2个寄存器
 
 
+
     quint16 j = checked? 1:0;
-
+    ui->check_OpenCylinder_1->setChecked(checked);
     writeUnit.setValue(0, j);  // 设置整型值
-
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply)
     {
@@ -1943,6 +2028,8 @@ void Widget::on_check_OpenCylinder_8_clicked(bool checked) //气缸
 
     writeUnit.setValue(0, j);  // 设置整型值
 
+    ui->check_OpenCylinder_9->setChecked(checked);
+
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply)
     {
@@ -1961,7 +2048,7 @@ void Widget::on_check_OpenCylinder_9_clicked(bool checked) //气缸
 
 
     quint16 j = checked? 1:0;
-
+    ui->check_OpenCylinder_8->setChecked(checked);
     writeUnit.setValue(0, j);  // 设置整型值
 
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
@@ -2914,5 +3001,394 @@ void Widget::on_btn_SetBox_clicked()
     {
         qDebug() << "Failed to send write request for integer.";
     }
+}
+
+
+
+
+
+
+//**轴1的点动实现
+void Widget::on_btn_Axi_Jog_Pos_1_pressed()
+{
+    // 写入整型数据 (假设地址 5 存储整型数据)
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33019, 1);  // 地址5，2个寄存器
+    writeUnit.setValue(0, 1);  // 设置整型值
+    auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
+    if (reply) {
+        connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
+
+    } else
+    {
+        qDebug() << "Failed to send write request for integer.";
+    }
+}
+
+
+void Widget::on_btn_Axi_Jog_Pos_1_clicked()
+{
+    // 写入整型数据 (假设地址 5 存储整型数据)
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33019, 1);  // 地址5，2个寄存器
+    writeUnit.setValue(0, 0);  // 设置整型值
+    auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
+    if (reply) {
+        connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
+
+    } else
+    {
+        qDebug() << "Failed to send write request for integer.";
+    }
+}
+
+
+void Widget::on_btn_Axi_Jog_Neg_1_pressed()
+{
+    // 写入整型数据 (假设地址 5 存储整型数据)
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33020, 1);  // 地址5，2个寄存器
+    writeUnit.setValue(0, 1);  // 设置整型值
+    auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
+    if (reply) {
+        connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
+
+    } else
+    {
+        qDebug() << "Failed to send write request for integer.";
+    }
+}
+
+void Widget::on_btn_Axi_Jog_Neg_1_clicked()
+{
+    // 写入整型数据 (假设地址 5 存储整型数据)
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33020, 1);  // 地址5，2个寄存器
+    writeUnit.setValue(0, 0);  // 设置整型值
+    auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
+    if (reply) {
+        connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
+
+    } else
+    {
+        qDebug() << "Failed to send write request for integer.";
+    }
+}
+
+//**轴1点动实现完成
+
+
+
+
+
+
+//**轴2的点动实现
+void Widget::on_btn_Axi_Jog_Pos_2_pressed()
+{
+    // 写入整型数据 (假设地址 5 存储整型数据)
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33021, 1);  // 地址5，2个寄存器
+    writeUnit.setValue(0, 1);  // 设置整型值
+    auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
+    if (reply) {
+        connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
+
+    } else
+    {
+        qDebug() << "Failed to send write request for integer.";
+    }
+}
+
+
+void Widget::on_btn_Axi_Jog_Pos_2_clicked()
+{
+    // 写入整型数据 (假设地址 5 存储整型数据)
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33021, 1);  // 地址5，2个寄存器
+    writeUnit.setValue(0, 0);  // 设置整型值
+    auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
+    if (reply) {
+        connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
+
+    } else
+    {
+        qDebug() << "Failed to send write request for integer.";
+    }
+}
+
+
+void Widget::on_btn_Axi_Jog_Neg_2_pressed()
+{
+    // 写入整型数据 (假设地址 5 存储整型数据)
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33022, 1);  // 地址5，2个寄存器
+    writeUnit.setValue(0, 1);  // 设置整型值
+    auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
+    if (reply) {
+        connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
+
+    } else
+    {
+        qDebug() << "Failed to send write request for integer.";
+    }
+}
+
+void Widget::on_btn_Axi_Jog_Neg_2_clicked()
+{
+    // 写入整型数据 (假设地址 5 存储整型数据)
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33022, 1);  // 地址5，2个寄存器
+    writeUnit.setValue(0, 0);  // 设置整型值
+    auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
+    if (reply) {
+        connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
+
+    } else
+    {
+        qDebug() << "Failed to send write request for integer.";
+    }
+}
+
+//**轴2点动实现完成
+
+
+
+
+
+//**轴3的点动实现
+void Widget::on_btn_Axi_Jog_Pos_3_pressed()
+{
+    // 写入整型数据 (假设地址 5 存储整型数据)
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32840, 1);  // 地址5，2个寄存器
+    writeUnit.setValue(0, 1);  // 设置整型值
+    auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
+    if (reply) {
+        connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
+
+    } else
+    {
+        qDebug() << "Failed to send write request for integer.";
+    }
+}
+
+
+void Widget::on_btn_Axi_Jog_Pos_3_clicked()
+{
+    // 写入整型数据 (假设地址 5 存储整型数据)
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32840, 1);  // 地址5，2个寄存器
+    writeUnit.setValue(0, 0);  // 设置整型值
+    auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
+    if (reply) {
+        connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
+
+    } else
+    {
+        qDebug() << "Failed to send write request for integer.";
+    }
+}
+
+
+void Widget::on_btn_Axi_Jog_Neg_3_pressed()
+{
+    // 写入整型数据 (假设地址 5 存储整型数据)
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32841, 1);  // 地址5，2个寄存器
+    writeUnit.setValue(0, 1);  // 设置整型值
+    auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
+    if (reply) {
+        connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
+
+    } else
+    {
+        qDebug() << "Failed to send write request for integer.";
+    }
+}
+
+void Widget::on_btn_Axi_Jog_Neg_3_clicked()
+{
+    // 写入整型数据 (假设地址 5 存储整型数据)
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32841, 1);  // 地址5，2个寄存器
+    writeUnit.setValue(0, 0);  // 设置整型值
+    auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
+    if (reply) {
+        connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
+
+    } else
+    {
+        qDebug() << "Failed to send write request for integer.";
+    }
+}
+
+//**轴3点动实现完成
+
+
+
+
+
+
+//**轴4的点动实现
+void Widget::on_btn_Axi_Jog_Pos_4_pressed()
+{
+    // 写入整型数据 (假设地址 5 存储整型数据)
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32843, 1);  // 地址5，2个寄存器
+    writeUnit.setValue(0, 1);  // 设置整型值
+    auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
+    if (reply) {
+        connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
+
+    } else
+    {
+        qDebug() << "Failed to send write request for integer.";
+    }
+}
+
+
+void Widget::on_btn_Axi_Jog_Pos_4_clicked()
+{
+    // 写入整型数据 (假设地址 5 存储整型数据)
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32843, 1);  // 地址5，2个寄存器
+    writeUnit.setValue(0, 0);  // 设置整型值
+    auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
+    if (reply) {
+        connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
+
+    } else
+    {
+        qDebug() << "Failed to send write request for integer.";
+    }
+}
+
+
+void Widget::on_btn_Axi_Jog_Neg_4_pressed()
+{
+    // 写入整型数据 (假设地址 5 存储整型数据)
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32844, 1);  // 地址5，2个寄存器
+    writeUnit.setValue(0, 1);  // 设置整型值
+    auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
+    if (reply) {
+        connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
+
+    } else
+    {
+        qDebug() << "Failed to send write request for integer.";
+    }
+}
+
+void Widget::on_btn_Axi_Jog_Neg_4_clicked()
+{
+    // 写入整型数据 (假设地址 5 存储整型数据)
+    QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 32844, 1);  // 地址5，2个寄存器
+    writeUnit.setValue(0, 0);  // 设置整型值
+    auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
+    if (reply) {
+        connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
+
+    } else
+    {
+        qDebug() << "Failed to send write request for integer.";
+    }
+}
+
+//**轴4点动实现完成
+
+
+
+void Widget::set_plc_state_by_modbus()
+{
+
+
+
+
+
+    // 写入整型数据 (假设地址 5 存储整型数据)
+    QModbusDataUnit writeUnit1(QModbusDataUnit::HoldingRegisters, 32924, 3);  // 地址5，2个寄存器
+    writeUnit1.setValue(0, ui->lineEdit_Axi1_Standby->text().toDouble()*10);  // 设置整型值
+    writeUnit1.setValue(1, ui->lineEdit_Axi1_WorkStation_1->text().toDouble()*10);  // 设置整型值
+    writeUnit1.setValue(2, ui->lineEdit_Axi1_WorkStation_2->text().toDouble()*10);  // 设置整型值
+    auto reply1 = modbusClient->sendWriteRequest(writeUnit1, 1);  // 设备地址为 1
+    if (reply1) {
+        connect(reply1, &QModbusReply::finished, this, &Widget::onWriteFinished);
+
+    } else {
+        qDebug() << "Failed to send write request for integer.";
+    }
+
+
+
+
+    QModbusDataUnit writeUnit2(QModbusDataUnit::HoldingRegisters, 32934, 4);  // 地址5，2个寄存器
+    writeUnit2.setValue(0, ui->lineEdit_Axi2_Standby->text().toDouble()*10);  // 设置整型值
+    writeUnit2.setValue(1, ui->lineEdit_Axi2_WorkPostion_1->text().toDouble()*10);  // 设置整型值
+    writeUnit2.setValue(2, ui->lineEdit_Axi2_WorkPostion_2->text().toDouble()*10);  // 设置整型值
+    writeUnit2.setValue(3, ui->lineEdit_Axi2_WorkPostion_3->text().toDouble()*10);  // 设置整型值
+    auto reply2 = modbusClient->sendWriteRequest(writeUnit2, 1);  // 设备地址为 1
+    if (reply2) {
+        connect(reply2, &QModbusReply::finished, this, &Widget::onWriteFinished);
+
+    } else {
+        qDebug() << "Failed to send write request for integer.";
+    }
+
+
+
+    QModbusDataUnit writeUnit3(QModbusDataUnit::HoldingRegisters, 32945, 3);  // 地址5，2个寄存器
+    writeUnit3.setValue(0, ui->lineEdit_Axi3_Standby->text().toDouble()*10);  // 设置整型值
+    writeUnit3.setValue(1, ui->lineEdit_Axi3_WorkStation_1->text().toDouble()*10);  // 设置整型值
+    auto reply3 = modbusClient->sendWriteRequest(writeUnit3, 1);  // 设备地址为 1
+    if (reply3) {
+        connect(reply3, &QModbusReply::finished, this, &Widget::onWriteFinished);
+
+    } else {
+        qDebug() << "Failed to send write request for integer.";
+    }
+
+
+    QModbusDataUnit writeUnit4(QModbusDataUnit::HoldingRegisters, 32954, 3);  // 地址5，2个寄存器
+    writeUnit4.setValue(0, ui->lineEdit_Axi4__Standby->text().toDouble()*10);  // 设置整型值
+    writeUnit4.setValue(1, ui->lineEdit_Axi4_WorkStation_1->text().toDouble()*10);  // 设置整型值
+    auto reply4 = modbusClient->sendWriteRequest(writeUnit4, 1);  // 设备地址为 1
+    if (reply4) {
+        connect(reply4, &QModbusReply::finished, this, &Widget::onWriteFinished);
+
+    } else {
+        qDebug() << "Failed to send write request for integer.";
+    }
+
+    QModbusDataUnit writeUnit5(QModbusDataUnit::HoldingRegisters, 32963, 3);  // 地址5，2个寄存器
+    writeUnit5.setValue(0, ui->lineEdit_Axi5__Standby->text().toDouble()*10);  // 设置整型值
+    writeUnit5.setValue(1, ui->lineEdit_Axi5_WorkStation_1->text().toDouble()*10);  // 设置整型值
+    auto reply5 = modbusClient->sendWriteRequest(writeUnit5, 1);  // 设备地址为 1
+    if (reply5) {
+        connect(reply5, &QModbusReply::finished, this, &Widget::onWriteFinished);
+
+    } else {
+        qDebug() << "Failed to send write request for integer.";
+    }
+
+
+
+    //  on_btn_Axi1_SetStandbyPosition_clicked();  // 设置待机位置
+
+    // on_btn_Axi1_SetWorkPostion_1_clicked();    // 设置工作位置1
+
+    //  on_btn_Axi1_SetWorkPostion_2_clicked();    // 设置工作位置2
+
+
+
+    //  on_btn_Axi2_SetStandbyPosition_clicked();  // 设置待机位置
+
+    //  on_btn_Axi2_SetWorkPostion_1_clicked();    // 设置工作位置1
+
+    //  on_btn_Axi2_SetWorkPostion_2_clicked();    // 设置工作位置2
+
+    // on_btn_Axi2_SetWorkPostion_3_clicked();
+
+    //  on_btn_Axi3_SetStandbyPosition_clicked();  // 设置待机位置
+
+    //  on_btn_Axi3_SetWorkPostion_1_clicked();    // 设置工作位置1
+
+
+    // on_btn_Axi4_SetStandbyPosition_clicked();  // 设置待机位置
+
+    //  on_btn_Axi4_SetWorkPostion_1_clicked();    // 设置工作位置1
+
+
+    //  on_btn_Axi5_SetStandbyPosition_clicked();  // 设置待机位置
+
+    //  on_btn_Axi5_SetWorkPostion_1_clicked();    // 设置工作位置1
+
+
+
 }
 

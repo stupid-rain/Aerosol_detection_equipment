@@ -40,6 +40,7 @@ public:
 private slots:
     void on_btn_get_plc_state_clicked();// 获取PLC状态
     void get_plc_state_by_modbus();
+    void set_plc_state_by_modbus();
 
     void on_btn_connect_plc_clicked();  // 连接PLC
 
@@ -270,6 +271,48 @@ private slots:
 
     void on_btn_SetBox_clicked();
 
+    void on_btn_Axi_SetPosition_5_pressed();
+
+    void on_btn_Axi_SetPosition_1_pressed();
+
+    void on_btn_Axi_SetPosition_2_pressed();
+
+    void on_btn_Axi_SetPosition_3_pressed();
+
+    void on_btn_Axi_SetPosition_4_pressed();
+
+    void on_btn_Axi_Jog_Pos_1_pressed();
+
+    void on_btn_Axi_Jog_Neg_1_clicked();
+
+    void on_btn_Axi_Jog_Neg_1_pressed();
+
+    void on_btn_Axi_Jog_Pos_1_clicked();
+
+    void on_btn_Axi_Jog_Pos_2_pressed();
+
+    void on_btn_Axi_Jog_Neg_2_clicked();
+
+    void on_btn_Axi_Jog_Neg_2_pressed();
+
+    void on_btn_Axi_Jog_Pos_2_clicked();
+
+    void on_btn_Axi_Jog_Pos_3_pressed();
+
+    void on_btn_Axi_Jog_Neg_3_clicked();
+
+    void on_btn_Axi_Jog_Neg_3_pressed();
+
+    void on_btn_Axi_Jog_Pos_3_clicked();
+
+
+    void on_btn_Axi_Jog_Pos_4_pressed();
+
+    void on_btn_Axi_Jog_Neg_4_clicked();
+
+    void on_btn_Axi_Jog_Neg_4_pressed();
+
+    void on_btn_Axi_Jog_Pos_4_clicked();
 private:
     Ui::Widget *ui;
     // Modbus tcp
@@ -278,6 +321,6 @@ private:
     QTimer writeTimer;
     // 定时器
     QTimer *_pTimerUpdate,*_pTimerUpdate1;
-    QTimer *_pTimerUpdate2;// 保存数据定时器
+    QTimer *_pTimerUpdate_setting;// 保存数据定时器
 };
 #endif // WIDGET_H
