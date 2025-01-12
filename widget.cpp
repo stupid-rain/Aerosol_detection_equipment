@@ -16,6 +16,8 @@ Widget::Widget(QWidget *parent)
     , ui(new Ui::Widget)
 {
     ui->setupUi(this);
+
+    setWindowTitle("气溶胶设备上位机软件");  // 设置窗口标题
     modbusClient = new QModbusTcpClient(this);
     if (nullptr == modbusClient )
     {
@@ -158,6 +160,27 @@ void Widget::readData()
         }
     }
 
+
+    QModbusDataUnit readUnit3(QModbusDataUnit::HoldingRegisters, 33023, 1);  // 地址1，1个寄存器
+    auto reply3 = modbusClient->sendReadRequest(readUnit3, 0x1);  // 设备地址为 1
+    if(nullptr==reply3)
+    {
+        qDebug() << "读取数据失败";
+    }
+    else
+    {
+        qDebug() << "读取数据成功";
+        if(!reply3->isFinished())
+        {
+            qDebug() << "!reply->isFinished()";
+            connect(reply3, &QModbusReply::finished, this, &Widget::onReadFinished3);
+        }
+        else
+        {
+            qDebug() << "reply->isFinished()";
+        }
+    }
+
 }
 
 void Widget::writeData()
@@ -213,6 +236,62 @@ void Widget::onReadFinished1()
         const QModbusDataUnit unit = reply->result();
 
         // 电机1
+        QString Status[100];
+
+        Status[0]  = (unit.value(0))? "就绪":"未就绪";       ui->lineEdit_Axi_Status_1->setText(Status[0]);
+        Status[1]  = (unit.value(1))? "报警":"未报警";       ui->lineEdit_Axi_ErroStatus_1->setText(Status[1]);
+        Status[2]  = (unit.value(2))? "电机运行中":"电机未运行";       ui->lineEdit_Axi_RunningStatus_1->setText(Status[2]);
+        ui->lineEdit_Axi_ErroID_1->setText(Status[6]);
+
+        Status[8]  = (unit.value(8))? "就绪":"未就绪";       ui->lineEdit_Axi_Status_2->setText(Status[8]);
+        Status[9]  = (unit.value(9))? "报警":"未报警";       ui->lineEdit_Axi_ErroStatus_2->setText(Status[9]);
+        Status[10]  = (unit.value(10))? "电机运行中":"电机未运行";       ui->lineEdit_Axi_RunningStatus_2->setText(Status[10]);
+        ui->lineEdit_Axi_ErroID_2->setText(Status[14]);
+
+
+
+        Status[16]  = (unit.value(16))? "就绪":"未就绪";       ui->lineEdit_Axi_Status_3->setText(Status[16]);
+        Status[17]  = (unit.value(17))? "报警":"未报警";       ui->lineEdit_Axi_ErroStatus_3->setText(Status[17]);
+        Status[18]  = (unit.value(18))? "电机运行中":"电机未运行";       ui->lineEdit_Axi_RunningStatus_3->setText(Status[18]);
+        ui->lineEdit_Axi_ErroID_3->setText(Status[22]);
+
+        Status[24]  = (unit.value(24))? "就绪":"未就绪";       ui->lineEdit_Axi_Status_4->setText(Status[24]);
+        Status[25]  = (unit.value(25))? "报警":"未报警";       ui->lineEdit_Axi_ErroStatus_4->setText(Status[25]);
+        Status[26]  = (unit.value(26))? "电机运行中":"电机未运行";       ui->lineEdit_Axi_RunningStatus_4->setText(Status[26]);
+        ui->lineEdit_Axi_ErroID_4->setText(Status[30]);
+
+        Status[32]  = (unit.value(32))? "就绪":"未就绪";       ui->lineEdit_Axi_Status_5->setText(Status[32]);
+        Status[33]  = (unit.value(33))? "报警":"未报警";       ui->lineEdit_Axi_ErroStatus_5->setText(Status[33]);
+        Status[34]  = (unit.value(34))? "电机运行中":"电机未运行";       ui->lineEdit_Axi_RunningStatus_5->setText(Status[34]);
+        ui->lineEdit_Axi_ErroID_5->setText(Status[38]);
+
+
+        if ((unit.value(78)& 0x01)==0)
+        {
+            ui->textEdit->clear();
+            ui->textEdit->append("正常");
+
+        }
+        else if((unit.value(78) & (1 << 2)) != 0)
+        {
+            ui->textEdit->append("转运组X轴电机走定位超过2S不动");
+        }
+        else if((unit.value(78) & (1 << 3)) != 0)
+        {
+            ui->textEdit->append("转运组Z轴电机走定位超过2S不动");
+        }
+        else if((unit.value(78) & (1 << 4)) != 0)
+        {
+            ui->textEdit->append("裁剪X轴电机走定位超过2S不动");
+        }
+        else if((unit.value(78) & (1 << 5)) != 0)
+        {
+            ui->textEdit->append("裁剪组Y轴电机走定位超过2S不动");
+        }
+        else if((unit.value(78) & (1 << 6)) != 0)
+        {
+            ui->textEdit->append("旋转轴电机走定位超过2S不动");
+        }
 
         if(unit.value(3)) // 正限位
         {
@@ -232,6 +311,7 @@ void Widget::onReadFinished1()
         }
 
         ui->lineEdit_AxiStatus_1->setText(QString::number(unit.value(5)/10.0)); // 轴的当前位置
+        ui->lineEdit_Axi_CurPositon_Status_1->setText(QString::number(unit.value(5)/10.0)); // 轴的当前位置;
 
         if(unit.value(7))   // 轴的使能状态
         {
@@ -264,7 +344,7 @@ void Widget::onReadFinished1()
         }
 
         ui->lineEdit_AxiStatus_2->setText(QString::number(unit.value(13)/10.0)); // 轴的当前位置
-
+        ui->lineEdit_Axi_CurPositon_Status_2->setText(QString::number(unit.value(13)/10.0)); // 轴的当前位置
         if(unit.value(15))   // 轴的使能状态
         {
             ui->lineEdit_Axi_Enable_2->setText("使能");
@@ -294,7 +374,7 @@ void Widget::onReadFinished1()
         }
 
         ui->lineEdit_AxiStatus_3->setText(QString::number(unit.value(21)/10.0)); // 轴的当前位置
-
+        ui->lineEdit_Axi_CurPositon_Status_3->setText(QString::number(unit.value(21)/10.0)); // 轴的当前位置
         if(unit.value(23))   // 轴的使能状态
         {
             ui->lineEdit_Axi_Enable_3->setText("使能");
@@ -324,7 +404,7 @@ void Widget::onReadFinished1()
         }
 
         ui->lineEdit_AxiStatus_4->setText(QString::number(unit.value(29)/10.0)); // 轴的当前位置
-
+        ui->lineEdit_Axi_CurPositon_Status_4->setText(QString::number(unit.value(29)/10.0)); // 轴的当前位置
         if(unit.value(31))   // 轴的使能状态
         {
             ui->lineEdit_Axi_Enable_4->setText("使能");
@@ -354,7 +434,7 @@ void Widget::onReadFinished1()
         }
 
         ui->lineEdit_AxiStatus_5->setText(QString::number(unit.value(37)/10.0)); // 轴的当前位置
-
+        ui->lineEdit_Axi_CurPositon_Status_5->setText(QString::number(unit.value(37)/10.0)); // 轴的当前位置
         if(unit.value(39))   // 轴的使能状态
         {
             ui->lineEdit_Axi_Enable_5->setText("使能");
@@ -411,16 +491,16 @@ void Widget::onReadFinished1()
         qN[10]  = (unit.value(69))? "已触发":"未触发"; ui->lineEdit_CylinderNegStatus_10->setText(qN[10]);
 
         qO[11]  = (unit.value(70))? "已输出":"未输出";       ui->lineEdit_CylinderCmd_11->setText(qO[11]);
-        qP[11]  = (unit.value(71))? "已触发":"未触发"; ui->lineEdit_CylinderPosStatus_11->setText(qP[11]);
-        qN[11]  = (unit.value(72))? "已触发":"未触发"; ui->lineEdit_CylinderNegStatus_11->setText(qN[11]);
+        // qP[11]  = (unit.value(71))? "已触发":"未触发"; ui->lineEdit_CylinderPosStatus_11->setText(qP[11]);
+        // qN[11]  = (unit.value(72))? "已触发":"未触发"; ui->lineEdit_CylinderNegStatus_11->setText(qN[11]);
 
         qO[12]  = (unit.value(73))? "已输出":"未输出";       ui->lineEdit_CylinderCmd_12->setText(qO[12]);
-        qP[12]  = (unit.value(74))? "已触发":"未触发"; ui->lineEdit_CylinderPosStatus_12->setText(qP[12]);
-        qN[12]  = (unit.value(75))? "已触发":"未触发"; ui->lineEdit_CylinderNegStatus_12->setText(qN[12]);
+        // qP[12]  = (unit.value(74))? "已触发":"未触发"; ui->lineEdit_CylinderPosStatus_12->setText(qP[12]);
+        // qN[12]  = (unit.value(75))? "已触发":"未触发"; ui->lineEdit_CylinderNegStatus_12->setText(qN[12]);
 
         qO[13]  = (unit.value(76))? "已输出":"未输出";       ui->lineEdit_CylinderCmd_13->setText(qO[13]);
-        qP[13]  = (unit.value(77))? "已触发":"未触发"; ui->lineEdit_CylinderPosStatus_13->setText(qP[13]);
-        qN[13]  = (unit.value(78))? "已触发":"未触发"; ui->lineEdit_CylinderNegStatus_13->setText(qN[13]);
+        // qP[13]  = (unit.value(77))? "已触发":"未触发"; ui->lineEdit_CylinderPosStatus_13->setText(qP[13]);
+        // qN[13]  = (unit.value(78))? "已触发":"未触发"; ui->lineEdit_CylinderNegStatus_13->setText(qN[13]);
 
         qO[14]  = (unit.value(79))? "已输出":"未输出";       ui->lineEdit_CylinderCmd_14->setText(qO[14]);
         qP[14]  = (unit.value(80))? "已触发":"未触发"; ui->lineEdit_CylinderPosStatus_14->setText(qP[14]);
@@ -643,6 +723,58 @@ void Widget::onReadFinished2()
 
     reply->deleteLater();
 }
+
+
+void Widget::onReadFinished3()
+{
+    QModbusReply *reply = qobject_cast<QModbusReply *>(sender());
+    if (!reply)
+
+    {
+        qDebug() << "REply erro";
+        return;
+    }
+
+    // 处理读取的Modbus数据
+    if (reply->error() == QModbusDevice::NoError)
+    {
+        const QModbusDataUnit unit = reply->result();
+
+        // 气缸
+
+        switch (unit.value(0)) {
+        case 0:
+            ui->lineEdit_Mode->setText("开机");
+            break;
+        case 1:
+            ui->lineEdit_Mode->setText("初始化");
+        case 2:
+            ui->lineEdit_Mode->setText("手动");
+        case 3:
+            ui->lineEdit_Mode->setText("自动");
+        case 4:
+            ui->lineEdit_Mode->setText("自动");
+        case 5:
+            ui->lineEdit_Mode->setText("错误");
+        default:
+            ui->lineEdit_Mode->setText("关机");
+            break;
+        }
+
+    }
+
+
+
+
+    else
+    {
+        qDebug() << "Modbus read error:" << reply->errorString();
+    }
+
+    reply->deleteLater();
+}
+
+
 void Widget::onWriteFinished()
 {
     QModbusReply *reply = qobject_cast<QModbusReply *>(sender());
@@ -701,6 +833,25 @@ void Widget::get_plc_state_by_modbus()
         }
     }
 
+    QModbusDataUnit readUnit3(QModbusDataUnit::HoldingRegisters, 33023, 1);  // 地址1，1个寄存器
+    auto reply3 = modbusClient->sendReadRequest(readUnit3, 0x1);  // 设备地址为 1
+    if(nullptr==reply3)
+    {
+        qDebug() << "读取数据失败";
+    }
+    else
+    {
+        qDebug() << "读取数据成功";
+        if(!reply3->isFinished())
+        {
+            qDebug() << "!reply->isFinished()";
+            connect(reply3, &QModbusReply::finished, this, &Widget::onReadFinished3);
+        }
+        else
+        {
+            qDebug() << "reply->isFinished()";
+        }
+    }
 
 }
 

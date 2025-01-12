@@ -56,7 +56,7 @@
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1111&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="tab_cmd">
     <attribute name="title">
@@ -66,9 +66,9 @@
      <property name="geometry">
       <rect>
        <x>660</x>
-       <y>420</y>
-       <width>75</width>
-       <height>23</height>
+       <y>280</y>
+       <width>141</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="text">
@@ -79,9 +79,9 @@
      <property name="geometry">
       <rect>
        <x>450</x>
-       <y>420</y>
-       <width>75</width>
-       <height>23</height>
+       <y>280</y>
+       <width>131</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="text">
@@ -92,208 +92,20 @@
      <property name="geometry">
       <rect>
        <x>260</x>
-       <y>420</y>
-       <width>75</width>
-       <height>23</height>
+       <y>280</y>
+       <width>131</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="text">
       <string>启动</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="btn_GetPaper">
-     <property name="geometry">
-      <rect>
-       <x>220</x>
-       <y>220</y>
-       <width>75</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>取纸</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_GetPaperStatus">
-     <property name="geometry">
-      <rect>
-       <x>320</x>
-       <y>220</y>
-       <width>61</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QGroupBox" name="Plc">
-     <property name="geometry">
-      <rect>
-       <x>110</x>
-       <y>80</y>
-       <width>751</width>
-       <height>91</height>
-      </rect>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>751</width>
-       <height>91</height>
-      </size>
-     </property>
-     <property name="title">
-      <string>PLC</string>
-     </property>
-     <widget class="QPushButton" name="btn_get_plc_state">
-      <property name="geometry">
-       <rect>
-        <x>142</x>
-        <y>42</y>
-        <width>80</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>获取PLC</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_plc_state">
-      <property name="geometry">
-       <rect>
-        <x>339</x>
-        <y>38</y>
-        <width>30</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>状态</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lineEdit_plc_state">
-      <property name="geometry">
-       <rect>
-        <x>485</x>
-        <y>43</y>
-        <width>142</width>
-        <height>27</height>
-       </rect>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QPushButton" name="btn_SetPaper">
-     <property name="geometry">
-      <rect>
-       <x>220</x>
-       <y>280</y>
-       <width>75</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>放纸</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_SetPaperStatus">
-     <property name="geometry">
-      <rect>
-       <x>320</x>
-       <y>280</y>
-       <width>61</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="btn_CutPaper">
-     <property name="geometry">
-      <rect>
-       <x>420</x>
-       <y>220</y>
-       <width>75</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>裁纸</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_CutPaperStatus">
-     <property name="geometry">
-      <rect>
-       <x>520</x>
-       <y>220</y>
-       <width>61</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_SetBox">
-     <property name="geometry">
-      <rect>
-       <x>520</x>
-       <y>260</y>
-       <width>61</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="btn_SetBox">
-     <property name="geometry">
-      <rect>
-       <x>420</x>
-       <y>260</y>
-       <width>75</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>装盒</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_Collect">
-     <property name="geometry">
-      <rect>
-       <x>320</x>
-       <y>250</y>
-       <width>61</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="btn_Collect">
-     <property name="geometry">
-      <rect>
-       <x>220</x>
-       <y>250</y>
-       <width>75</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>采集</string>
-     </property>
-    </widget>
     <widget class="QGroupBox" name="Ads">
      <property name="geometry">
       <rect>
        <x>110</x>
-       <y>0</y>
+       <y>30</y>
        <width>751</width>
        <height>91</height>
       </rect>
@@ -339,11 +151,14 @@
      <widget class="QLineEdit" name="lineEdit_plc_connect_status">
       <property name="geometry">
        <rect>
-        <x>485</x>
+        <x>410</x>
         <y>43</y>
         <width>142</width>
         <height>27</height>
        </rect>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_plc_addr">
@@ -357,6 +172,9 @@
       </property>
       <property name="text">
        <string>192.168.10.10</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="label_plc_addr">
@@ -380,45 +198,797 @@
      <property name="geometry">
       <rect>
        <x>90</x>
-       <y>420</y>
-       <width>75</width>
-       <height>23</height>
+       <y>280</y>
+       <width>121</width>
+       <height>71</height>
       </rect>
      </property>
      <property name="text">
       <string>回原点</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="btn_Axi_Mode_Switch">
+    <widget class="QGroupBox" name="groupBox_2">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>320</y>
-       <width>75</width>
-       <height>23</height>
+       <x>110</x>
+       <y>130</y>
+       <width>751</width>
+       <height>131</height>
       </rect>
      </property>
-     <property name="text">
-      <string>模式转换</string>
+     <property name="title">
+      <string>模式</string>
      </property>
+     <widget class="QLineEdit" name="lineEdit_Mode">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>50</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>关机</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Axi_Mode_Switch">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>50</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>模式转换</string>
+      </property>
+     </widget>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_Mode">
+    <widget class="QGroupBox" name="groupBox_3">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>320</y>
-       <width>61</width>
-       <height>21</height>
+       <x>110</x>
+       <y>380</y>
+       <width>771</width>
+       <height>301</height>
       </rect>
      </property>
-     <property name="text">
-      <string>手动</string>
+     <property name="title">
+      <string>运行状态监测</string>
      </property>
+     <widget class="QLabel" name="label_Axi_Status_1">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>60</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>转运组X轴准备状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_Status_1">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>60</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_Status_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>220</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>转运组Z轴准备状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_Status_2">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>220</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_Status_3">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>60</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>裁剪组X轴准备状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_Status_3">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>60</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_Status_4">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>220</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>裁剪组Y轴准备状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_Status_4">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>220</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_Status_5">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>60</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>旋转组准备状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_Status_5">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>60</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_CurPositon_Status_1">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>当前位置</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_CurPositon_Status_1">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>30</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_CurPositon_Status_2">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>190</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_CurPositon_Status_2">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>190</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>当前位置</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_CurPositon_Status_3">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>30</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_CurPositon_Status_3">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>30</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>当前位置</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_CurPositon_Status_4">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>190</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_CurPositon_Status_4">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>190</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>当前位置</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_CurPositon_Status_5">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>30</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_CurPositon_Status_5">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>30</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>当前位置</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_RunningStatus_1">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>90</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_RunningStatus_1">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>90</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>转运组X轴运行状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_RunningStatus_2">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>250</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_RunningStatus_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>250</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>转运组Z轴运行状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_RunningStatus_3">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>90</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_RunningStatus_3">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>90</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>裁剪组X轴运行状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_RunningStatus_4">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>250</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_RunningStatus_4">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>250</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>裁剪组Y轴运行状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_RunningStatus_5">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>90</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_RunningStatus_5">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>90</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>旋转轴运行状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_ErroStatus_1">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>120</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_ErroStatus_1">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>120</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>转运组X轴报警状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_ErroStatus_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>280</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>转运组Z轴报警状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_ErroStatus_3">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>120</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>裁剪组X轴报警状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_ErroStatus_4">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>280</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>裁剪组Y轴报警状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_Axi_ErroStatus_5">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>120</y>
+        <width>121</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>旋转轴报警状态</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_ErroStatus_2">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>280</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_ErroStatus_3">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>120</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_ErroStatus_4">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>280</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Axi_ErroStatus_5">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>120</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>调试模式-单步操作</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>180</y>
+       <width>331</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>单步操作</string>
+     </property>
+     <widget class="QPushButton" name="btn_SetBox">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>80</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>装盒</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_Collect">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>80</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>采集</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_CutPaper">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>30</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>裁纸</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_GetPaper">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>取纸</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_SetPaper">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>130</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>放纸</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QWidget" name="tab_set_param">
     <attribute name="title">
-     <string>电机操作</string>
+     <string>调试模式-电机操作</string>
     </attribute>
     <widget class="QGroupBox" name="Axi1">
      <property name="geometry">
@@ -457,19 +1027,6 @@
        <string>位置定位</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_Axi_SetVel_1">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>170</y>
-        <width>61</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
      <widget class="QPushButton" name="btn_Axi_Reset_1">
       <property name="geometry">
        <rect>
@@ -494,19 +1051,6 @@
       </property>
       <property name="text">
        <string>停止</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btn_Axi_SetVel_1">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>170</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>速度设定</string>
       </property>
      </widget>
      <widget class="QPushButton" name="btn_Axi_GoHome_1">
@@ -534,6 +1078,9 @@
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QPushButton" name="btn_Axi_SetHome_1">
       <property name="geometry">
@@ -559,6 +1106,9 @@
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="label_Axi_CurPositon_1">
@@ -589,6 +1139,9 @@
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLabel" name="label_Axi_PosLimit_1">
       <property name="geometry">
@@ -617,6 +1170,9 @@
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="label_Axi_NegLimit_1">
@@ -647,6 +1203,9 @@
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_Axi1_Standby">
       <property name="geometry">
@@ -659,6 +1218,9 @@
       </property>
       <property name="text">
        <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_Axi1_WorkStation_1">
@@ -673,6 +1235,9 @@
       <property name="text">
        <string>920</string>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_Axi1_WorkStation_2">
       <property name="geometry">
@@ -685,6 +1250,9 @@
       </property>
       <property name="text">
        <string>2520</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QPushButton" name="btn_Axi1_SetStandbyPosition">
@@ -847,6 +1415,9 @@
       <property name="text">
        <string>1700</string>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QPushButton" name="btn_Axi2_SetWorkPostion_3">
       <property name="geometry">
@@ -898,6 +1469,9 @@
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QPushButton" name="btn_Axi_Reset_2">
@@ -964,6 +1538,9 @@
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QPushButton" name="btn_Axi_SetHome_2">
       <property name="geometry">
@@ -989,6 +1566,9 @@
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="label_Axi_CurPositon_2">
@@ -1019,6 +1599,9 @@
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLabel" name="label_Axi_PosLimit_2">
       <property name="geometry">
@@ -1047,6 +1630,9 @@
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="label_Axi_NegLimit_2">
@@ -1077,6 +1663,9 @@
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLabel" name="label_Axi2_WorkStation_1">
       <property name="geometry">
@@ -1105,6 +1694,9 @@
       </property>
       <property name="text">
        <string>120</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QPushButton" name="btn_Axi2_SetWorkPostion_2">
@@ -1144,6 +1736,9 @@
       </property>
       <property name="text">
        <string>150</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="label_Axi2_WorkStation_2">
@@ -1189,6 +1784,9 @@
       </property>
       <property name="text">
        <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QPushButton" name="btn_Axi2_SetStandbyPosition">
@@ -1287,19 +1885,6 @@
        <string>位置定位</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_Axi_SetVel_3">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>170</y>
-        <width>61</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
      <widget class="QPushButton" name="btn_Axi_Reset_3">
       <property name="geometry">
        <rect>
@@ -1324,19 +1909,6 @@
       </property>
       <property name="text">
        <string>停止</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btn_Axi_SetVel_3">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>170</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>速度设定</string>
       </property>
      </widget>
      <widget class="QPushButton" name="btn_Axi_GoHome_3">
@@ -1364,6 +1936,9 @@
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QPushButton" name="btn_Axi_SetHome_3">
       <property name="geometry">
@@ -1389,6 +1964,9 @@
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="label_Axi_CurPositon_3">
@@ -1419,6 +1997,9 @@
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLabel" name="label_Axi_PosLimit_3">
       <property name="geometry">
@@ -1447,6 +2028,9 @@
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="label_Axi_NegLimit_3">
@@ -1477,6 +2061,9 @@
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QPushButton" name="btn_Axi3_SetWorkPostion_1">
       <property name="geometry">
@@ -1502,6 +2089,9 @@
       </property>
       <property name="text">
        <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QPushButton" name="btn_Axi3_SetStandbyPosition">
@@ -1544,6 +2134,9 @@
       </property>
       <property name="text">
        <string>644</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="label_Axi3_Standby">
@@ -1645,19 +2238,6 @@
        <string>位置定位</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_Axi_SetVel_4">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>170</y>
-        <width>61</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
      <widget class="QPushButton" name="btn_Axi_Reset_4">
       <property name="geometry">
        <rect>
@@ -1682,19 +2262,6 @@
       </property>
       <property name="text">
        <string>停止</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btn_Axi_SetVel_4">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>170</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>速度设定</string>
       </property>
      </widget>
      <widget class="QPushButton" name="btn_Axi_GoHome_4">
@@ -1722,6 +2289,9 @@
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QPushButton" name="btn_Axi_SetHome_4">
       <property name="geometry">
@@ -1747,6 +2317,9 @@
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="label_Axi_CurPositon_4">
@@ -1777,6 +2350,9 @@
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLabel" name="label_Axi_PosLimit_4">
       <property name="geometry">
@@ -1805,6 +2381,9 @@
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="label_Axi_NegLimit_4">
@@ -1835,6 +2414,9 @@
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_Axi4_WorkStation_1">
       <property name="geometry">
@@ -1847,6 +2429,9 @@
       </property>
       <property name="text">
        <string>200</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QPushButton" name="btn_Axi4_SetStandbyPosition">
@@ -1918,6 +2503,9 @@
       </property>
       <property name="text">
        <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QCheckBox" name="check_Axi_Enable_4">
@@ -1991,19 +2579,6 @@
        <string>位置定位</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_Axi_SetVel_5">
-      <property name="geometry">
-       <rect>
-        <x>510</x>
-        <y>60</y>
-        <width>61</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
      <widget class="QPushButton" name="btn_Axi_Reset_5">
       <property name="geometry">
        <rect>
@@ -2028,19 +2603,6 @@
       </property>
       <property name="text">
        <string>停止</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btn_Axi_SetVel_5">
-      <property name="geometry">
-       <rect>
-        <x>590</x>
-        <y>60</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>速度设定</string>
       </property>
      </widget>
      <widget class="QPushButton" name="btn_Axi_GoHome_5">
@@ -2068,6 +2630,9 @@
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QPushButton" name="btn_Axi_SetHome_5">
       <property name="geometry">
@@ -2093,6 +2658,9 @@
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="label_Axi_CurPositon_5">
@@ -2123,6 +2691,9 @@
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLabel" name="label_Axi_PosLimit_5">
       <property name="geometry">
@@ -2152,6 +2723,9 @@
       <property name="text">
        <string/>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLabel" name="label_Axi_NegLimit_5">
       <property name="geometry">
@@ -2180,6 +2754,9 @@
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QLabel" name="label_Axi5_WorkStation">
@@ -2239,6 +2816,9 @@
       <property name="text">
        <string>0</string>
       </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
      <widget class="QLineEdit" name="lineEdit_Axi5__Standby">
       <property name="geometry">
@@ -2251,6 +2831,9 @@
       </property>
       <property name="text">
        <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
      <widget class="QPushButton" name="btn_Axi5_SetWorkPostion_1">
@@ -2289,7 +2872,7 @@
    </widget>
    <widget class="QWidget" name="tab_state">
     <attribute name="title">
-     <string>混合组气缸</string>
+     <string>调试模式-混合组气缸</string>
     </attribute>
     <widget class="QGroupBox" name="Cylinder_1">
      <property name="geometry">
@@ -3420,7 +4003,7 @@
    </widget>
    <widget class="QWidget" name="tab">
     <attribute name="title">
-     <string>裁剪组</string>
+     <string>调试模式-裁剪组</string>
     </attribute>
     <widget class="QGroupBox" name="Cylinder_31">
      <property name="geometry">
@@ -6563,6 +7146,192 @@
     <attribute name="title">
      <string>报警</string>
     </attribute>
+    <widget class="QLabel" name="label_Axi_ErroID_1">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>60</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>转运组X轴错误代码</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_Axi_ErroID_2">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>110</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>转运组Z轴错误代码</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_Axi_ErroID_3">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>160</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>裁剪组X轴错误代码</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_Axi_ErroID_4">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>200</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>裁剪组X轴错误代码</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_Axi_Erro_5">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>240</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>旋转轴错误信息代码</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_Axi_ErroID_1">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>60</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_Axi_Erro_6">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>390</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>定位警告信息 </string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="textEdit">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>360</y>
+       <width>401</width>
+       <height>81</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_Axi_ErroID_2">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>110</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_Axi_ErroID_3">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>160</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_Axi_ErroID_4">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>200</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_Axi_ErroID_5">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>240</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>
