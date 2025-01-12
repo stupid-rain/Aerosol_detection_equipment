@@ -2684,7 +2684,7 @@ void Widget::on_btn_Axi_All_Start_clicked()
 {
     // 写入整型数据 (假设地址 5 存储整型数据)
     QModbusDataUnit writeUnit(QModbusDataUnit::HoldingRegisters, 33009, 1);  // 地址5，2个寄存器
-    writeUnit.setValue(0, 1);  // 设置整型值
+    writeUnit.setValue(0, 0);  // 设置整型值
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
@@ -2752,7 +2752,8 @@ void Widget::Set_On_Auto()
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
-        ui->lineEdit_Mode->setText("切换为手动");
+        ui->btn_Axi_Mode_Switch->setText("切换为手动");
+        ui->lineEdit_Mode->setText("自动");
 
     } else
     {
@@ -2768,7 +2769,8 @@ void Widget::Set_On_Manu()
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
-        ui->lineEdit_Mode->setText("切换为自动");
+        ui->btn_Axi_Mode_Switch->setText("切换为自动");
+        ui->lineEdit_Mode->setText("手动");
 
     } else
     {
