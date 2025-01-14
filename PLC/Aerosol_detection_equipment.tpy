@@ -4,7 +4,7 @@
 	<ProjectInfo>
 		<Path>D:\Work\Qt_Project\Aerosol_detection_equipment\PLC\Aerosol_detection_equipment.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2025-01-14T09:22:46</ChangeDate>
+		<ChangeDate>2025-01-14T13:48:03</ChangeDate>
 		<Library>
 			<Name>TcFloatPC.lib</Name>
 			<Path>C:\TwinCAT\PLC\LIB\TcFloatPC.lib</Path>
@@ -127,7 +127,7 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="10073900" Crc32="2141179139" LastChange="2025-01-14T09:22:46">Aifilter</Name>
+			<Name Decoration="10073900" Crc32="2141179139" LastChange="2025-01-14T10:48:32">Aifilter</Name>
 			<BitSize>3344</BitSize>
 			<SubItem>
 				<Name>Filter</Name>
@@ -177,7 +177,7 @@
 			</FbInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="101733CB" Crc32="1474709943" LastChange="2025-01-14T09:22:46">FB_Cylinder</Name>
+			<Name Decoration="101733CB" Crc32="1474709943" LastChange="2025-01-14T10:48:32">FB_Cylinder</Name>
 			<BitSize>944</BitSize>
 			<SubItem>
 				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">tonAlarm</Name>
@@ -371,7 +371,7 @@
 			</FbInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="30000272" Crc32="4150941735" LastChange="2025-01-14T09:22:46">EM_State</Name>
+			<Name Decoration="30000272" Crc32="4150941735" LastChange="2025-01-14T10:48:36">EM_State</Name>
 			<Type>INT</Type>
 			<BitSize>16</BitSize>
 			<EnumInfo>
@@ -501,7 +501,7 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="10052AB5" Crc32="3648258662" LastChange="2025-01-14T09:22:46">PulseGeneratorCtrl</Name>
+			<Name Decoration="10052AB5" Crc32="3648258662" LastChange="2025-01-14T10:48:32">PulseGeneratorCtrl</Name>
 			<BitSize>200</BitSize>
 			<SubItem>
 				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">TON_PULSE</Name>
@@ -539,7 +539,7 @@
 			</FbInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="100D5DE1" Crc32="0546839990" LastChange="2025-01-14T09:22:46">PulseCtrl</Name>
+			<Name Decoration="100D5DE1" Crc32="0546839990" LastChange="2025-01-14T10:48:32">PulseCtrl</Name>
 			<BitSize>1832</BitSize>
 			<SubItem>
 				<Name>_20ms</Name>
@@ -637,7 +637,7 @@
 			</FbInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="101C2810" Crc32="1635545828" LastChange="2025-01-14T09:22:46">SystemInfoCtrl</Name>
+			<Name Decoration="101C2810" Crc32="1635545828" LastChange="2025-01-14T10:48:32">SystemInfoCtrl</Name>
 			<BitSize>18496</BitSize>
 			<SubItem>
 				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcSystem.lib">InstGETCURTASKINDEX</Name>
@@ -847,7 +847,7 @@
 			</FbInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="100BA428" Crc32="1147339981" LastChange="2025-01-14T09:22:46">TaskInfoCtrl</Name>
+			<Name Decoration="100BA428" Crc32="1147339981" LastChange="2025-01-14T10:48:32">TaskInfoCtrl</Name>
 			<BitSize>328</BitSize>
 			<SubItem>
 				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcSystem.lib">GETCURTASKINDEX</Name>
@@ -948,7 +948,7 @@
 			</FbInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="300002D5" Crc32="1335057030" LastChange="2025-01-14T09:22:46">EM_Status</Name>
+			<Name Decoration="300002D5" Crc32="1335057030" LastChange="2025-01-14T10:48:36">EM_Status</Name>
 			<Type>INT</Type>
 			<BitSize>16</BitSize>
 			<EnumInfo>
@@ -977,7 +977,7 @@
 			</EnumInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="1032138A" Crc32="3955357221" LastChange="2025-01-14T09:22:46">ST_Axis</Name>
+			<Name Decoration="1032138A" Crc32="3955357221" LastChange="2025-01-14T10:48:32">ST_Axis</Name>
 			<BitSize>1712</BitSize>
 			<SubItem>
 				<Name>AxisName</Name>
@@ -1377,7 +1377,7 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name Decoration="100C2D95" Crc32="3629671728" LastChange="2025-01-14T09:22:46">ST_AxisCmd</Name>
+			<Name Decoration="100C2D95" Crc32="3629671728" LastChange="2025-01-14T10:48:32">ST_AxisCmd</Name>
 			<BitSize>96</BitSize>
 			<SubItem>
 				<Name>bEnable</Name>
@@ -1471,7 +1471,7 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name Decoration="100B26F1" Crc32="1395183932" LastChange="2025-01-14T09:22:46">ST_AxisDisplay</Name>
+			<Name Decoration="100B26F1" Crc32="1395183932" LastChange="2025-01-14T10:48:32">ST_AxisDisplay</Name>
 			<BitSize>184</BitSize>
 			<SubItem>
 				<Name>bError</Name>
@@ -1568,7 +1568,7 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name Decoration="10104950" Crc32="1604077290" LastChange="2025-01-14T09:22:46">ST_AxisParam</Name>
+			<Name Decoration="10104950" Crc32="1604077290" LastChange="2025-01-14T10:48:32">ST_AxisParam</Name>
 			<BitSize>720</BitSize>
 			<SubItem>
 				<Name>fVelocity_of_Jog</Name>
@@ -1704,7 +1704,7 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name Decoration="100F85B3" Crc32="2799220533" LastChange="2025-01-14T09:22:46">ST_Cylinder_Ctrl</Name>
+			<Name Decoration="100F85B3" Crc32="2799220533" LastChange="2025-01-14T10:48:32">ST_Cylinder_Ctrl</Name>
 			<BitSize>440</BitSize>
 			<SubItem>
 				<Name>DiBaseLimit</Name>
@@ -1840,7 +1840,7 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name Decoration="10081B75" Crc32="0557535188" LastChange="2025-01-14T09:22:46">ST_HmiCmd</Name>
+			<Name Decoration="10081B75" Crc32="0557535188" LastChange="2025-01-14T10:48:32">ST_HmiCmd</Name>
 			<BitSize>64</BitSize>
 			<SubItem>
 				<Name>bStart</Name>
@@ -1910,7 +1910,7 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name Decoration="10096C62" Crc32="0283950568" LastChange="2025-01-14T09:22:46">ST_HmiDisplay</Name>
+			<Name Decoration="10096C62" Crc32="0283950568" LastChange="2025-01-14T10:48:32">ST_HmiDisplay</Name>
 			<BitSize>720</BitSize>
 			<SubItem>
 				<Name>bAll_Enable_OK</Name>
@@ -1992,7 +1992,7 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name Decoration="100D3758" Crc32="3839865049" LastChange="2025-01-14T09:22:46">ST_Machine</Name>
+			<Name Decoration="100D3758" Crc32="3839865049" LastChange="2025-01-14T10:48:32">ST_Machine</Name>
 			<BitSize>104</BitSize>
 			<SubItem>
 				<Name>btnStart</Name>
@@ -25639,7 +25639,7 @@
 	</Functions>
 	<Programs>
 		<Program>
-			<Name Decoration="10297C80" Crc32="2400180997" LastChange="2025-01-14T09:22:46">MAIN</Name>
+			<Name Decoration="10297C80" Crc32="2403996491" LastChange="2025-01-14T13:28:46">MAIN</Name>
 			<PrgInfo>
 				<CodeIndex>1253</CodeIndex>
 				<ActionInfo>
@@ -25784,7 +25784,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="10077451" Crc32="0934014190" LastChange="2025-01-14T09:22:46">PRG_Alarm</Name>
+			<Name Decoration="10077451" Crc32="0934014190" LastChange="2025-01-14T10:48:32">PRG_Alarm</Name>
 			<PrgInfo>
 				<CodeIndex>1258</CodeIndex>
 				<ActionInfo>
@@ -25831,7 +25831,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="10074CF3" Crc32="3918586567" LastChange="2025-01-14T09:22:46">PRG_AutoPreparation</Name>
+			<Name Decoration="10074CF3" Crc32="3918586567" LastChange="2025-01-14T10:48:32">PRG_AutoPreparation</Name>
 			<PrgInfo>
 				<CodeIndex>1264</CodeIndex>
 				<Symbol>
@@ -25858,7 +25858,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1047E012" Crc32="1692844264" LastChange="2025-01-14T09:22:46">PRG_AutoWork</Name>
+			<Name Decoration="1047E012" Crc32="3923321643" LastChange="2025-01-14T11:24:34">PRG_AutoWork</Name>
 			<PrgInfo>
 				<CodeIndex>1265</CodeIndex>
 				<ActionInfo>
@@ -26113,7 +26113,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1001019B" Crc32="4042738179" LastChange="2025-01-14T09:22:46">PRG_Cylinder</Name>
+			<Name Decoration="1001019B" Crc32="4042738179" LastChange="2025-01-14T10:48:32">PRG_Cylinder</Name>
 			<PrgInfo>
 				<CodeIndex>1275</CodeIndex>
 				<Symbol>
@@ -26122,7 +26122,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1047D907" Crc32="3821115824" LastChange="2025-01-14T09:22:46">PRG_Debug_Mode</Name>
+			<Name Decoration="1047D907" Crc32="0594362247" LastChange="2025-01-14T11:24:34">PRG_Debug_Mode</Name>
 			<PrgInfo>
 				<CodeIndex>1276</CodeIndex>
 				<ActionInfo>
@@ -26353,7 +26353,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1001019B" Crc32="3137184222" LastChange="2025-01-14T09:22:46">PRG_Estop</Name>
+			<Name Decoration="1001019B" Crc32="0381479592" LastChange="2025-01-14T10:48:32">PRG_Estop</Name>
 			<PrgInfo>
 				<CodeIndex>1280</CodeIndex>
 				<Symbol>
@@ -26362,31 +26362,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="10064859" Crc32="2480683931" LastChange="2025-01-14T09:22:46">PRG_GoHomeTogether</Name>
-			<PrgInfo>
-				<CodeIndex>1281</CodeIndex>
-				<Symbol>
-					<Name>PRG_GoHomeTogether.i</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_GoHomeTogether.iPullAxisHomeStep</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_GoHomeTogether.rTrig</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_GoHomeTogether.iStep</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_GoHomeTogether.bAxisNotMoving</Name>
-				</Symbol>
-				<Symbol>
-					<Name>PRG_GoHomeTogether.tDelay</Name>
-				</Symbol>
-			</PrgInfo>
-		</Program>
-		<Program>
-			<Name Decoration="1007686E" Crc32="3080281749" LastChange="2025-01-14T09:22:46">PRG_GoResetTogether</Name>
+			<Name Decoration="1007686E" Crc32="1504125124" LastChange="2025-01-14T11:24:11">PRG_GoResetTogether</Name>
 			<PrgInfo>
 				<CodeIndex>1282</CodeIndex>
 				<Symbol>
@@ -26413,7 +26389,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="10064859" Crc32="2410495701" LastChange="2025-01-14T09:22:46">PRG_GoStopTogether</Name>
+			<Name Decoration="10064859" Crc32="2410495701" LastChange="2025-01-14T10:48:32">PRG_GoStopTogether</Name>
 			<PrgInfo>
 				<CodeIndex>1283</CodeIndex>
 				<Symbol>
@@ -26437,7 +26413,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1007686E" Crc32="0344595628" LastChange="2025-01-14T09:22:46">PRG_GoWork</Name>
+			<Name Decoration="1007686E" Crc32="0344595628" LastChange="2025-01-14T10:48:32">PRG_GoWork</Name>
 			<PrgInfo>
 				<CodeIndex>1284</CodeIndex>
 				<Symbol>
@@ -26464,7 +26440,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="10020623" Crc32="0859315391" LastChange="2025-01-14T09:22:46">PRG_Init</Name>
+			<Name Decoration="10020623" Crc32="0859315391" LastChange="2025-01-14T10:48:32">PRG_Init</Name>
 			<PrgInfo>
 				<CodeIndex>1285</CodeIndex>
 				<Symbol>
@@ -26476,7 +26452,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1009AE7F" Crc32="3992947378" LastChange="2025-01-14T09:22:46">PRG_IO</Name>
+			<Name Decoration="1009AE7F" Crc32="3992947378" LastChange="2025-01-14T10:48:32">PRG_IO</Name>
 			<PrgInfo>
 				<CodeIndex>1286</CodeIndex>
 				<ActionInfo>
@@ -26517,7 +26493,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="100208CA" Crc32="4199299602" LastChange="2025-01-14T09:22:46">PRG_M_Function</Name>
+			<Name Decoration="100208CA" Crc32="4199299602" LastChange="2025-01-14T10:48:32">PRG_M_Function</Name>
 			<PrgInfo>
 				<CodeIndex>1289</CodeIndex>
 				<Symbol>
@@ -26529,7 +26505,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="10147620" Crc32="3076177430" LastChange="2025-01-14T09:22:46">PRG_Manual</Name>
+			<Name Decoration="10147620" Crc32="3076177430" LastChange="2025-01-14T10:48:32">PRG_Manual</Name>
 			<PrgInfo>
 				<CodeIndex>1290</CodeIndex>
 				<Symbol>
@@ -26595,7 +26571,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1003054F" Crc32="1985379670" LastChange="2025-01-14T09:22:46">PRG_Modbus_TCP</Name>
+			<Name Decoration="1003054F" Crc32="2271190672" LastChange="2025-01-14T11:28:54">PRG_Modbus_TCP</Name>
 			<PrgInfo>
 				<CodeIndex>1291</CodeIndex>
 				<ActionInfo>
@@ -26622,7 +26598,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="100204AF" Crc32="2153789884" LastChange="2025-01-14T09:22:46">PRG_Monitor</Name>
+			<Name Decoration="100204AF" Crc32="2153789884" LastChange="2025-01-14T10:48:32">PRG_Monitor</Name>
 			<PrgInfo>
 				<CodeIndex>1295</CodeIndex>
 				<Symbol>
@@ -26634,7 +26610,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1001019B" Crc32="1660931713" LastChange="2025-01-14T09:22:46">PRG_Power</Name>
+			<Name Decoration="1001019B" Crc32="1660931713" LastChange="2025-01-14T10:48:32">PRG_Power</Name>
 			<PrgInfo>
 				<CodeIndex>1296</CodeIndex>
 				<Symbol>
@@ -26643,7 +26619,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1018E4CF" Crc32="3594073310" LastChange="2025-01-14T09:22:46">PRG_PTP</Name>
+			<Name Decoration="1018E4CF" Crc32="3594073310" LastChange="2025-01-14T10:48:32">PRG_PTP</Name>
 			<PrgInfo>
 				<CodeIndex>1297</CodeIndex>
 				<ActionInfo>
@@ -26729,7 +26705,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="100204D1" Crc32="2511279814" LastChange="2025-01-14T09:22:46">PRG_ServOn</Name>
+			<Name Decoration="100204D1" Crc32="2511279814" LastChange="2025-01-14T10:48:32">PRG_ServOn</Name>
 			<PrgInfo>
 				<CodeIndex>1300</CodeIndex>
 				<Symbol>
@@ -26737,6 +26713,27 @@
 				</Symbol>
 				<Symbol>
 					<Name>PRG_ServOn.Encoder</Name>
+				</Symbol>
+			</PrgInfo>
+		</Program>
+		<Program>
+			<Name Decoration="10054587" Crc32="3216382125" LastChange="2025-01-14T12:04:17">PRG_GoHomeTogether</Name>
+			<PrgInfo>
+				<CodeIndex>1281</CodeIndex>
+				<Symbol>
+					<Name>PRG_GoHomeTogether.i</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_GoHomeTogether.iPullAxisHomeStep</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_GoHomeTogether.rTrig</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_GoHomeTogether.bAxisNotMoving</Name>
+				</Symbol>
+				<Symbol>
+					<Name>PRG_GoHomeTogether.tDelay</Name>
 				</Symbol>
 			</PrgInfo>
 		</Program>
@@ -28163,48 +28160,6 @@
 			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">PRG_GoHomeTogether.i</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>10288</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>PRG_GoHomeTogether.iPullAxisHomeStep</Name>
-			<Type>INT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>10290</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_GoHomeTogether.rTrig</Name>
-			<Type Decoration="1003051C">R_TRIG</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>10292</IOffset>
-			<BitSize>24</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_GoHomeTogether.iStep</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>10295</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_GoHomeTogether.bAxisNotMoving</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>10297</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">PRG_GoHomeTogether.tDelay</Name>
-			<Type Decoration="10060D24">TON</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>10298</IOffset>
-			<BitSize>120</BitSize>
-		</Symbol>
-		<Symbol>
 			<Name TaskPrio="1">PRG_GoResetTogether.i</Name>
 			<Type>UINT</Type>
 			<IGroup>16448</IGroup>
@@ -28801,6 +28756,41 @@
 			<IGroup>16448</IGroup>
 			<IOffset>18589</IOffset>
 			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_GoHomeTogether.i</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10288</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>PRG_GoHomeTogether.iPullAxisHomeStep</Name>
+			<Type>INT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10290</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_GoHomeTogether.rTrig</Name>
+			<Type Decoration="1003051C">R_TRIG</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10292</IOffset>
+			<BitSize>24</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_GoHomeTogether.bAxisNotMoving</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10297</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">PRG_GoHomeTogether.tDelay</Name>
+			<Type Decoration="10060D24">TON</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>10298</IOffset>
+			<BitSize>120</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" TaskPrio="1">.MaxAlarms</Name>
@@ -32233,6 +32223,16 @@
 			</Comment>
 			<IGroup>16448</IGroup>
 			<IOffset>21662</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.iHomeStep</Name>
+			<Type>UINT</Type>
+			<Comment>
+				<![CDATA[用于清除回原点步骤]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>114649</IOffset>
 			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>

@@ -501,6 +501,8 @@ void Widget::onReadFinished1()
         qO[13]  = (unit.value(76))? "已输出":"未输出";       ui->lineEdit_CylinderCmd_13->setText(qO[13]);
         // qP[13]  = (unit.value(77))? "已触发":"未触发"; ui->lineEdit_CylinderPosStatus_13->setText(qP[13]);
         // qN[13]  = (unit.value(78))? "已触发":"未触发"; ui->lineEdit_CylinderNegStatus_13->setText(qN[13]);
+        qN[13]  = (unit.value(78))? "已回原点":"未回原点"; ui->lineEdit_All_homed_status->setText(qN[13]);
+
 
         qO[14]  = (unit.value(79))? "已输出":"未输出";       ui->lineEdit_CylinderCmd_14->setText(qO[14]);
         qP[14]  = (unit.value(80))? "已触发":"未触发"; ui->lineEdit_CylinderPosStatus_14->setText(qP[14]);
@@ -741,25 +743,54 @@ void Widget::onReadFinished3()
         const QModbusDataUnit unit = reply->result();
 
         // 气缸
+        qDebug()<<"-----------"<<unit.value(0);
+        int swflag;
+        swflag=unit.value(0);
 
-        switch (unit.value(0)) {
-        case 0:
-            ui->lineEdit_Mode->setText("开机");
-            break;
-        case 1:
-            ui->lineEdit_Mode->setText("初始化");
-        case 2:
-            ui->lineEdit_Mode->setText("手动");
-        case 3:
-            ui->lineEdit_Mode->setText("自动");
-        case 4:
-            ui->lineEdit_Mode->setText("自动");
-        case 5:
-            ui->lineEdit_Mode->setText("错误");
-        default:
-            ui->lineEdit_Mode->setText("关机");
-            break;
+        if(unit.value(0)==0)
+        {
+          ui->lineEdit_Mode->setText("关机");
         }
+        else if(unit.value(0)==1)
+        {
+            ui->lineEdit_Mode->setText("初始化");
+        }
+        else if(unit.value(0)==2)
+        {
+            ui->lineEdit_Mode->setText("手动");
+        }
+        else if(unit.value(0)==3)
+        {
+            ui->lineEdit_Mode->setText("自动");
+        }
+        else if(unit.value(0)==4)
+        {
+            ui->lineEdit_Mode->setText("自动");
+        }
+        else if(unit.value(0)==5)
+        {
+            ui->lineEdit_Mode->setText("故障");
+        }
+        else
+            ui->lineEdit_Mode->setText("关机");
+        // switch (swflag) {
+        // case 0:
+        //     ui->lineEdit_Mode->setText("开机");
+        //     break;
+        // case 1:
+        //     ui->lineEdit_Mode->setText("初始化");
+        // case 2:
+        //     ui->lineEdit_Mode->setText("手动");
+        // case 3:
+        //     ui->lineEdit_Mode->setText("自动");
+        // case 4:
+        //     ui->lineEdit_Mode->setText("自动");
+        // case 5:
+        //     ui->lineEdit_Mode->setText("错误");
+        // default:
+        //     ui->lineEdit_Mode->setText("关机");
+        //     break;
+        // }
 
     }
 
