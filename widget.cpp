@@ -2903,9 +2903,6 @@ void Widget::Set_On_Auto()
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
-        ui->btn_Axi_Mode_Switch->setText("切换为手动");
-        ui->lineEdit_Mode->setText("自动");
-
     } else
     {
         qDebug() << "Failed to send write request for integer.";
@@ -2920,8 +2917,6 @@ void Widget::Set_On_Manu()
     auto reply = modbusClient->sendWriteRequest(writeUnit, 1);  // 设备地址为 1
     if (reply) {
         connect(reply, &QModbusReply::finished, this, &Widget::onWriteFinished);
-        ui->btn_Axi_Mode_Switch->setText("切换为自动");
-        ui->lineEdit_Mode->setText("手动");
 
     } else
     {
@@ -3551,6 +3546,28 @@ void Widget::on_btn_Axi_Mode_Switch_clicked()
     if (ui->lineEdit_Mode->text()=="手动")
     {
          qDebug() << "ui->lineEdit_Mode->text()==\"手动\"";
+        Set_On_Auto();
+    }
+    else
+    {
+        Set_On_Manu();
+    }
+}
+
+
+void Widget::on_ManuButton_clicked(bool checked)
+{
+    if(checked)
+    {
+       Set_On_Manu();
+    }
+}
+
+
+void Widget::on_AutoButton_clicked(bool checked)
+{
+    if(checked)
+    {
         Set_On_Auto();
     }
     else

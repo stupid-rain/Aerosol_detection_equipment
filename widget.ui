@@ -56,7 +56,7 @@
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1111&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tab_cmd">
     <attribute name="title">
@@ -235,17 +235,33 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QPushButton" name="btn_Axi_Mode_Switch">
+     <widget class="QRadioButton" name="AutoButton">
       <property name="geometry">
        <rect>
-        <x>180</x>
-        <y>50</y>
-        <width>111</width>
-        <height>41</height>
+        <x>280</x>
+        <y>60</y>
+        <width>95</width>
+        <height>19</height>
        </rect>
       </property>
       <property name="text">
-       <string>模式转换</string>
+       <string>自动模式</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="ManuButton">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>60</y>
+        <width>95</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>手动模式</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
       </property>
      </widget>
     </widget>
@@ -328,7 +344,7 @@
      <widget class="QLabel" name="label_Axi_Status_3">
       <property name="geometry">
        <rect>
-        <x>240</x>
+        <x>290</x>
         <y>60</y>
         <width>121</width>
         <height>21</height>
@@ -344,7 +360,7 @@
      <widget class="QLineEdit" name="lineEdit_Axi_Status_3">
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>410</x>
         <y>60</y>
         <width>81</width>
         <height>21</height>
@@ -360,7 +376,7 @@
      <widget class="QLabel" name="label_Axi_Status_4">
       <property name="geometry">
        <rect>
-        <x>240</x>
+        <x>290</x>
         <y>220</y>
         <width>121</width>
         <height>21</height>
@@ -376,7 +392,7 @@
      <widget class="QLineEdit" name="lineEdit_Axi_Status_4">
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>410</x>
         <y>220</y>
         <width>81</width>
         <height>21</height>
@@ -392,7 +408,7 @@
      <widget class="QLabel" name="label_Axi_Status_5">
       <property name="geometry">
        <rect>
-        <x>460</x>
+        <x>530</x>
         <y>60</y>
         <width>121</width>
         <height>21</height>
@@ -408,7 +424,7 @@
      <widget class="QLineEdit" name="lineEdit_Axi_Status_5">
       <property name="geometry">
        <rect>
-        <x>580</x>
+        <x>650</x>
         <y>60</y>
         <width>81</width>
         <height>21</height>
@@ -488,7 +504,7 @@
      <widget class="QLineEdit" name="lineEdit_Axi_CurPositon_Status_3">
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>410</x>
         <y>30</y>
         <width>81</width>
         <height>21</height>
@@ -504,7 +520,7 @@
      <widget class="QLabel" name="label_Axi_CurPositon_Status_3">
       <property name="geometry">
        <rect>
-        <x>250</x>
+        <x>300</x>
         <y>30</y>
         <width>91</width>
         <height>21</height>
@@ -520,7 +536,7 @@
      <widget class="QLineEdit" name="lineEdit_Axi_CurPositon_Status_4">
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>410</x>
         <y>190</y>
         <width>81</width>
         <height>21</height>
@@ -536,7 +552,7 @@
      <widget class="QLabel" name="label_Axi_CurPositon_Status_4">
       <property name="geometry">
        <rect>
-        <x>250</x>
+        <x>300</x>
         <y>190</y>
         <width>91</width>
         <height>21</height>
@@ -552,7 +568,7 @@
      <widget class="QLineEdit" name="lineEdit_Axi_CurPositon_Status_5">
       <property name="geometry">
        <rect>
-        <x>580</x>
+        <x>650</x>
         <y>30</y>
         <width>81</width>
         <height>21</height>
@@ -568,7 +584,7 @@
      <widget class="QLabel" name="label_Axi_CurPositon_Status_5">
       <property name="geometry">
        <rect>
-        <x>470</x>
+        <x>540</x>
         <y>30</y>
         <width>91</width>
         <height>21</height>
@@ -648,7 +664,7 @@
      <widget class="QLineEdit" name="lineEdit_Axi_RunningStatus_3">
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>410</x>
         <y>90</y>
         <width>81</width>
         <height>21</height>
@@ -664,7 +680,7 @@
      <widget class="QLabel" name="label_Axi_RunningStatus_3">
       <property name="geometry">
        <rect>
-        <x>240</x>
+        <x>290</x>
         <y>90</y>
         <width>121</width>
         <height>21</height>
@@ -680,7 +696,7 @@
      <widget class="QLineEdit" name="lineEdit_Axi_RunningStatus_4">
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>410</x>
         <y>250</y>
         <width>81</width>
         <height>21</height>
@@ -696,7 +712,7 @@
      <widget class="QLabel" name="label_Axi_RunningStatus_4">
       <property name="geometry">
        <rect>
-        <x>240</x>
+        <x>290</x>
         <y>250</y>
         <width>121</width>
         <height>21</height>
@@ -712,7 +728,7 @@
      <widget class="QLineEdit" name="lineEdit_Axi_RunningStatus_5">
       <property name="geometry">
        <rect>
-        <x>580</x>
+        <x>650</x>
         <y>90</y>
         <width>81</width>
         <height>21</height>
@@ -728,7 +744,7 @@
      <widget class="QLabel" name="label_Axi_RunningStatus_5">
       <property name="geometry">
        <rect>
-        <x>460</x>
+        <x>530</x>
         <y>90</y>
         <width>121</width>
         <height>21</height>
@@ -792,7 +808,7 @@
      <widget class="QLabel" name="label_Axi_ErroStatus_3">
       <property name="geometry">
        <rect>
-        <x>240</x>
+        <x>290</x>
         <y>120</y>
         <width>121</width>
         <height>21</height>
@@ -808,7 +824,7 @@
      <widget class="QLabel" name="label_Axi_ErroStatus_4">
       <property name="geometry">
        <rect>
-        <x>240</x>
+        <x>290</x>
         <y>280</y>
         <width>121</width>
         <height>21</height>
@@ -824,7 +840,7 @@
      <widget class="QLabel" name="label_Axi_ErroStatus_5">
       <property name="geometry">
        <rect>
-        <x>460</x>
+        <x>530</x>
         <y>120</y>
         <width>121</width>
         <height>21</height>
@@ -856,7 +872,7 @@
      <widget class="QLineEdit" name="lineEdit_Axi_ErroStatus_3">
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>410</x>
         <y>120</y>
         <width>81</width>
         <height>21</height>
@@ -872,7 +888,7 @@
      <widget class="QLineEdit" name="lineEdit_Axi_ErroStatus_4">
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>410</x>
         <y>280</y>
         <width>81</width>
         <height>21</height>
@@ -888,7 +904,7 @@
      <widget class="QLineEdit" name="lineEdit_Axi_ErroStatus_5">
       <property name="geometry">
        <rect>
-        <x>580</x>
+        <x>650</x>
         <y>120</y>
         <width>81</width>
         <height>21</height>

@@ -312,6 +312,10 @@ private slots:
     void on_btn_Axi_Jog_Pos_4_clicked();
     void on_btn_Axi_Mode_Switch_clicked();
 
+    void on_ManuButton_clicked(bool checked);
+
+    void on_AutoButton_clicked(bool checked);
+
 private:
     Ui::Widget *ui;
     // Modbus tcp
