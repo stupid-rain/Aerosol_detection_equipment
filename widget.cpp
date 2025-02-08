@@ -96,7 +96,7 @@ void Widget::on_btn_connect_plc_clicked()
         bool ok = modbusClient->connectDevice();
         if (ok)
         {
-            ui->lineEdit_plc_connect_status->setText("已连接");
+            ui->lineEdit_plc_connect_status->setText("连接中");
             _pTimerUpdate = new QTimer();
             connect(_pTimerUpdate, SIGNAL(timeout()), this, SLOT(get_plc_state_by_modbus()));
             _pTimerUpdate->start(3000);
@@ -233,6 +233,7 @@ void Widget::onReadFinished1()
     // 处理读取的Modbus数据
     if (reply->error() == QModbusDevice::NoError)
     {
+        ui->lineEdit_plc_connect_status->setText("已连接");
         const QModbusDataUnit unit = reply->result();
 
         // 电机1

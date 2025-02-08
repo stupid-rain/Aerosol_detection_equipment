@@ -4,7 +4,7 @@
 	<ProjectInfo>
 		<Path>D:\Work\Qt_Project\Aerosol_detection_equipment\PLC\Aerosol_detection_equipment.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2025-01-14T13:48:03</ChangeDate>
+		<ChangeDate>2025-01-15T16:27:23</ChangeDate>
 		<Library>
 			<Name>TcFloatPC.lib</Name>
 			<Path>C:\TwinCAT\PLC\LIB\TcFloatPC.lib</Path>
@@ -2179,24 +2179,24 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="2001013D">ARRAY [1..5] OF BOOL</Name>
-			<Type>BOOL</Type>
+			<Name Decoration="20010154">ARRAY [1..5] OF WORD</Name>
+			<Type>WORD</Type>
 			<Comment>
-				<![CDATA[软限位正限开关]]>
+				<![CDATA[自动速度]]>
 			</Comment>
-			<BitSize>40</BitSize>
+			<BitSize>80</BitSize>
 			<ArrayInfo>
 				<LBound>1</LBound>
 				<Elements>5</Elements>
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="20010154">ARRAY [1..5] OF WORD</Name>
-			<Type>WORD</Type>
+			<Name Decoration="2001013D">ARRAY [1..5] OF BOOL</Name>
+			<Type>BOOL</Type>
 			<Comment>
 				<![CDATA[软限位正限开关]]>
 			</Comment>
-			<BitSize>80</BitSize>
+			<BitSize>40</BitSize>
 			<ArrayInfo>
 				<LBound>1</LBound>
 				<Elements>5</Elements>
@@ -5276,7 +5276,7 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="1020CB6C" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcUtilities.lib">FB_DbgOutputCtrl</Name>
+			<Name Decoration="1020C651" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcUtilities.lib">FB_DbgOutputCtrl</Name>
 			<BitSize>114664</BitSize>
 			<SubItem>
 				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcUtilities.lib">fbFormat</Name>
@@ -17644,7 +17644,7 @@
 			</FunInfo>
 		</Function>
 		<Function>
-			<Name Decoration="10079EE8" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcUtilities.lib">DATA_TO_HEXSTR</Name>
+			<Name Decoration="10079A3F" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcUtilities.lib">DATA_TO_HEXSTR</Name>
 			<FunInfo>
 				<CodeIndex>49</CodeIndex>
 				<ReturnValue>
@@ -18511,7 +18511,7 @@
 			</FunInfo>
 		</Function>
 		<Function>
-			<Name Decoration="10151547" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcUtilities.lib">F_FormatArgToStr</Name>
+			<Name Decoration="101510A6" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcUtilities.lib">F_FormatArgToStr</Name>
 			<FunInfo>
 				<CodeIndex>79</CodeIndex>
 				<ReturnValue>
@@ -19060,7 +19060,7 @@
 			</FunInfo>
 		</Function>
 		<Function>
-			<Name Decoration="10041BA6" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcUtilities.lib">F_LTrim</Name>
+			<Name Decoration="10041707" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcUtilities.lib">F_LTrim</Name>
 			<FunInfo>
 				<CodeIndex>92</CodeIndex>
 				<ReturnValue>
@@ -19160,7 +19160,7 @@
 			</FunInfo>
 		</Function>
 		<Function>
-			<Name Decoration="10025CD7" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcUtilities.lib">F_STRING</Name>
+			<Name Decoration="10025836" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcUtilities.lib">F_STRING</Name>
 			<FunInfo>
 				<CodeIndex>97</CodeIndex>
 				<ReturnValue>
@@ -20539,7 +20539,7 @@
 			</FunInfo>
 		</Function>
 		<Function>
-			<Name Decoration="100295F0" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcUtilities.lib">PMAXSTRING_TO_MAXSTRING</Name>
+			<Name Decoration="1002914D" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcUtilities.lib">PMAXSTRING_TO_MAXSTRING</Name>
 			<FunInfo>
 				<CodeIndex>344</CodeIndex>
 				<ReturnValue>
@@ -23953,7 +23953,7 @@
 			</FunInfo>
 		</Function>
 		<Function>
-			<Name Decoration="100B93AA" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcSystem.lib">F_SplitPathName</Name>
+			<Name Decoration="100B85B5" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcSystem.lib">F_SplitPathName</Name>
 			<FunInfo>
 				<CodeIndex>864</CodeIndex>
 				<ReturnValue>
@@ -25639,7 +25639,7 @@
 	</Functions>
 	<Programs>
 		<Program>
-			<Name Decoration="10297C80" Crc32="2403996491" LastChange="2025-01-14T13:28:46">MAIN</Name>
+			<Name Decoration="10297C80" Crc32="0364933168" LastChange="2025-01-15T16:27:18">MAIN</Name>
 			<PrgInfo>
 				<CodeIndex>1253</CodeIndex>
 				<ActionInfo>
@@ -25831,7 +25831,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="10074CF3" Crc32="3918586567" LastChange="2025-01-14T10:48:32">PRG_AutoPreparation</Name>
+			<Name Decoration="10074CF3" Crc32="3918586567" LastChange="2025-01-15T15:53:13">PRG_AutoPreparation</Name>
 			<PrgInfo>
 				<CodeIndex>1264</CodeIndex>
 				<Symbol>
@@ -26122,7 +26122,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1047D907" Crc32="0594362247" LastChange="2025-01-14T11:24:34">PRG_Debug_Mode</Name>
+			<Name Decoration="1047D907" Crc32="1355506543" LastChange="2025-01-15T15:53:40">PRG_Debug_Mode</Name>
 			<PrgInfo>
 				<CodeIndex>1276</CodeIndex>
 				<ActionInfo>
@@ -26362,7 +26362,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1007686E" Crc32="1504125124" LastChange="2025-01-14T11:24:11">PRG_GoResetTogether</Name>
+			<Name Decoration="1007686E" Crc32="0160184170" LastChange="2025-01-15T16:22:54">PRG_GoResetTogether</Name>
 			<PrgInfo>
 				<CodeIndex>1282</CodeIndex>
 				<Symbol>
@@ -26389,7 +26389,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="10064859" Crc32="2410495701" LastChange="2025-01-14T10:48:32">PRG_GoStopTogether</Name>
+			<Name Decoration="10064859" Crc32="0834148923" LastChange="2025-01-15T16:22:44">PRG_GoStopTogether</Name>
 			<PrgInfo>
 				<CodeIndex>1283</CodeIndex>
 				<Symbol>
@@ -26413,7 +26413,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1007686E" Crc32="0344595628" LastChange="2025-01-14T10:48:32">PRG_GoWork</Name>
+			<Name Decoration="1007686E" Crc32="1842402029" LastChange="2025-01-15T16:26:52">PRG_GoWork</Name>
 			<PrgInfo>
 				<CodeIndex>1284</CodeIndex>
 				<Symbol>
@@ -26452,7 +26452,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1009AE7F" Crc32="3992947378" LastChange="2025-01-14T10:48:32">PRG_IO</Name>
+			<Name Decoration="1009AE7F" Crc32="1406517902" LastChange="2025-01-15T16:21:42">PRG_IO</Name>
 			<PrgInfo>
 				<CodeIndex>1286</CodeIndex>
 				<ActionInfo>
@@ -26571,7 +26571,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1003054F" Crc32="2271190672" LastChange="2025-01-14T11:28:54">PRG_Modbus_TCP</Name>
+			<Name Decoration="1003054F" Crc32="3089740825" LastChange="2025-01-15T16:23:36">PRG_Modbus_TCP</Name>
 			<PrgInfo>
 				<CodeIndex>1291</CodeIndex>
 				<ActionInfo>
@@ -32587,6 +32587,26 @@
 			<IGroup>16448</IGroup>
 			<IOffset>22516</IOffset>
 			<BitSize>4096</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="MArea">.fVelo_of_Auto</Name>
+			<Type Decoration="20010154">ARRAY [1..5] OF WORD</Type>
+			<Comment>
+				<![CDATA[自动速度]]>
+			</Comment>
+			<IGroup>16416</IGroup>
+			<IOffset>1000</IOffset>
+			<BitSize>80</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="MArea">.fVelocity_of_Abs</Name>
+			<Type Decoration="20010154">ARRAY [1..5] OF WORD</Type>
+			<Comment>
+				<![CDATA[手动速度]]>
+			</Comment>
+			<IGroup>16416</IGroup>
+			<IOffset>1010</IOffset>
+			<BitSize>80</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Persistent="1" TaskPrio="1">.iAxisSoftLimitSwitch_Neg</Name>
