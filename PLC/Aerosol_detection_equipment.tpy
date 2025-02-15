@@ -4,7 +4,7 @@
 	<ProjectInfo>
 		<Path>D:\Work\Qt_Project\Aerosol_detection_equipment\PLC\Aerosol_detection_equipment.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2025-01-15T16:27:23</ChangeDate>
+		<ChangeDate>2025-02-08T13:47:38</ChangeDate>
 		<Library>
 			<Name>TcFloatPC.lib</Name>
 			<Path>C:\TwinCAT\PLC\LIB\TcFloatPC.lib</Path>
@@ -18,7 +18,6 @@
 		<Library>
 			<Name>TcEtherCAT.lib</Name>
 			<Path>C:\TwinCAT\PLC\LIB\TcEtherCAT.lib</Path>
-			<ChangeDate>2022-08-15T11:50:34</ChangeDate>
 		</Library>
 		<Library>
 			<Name>TcTestAndSet.lib</Name>
@@ -70,9 +69,6 @@
 		<AdsInfo>
 			<NetId>192.168.1.10.1.1</NetId>
 			<Port>801</Port>
-			<TargetName>
-				<![CDATA[Target: CP-104E78 (192.168.1.10.1.1), Run Time: 1]]>
-			</TargetName>
 		</AdsInfo>
 	</RoutingInfo>
 	<CompilerInfo>
@@ -7282,61 +7278,6 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">T_DCTIME32</Name>
-			<Type>UDINT</Type>
-			<BitSize>32</BitSize>
-		</DataType>
-		<DataType>
-			<Name Decoration="100208DB" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">T_DCTIME</Name>
-			<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-			<BitSize>64</BitSize>
-		</DataType>
-		<DataType>
-			<Name Decoration="3000033C" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ProductCode</Name>
-			<Type>INT</Type>
-			<BitSize>16</BitSize>
-			<EnumInfo>
-				<Text>PCTYPE_XXDDDD</Text>
-				<Enum>0</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>PCTYPE_XXDDDD_DDDD</Text>
-				<Enum>1</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>PCTYPE_XXDDDD_DDDD_DDDD</Text>
-				<Enum>2</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>PCTYPE_XXDDDD_XDDD</Text>
-				<Enum>3</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>PCTYPE_XXDDDD_XDDD_DDDD</Text>
-				<Enum>4</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>PCTYPE_XXDDDD_DDDD_XDDD</Text>
-				<Enum>5</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>PCTYPE_XXDDDD_XDDD_XDDD</Text>
-				<Enum>6</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>PCTYPE_XXXDDDD</Text>
-				<Enum>7</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>PCTYPE_XXXDDDD_QDDD</Text>
-				<Enum>8</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>PCTYPE_XXXDDDD_QDDD_QDDD</Text>
-				<Enum>9</Enum>
-			</EnumInfo>
-		</DataType>
-		<DataType>
 			<Name Decoration="100207EF" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcBase.lib">FW_GetSystemTime</Name>
 			<BitSize>64</BitSize>
 			<SubItem>
@@ -7355,59 +7296,6 @@
 				<CodeIndex>795</CodeIndex>
 				<InitIndex>796</InitIndex>
 			</FbInfo>
-		</DataType>
-		<DataType>
-			<Name Decoration="10045097" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ST_DriveRef</Name>
-			<BitSize>224</BitSize>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">sNetId</Name>
-				<Type Decoration="40000018">STRING(23)</Type>
-				<Comment>
-					<![CDATA[AmsNetId of the EtherCAT master device.]]>
-				</Comment>
-				<BitSize>192</BitSize>
-				<BitOffs>0</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nSlaveAddr</Name>
-				<Type>UINT</Type>
-				<Comment>
-					<![CDATA[Address of the slave device.]]>
-				</Comment>
-				<BitSize>16</BitSize>
-				<BitOffs>192</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nDriveNo</Name>
-				<Type>BYTE</Type>
-				<Comment>
-					<![CDATA[Drive number]]>
-				</Comment>
-				<BitSize>8</BitSize>
-				<BitOffs>208</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nDriveType</Name>
-				<Type>BYTE</Type>
-				<Comment>
-					<![CDATA[Drive type]]>
-				</Comment>
-				<BitSize>8</BitSize>
-				<BitOffs>216</BitOffs>
-			</SubItem>
-		</DataType>
-		<DataType>
-			<Name Decoration="3000032B" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">E_EcFoeMode</Name>
-			<Type>INT</Type>
-			<BitSize>16</BitSize>
-			<EnumInfo>
-				<Text>eFoeMode_Write</Text>
-				<Enum>1</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>eFoeMode_Read</Text>
-				<Enum>2</Enum>
-			</EnumInfo>
 		</DataType>
 		<DataType>
 			<Name Decoration="1001030B" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcBase.lib">FW_GetCurTaskIndex</Name>
@@ -7445,204 +7333,6 @@
 				<CodeIndex>927</CodeIndex>
 				<InitIndex>928</InitIndex>
 			</FbInfo>
-		</DataType>
-		<DataType>
-			<Name Decoration="3000049A" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">E_EcMbxProtType</Name>
-			<Type>INT</Type>
-			<BitSize>16</BitSize>
-			<EnumInfo>
-				<Text>eEcMbxProt_CoE</Text>
-				<Enum>3</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>eEcMbxProt_FoE</Text>
-				<Enum>4</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>eEcMbxProt_SoE</Text>
-				<Enum>5</Enum>
-			</EnumInfo>
-		</DataType>
-		<DataType>
-			<Name Decoration="30000802" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">E_EcScanSlavesCommandStatus</Name>
-			<Type>INT</Type>
-			<BitSize>16</BitSize>
-			<EnumInfo>
-				<Text>eEcScanSlavesCommandState_Completed_NoErrors_NoReply</Text>
-				<Enum>0</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>eEcScanSlavesCommandState_Completed_NoErrors_Reply</Text>
-				<Enum>1</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>eEcScanSlavesCommandState_Completed_Error_NoReply</Text>
-				<Enum>2</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>eEcScanSlavesCommandState_Completed_Error_Reply</Text>
-				<Enum>3</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>eEcScanSlavesCommandState_Completed_Reserved</Text>
-				<Enum>4</Enum>
-			</EnumInfo>
-		</DataType>
-		<DataType>
-			<Name Decoration="3000050E" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">E_EcAdressingType</Name>
-			<Type>INT</Type>
-			<BitSize>16</BitSize>
-			<EnumInfo>
-				<Text>eAdressingType_AutoInc</Text>
-				<Enum>1</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>eAdressingType_Fixed</Text>
-				<Enum>2</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>eAdressingType_Broadcast</Text>
-				<Enum>3</Enum>
-			</EnumInfo>
-		</DataType>
-		<DataType>
-			<Name Decoration="10109C9B" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">FB_EcSoEWrite</Name>
-			<BitSize>1440</BitSize>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nOffset</Name>
-				<Type>DWORD</Type>
-				<BitSize>32</BitSize>
-				<BitOffs>0</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">fbAdsWrite</Name>
-				<Type Decoration="100CFBF1">ADSWRITE</Type>
-				<BitSize>984</BitSize>
-				<BitOffs>32</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">RisingEdge</Name>
-				<Type Decoration="1003051C">R_TRIG</Type>
-				<BitSize>24</BitSize>
-				<BitOffs>1016</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">sNetId</Name>
-				<Type Decoration="40000018">STRING(23)</Type>
-				<Comment>
-					<![CDATA[AmsNetId of the EtherCAT master device.]]>
-				</Comment>
-				<BitSize>192</BitSize>
-				<BitOffs>1040</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nSlaveAddr</Name>
-				<Type>UINT</Type>
-				<Comment>
-					<![CDATA[Address of the slave device.]]>
-				</Comment>
-				<BitSize>16</BitSize>
-				<BitOffs>1232</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nIdn</Name>
-				<Type>WORD</Type>
-				<Comment>
-					<![CDATA[SoE idn.]]>
-				</Comment>
-				<BitSize>16</BitSize>
-				<BitOffs>1248</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nElement</Name>
-				<Type>BYTE</Type>
-				<Comment>
-					<![CDATA[SoE element.]]>
-				</Comment>
-				<BitSize>8</BitSize>
-				<BitOffs>1264</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nDriveNo</Name>
-				<Type>BYTE</Type>
-				<Comment>
-					<![CDATA[Drive number]]>
-				</Comment>
-				<BitSize>8</BitSize>
-				<BitOffs>1272</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">bCommand</Name>
-				<Type>BOOL</Type>
-				<Comment>
-					<![CDATA[bCommand must be set, if internal command excecution should be used]]>
-				</Comment>
-				<BitSize>8</BitSize>
-				<BitOffs>1280</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">pSrcBuf</Name>
-				<Type>DWORD</Type>
-				<Comment>
-					<![CDATA[Contains the address of the buffer containing the data to be send.]]>
-				</Comment>
-				<BitSize>32</BitSize>
-				<BitOffs>1288</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">cbBufLen</Name>
-				<Type>UDINT</Type>
-				<Comment>
-					<![CDATA[Contains the max. number of bytes to be received.]]>
-				</Comment>
-				<BitSize>32</BitSize>
-				<BitOffs>1320</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">bExecute</Name>
-				<Type>BOOL</Type>
-				<Comment>
-					<![CDATA[Function block execution is triggered by a rising edge at this input.]]>
-				</Comment>
-				<BitSize>8</BitSize>
-				<BitOffs>1352</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">tTimeout</Name>
-				<Type>TIME</Type>
-				<Comment>
-					<![CDATA[States the time before the function is cancelled.]]>
-				</Comment>
-				<BitSize>32</BitSize>
-				<BitOffs>1360</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">bBusy</Name>
-				<Type>BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>1392</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">bError</Name>
-				<Type>BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>1400</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nErrId</Name>
-				<Type>UDINT</Type>
-				<BitSize>32</BitSize>
-				<BitOffs>1408</BitOffs>
-			</SubItem>
-			<FbInfo>
-				<CodeIndex>626</CodeIndex>
-				<InitIndex>627</InitIndex>
-			</FbInfo>
-		</DataType>
-		<DataType>
-			<Name Decoration="10045097" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ST_SoE_DriveRef</Name>
-			<Type Decoration="10045097">ST_DriveRef</Type>
-			<BitSize>224</BitSize>
 		</DataType>
 		<DataType>
 			<Name Decoration="3000059F" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">E_AX5000_DriveOpMode</Name>
@@ -8143,110 +7833,6 @@
 			</EnumInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="100EB72D" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">FB_SoEExecuteCommand_ByDriveRef</Name>
-			<BitSize>1856</BitSize>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">fbEcSoEWrite</Name>
-				<Type Decoration="10109C9B">FB_EcSoEWrite</Type>
-				<BitSize>1440</BitSize>
-				<BitOffs>0</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">iErrId</Name>
-				<Type>UDINT</Type>
-				<BitSize>32</BitSize>
-				<BitOffs>1440</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">iState</Name>
-				<Type>INT</Type>
-				<BitSize>16</BitSize>
-				<BitOffs>1472</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">bExecute_I</Name>
-				<Type>BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>1488</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">eExecuteCmd</Name>
-				<Type Decoration="300004DF">E_SoE_CmdControl</Type>
-				<BitSize>16</BitSize>
-				<BitOffs>1496</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">eCancelCmd</Name>
-				<Type Decoration="300004DF">E_SoE_CmdControl</Type>
-				<BitSize>16</BitSize>
-				<BitOffs>1512</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">stDriveRef</Name>
-				<Type Decoration="10045097">ST_DriveRef</Type>
-				<Comment>
-					<![CDATA[contains sNetID of EcMaster, nSlaveAddr of EcDrive, nDriveNo of EcDrive, either preset or read from NC]]>
-				</Comment>
-				<BitSize>224</BitSize>
-				<BitOffs>1528</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">nIdn</Name>
-				<Type>WORD</Type>
-				<Comment>
-					<![CDATA[SoE IDN: e.g. "S_0_IDN + 1" for S-0-0001 or "P_0_IDN + 23" for P-0-0023]]>
-				</Comment>
-				<BitSize>16</BitSize>
-				<BitOffs>1752</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">bExecute</Name>
-				<Type>BOOL</Type>
-				<Comment>
-					<![CDATA[Function block execution is triggered by a rising edge at this input.]]>
-				</Comment>
-				<BitSize>8</BitSize>
-				<BitOffs>1768</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">tTimeout</Name>
-				<Type>TIME</Type>
-				<Comment>
-					<![CDATA[States the time before the function is cancelled.]]>
-				</Comment>
-				<BitSize>32</BitSize>
-				<BitOffs>1776</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">bBusy</Name>
-				<Type>BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>1808</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">bError</Name>
-				<Type>BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>1816</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">iAdsErrId</Name>
-				<Type>UINT</Type>
-				<BitSize>16</BitSize>
-				<BitOffs>1824</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">iSercosErrId</Name>
-				<Type>UINT</Type>
-				<BitSize>16</BitSize>
-				<BitOffs>1840</BitOffs>
-			</SubItem>
-			<FbInfo>
-				<CodeIndex>674</CodeIndex>
-				<InitIndex>675</InitIndex>
-			</FbInfo>
-		</DataType>
-		<DataType>
 			<Name Decoration="3000043F" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">E_SoE_CmdState</Name>
 			<Type>INT</Type>
 			<BitSize>16</BitSize>
@@ -8283,89 +7869,6 @@
 			<Name Decoration="100333C1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">ST_SoE_DiagNumList</Name>
 			<Type Decoration="100333C1">ST_SoE_DiagNumList30</Type>
 			<BitSize>992</BitSize>
-		</DataType>
-		<DataType>
-			<Name Decoration="100B5B60" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">FB_SoEReset_ByDriveRef</Name>
-			<BitSize>2208</BitSize>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">fbEcExecuteCmd</Name>
-				<Type Decoration="100EB72D">FB_SoEExecuteCommand_ByDriveRef</Type>
-				<BitSize>1856</BitSize>
-				<BitOffs>0</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">iState</Name>
-				<Type>INT</Type>
-				<BitSize>16</BitSize>
-				<BitOffs>1856</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">bExecute_I</Name>
-				<Type>BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>1872</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">iReset</Name>
-				<Type>UINT</Type>
-				<BitSize>16</BitSize>
-				<BitOffs>1880</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">stDriveRef</Name>
-				<Type Decoration="10045097">ST_DriveRef</Type>
-				<Comment>
-					<![CDATA[contains sNetID of EcMaster, nSlaveAddr of EcDrive, nDriveNo of EcDrive, either preset or read from NC]]>
-				</Comment>
-				<BitSize>224</BitSize>
-				<BitOffs>1896</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">bExecute</Name>
-				<Type>BOOL</Type>
-				<Comment>
-					<![CDATA[Function block execution is triggered by a rising edge at this input.]]>
-				</Comment>
-				<BitSize>8</BitSize>
-				<BitOffs>2120</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">tTimeout</Name>
-				<Type>TIME</Type>
-				<Comment>
-					<![CDATA[States the time before the function is cancelled. (up to 10s)]]>
-				</Comment>
-				<BitSize>32</BitSize>
-				<BitOffs>2128</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">bBusy</Name>
-				<Type>BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>2160</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">bError</Name>
-				<Type>BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>2168</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">iAdsErrId</Name>
-				<Type>UINT</Type>
-				<BitSize>16</BitSize>
-				<BitOffs>2176</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">iSercosErrId</Name>
-				<Type>UINT</Type>
-				<BitSize>16</BitSize>
-				<BitOffs>2192</BitOffs>
-			</SubItem>
-			<FbInfo>
-				<CodeIndex>694</CodeIndex>
-				<InitIndex>695</InitIndex>
-			</FbInfo>
 		</DataType>
 		<DataType>
 			<Name Decoration="10033381" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">ST_SoE_CPxInvParamList</Name>
@@ -9584,143 +9087,6 @@
 				<Text>STATE_MOTIONCOMMANDSLOCKED</Text>
 				<Enum>104</Enum>
 			</EnumInfo>
-		</DataType>
-		<DataType>
-			<Name Decoration="1012B85F" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">FB_SoEReset</Name>
-			<BitSize>4008</BitSize>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">fbEcSoEReset</Name>
-				<Type Decoration="100B5B60">FB_SoEReset_ByDriveRef</Type>
-				<BitSize>2208</BitSize>
-				<BitOffs>0</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">iState</Name>
-				<Type>INT</Type>
-				<BitSize>16</BitSize>
-				<BitOffs>2208</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">bExecute_I</Name>
-				<Type>BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>2224</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">nAxisId_I</Name>
-				<Type>DWORD</Type>
-				<BitSize>32</BitSize>
-				<BitOffs>2232</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">fbAdsRead</Name>
-				<Type Decoration="100CFCF2">ADSREAD</Type>
-				<BitSize>1016</BitSize>
-				<BitOffs>2264</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">readBuffer</Name>
-				<Type Decoration="2001014E">ARRAY [0..9] OF BYTE</Type>
-				<BitSize>80</BitSize>
-				<BitOffs>3280</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">nIds</Name>
-				<Type Decoration="2001014A">ARRAY [0..5] OF BYTE</Type>
-				<Comment>
-					<![CDATA[Ams net id as array of bytes]]>
-				</Comment>
-				<BitSize>48</BitSize>
-				<BitOffs>3360</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">stDriveRef</Name>
-				<Type Decoration="10045097">ST_DriveRef</Type>
-				<Comment>
-					<![CDATA[contains sNetID of EcMaster, nSlaveAddr of EcDrive, nDriveNo of EcDrive, either preset or read from NC]]>
-				</Comment>
-				<BitSize>224</BitSize>
-				<BitOffs>3408</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">NCIDXG_AXPARMS</Name>
-				<Type>UDINT</Type>
-				<Comment>
-					<![CDATA[Axis with ID: Parameter]]>
-				</Comment>
-				<BitSize>32</BitSize>
-				<BitOffs>3632</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">NCIDXO_AXP_HWAMSADDR</Name>
-				<Type>UDINT</Type>
-				<BitSize>32</BitSize>
-				<BitOffs>3664</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">NetId</Name>
-				<Type Decoration="40000018">STRING(23)</Type>
-				<Comment>
-					<![CDATA[netID of PC with NC]]>
-				</Comment>
-				<BitSize>192</BitSize>
-				<BitOffs>3696</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">Execute</Name>
-				<Type>BOOL</Type>
-				<Comment>
-					<![CDATA[Function block execution is triggered by a rising edge at this input.]]>
-				</Comment>
-				<BitSize>8</BitSize>
-				<BitOffs>3888</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">Timeout</Name>
-				<Type>TIME</Type>
-				<Comment>
-					<![CDATA[States the time before the function is cancelled. (up to 10s)]]>
-				</Comment>
-				<BitSize>32</BitSize>
-				<BitOffs>3896</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">Busy</Name>
-				<Type>BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>3928</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">Error</Name>
-				<Type>BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>3936</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">AdsErrId</Name>
-				<Type>UINT</Type>
-				<BitSize>16</BitSize>
-				<BitOffs>3944</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">SercosErrId</Name>
-				<Type>UINT</Type>
-				<BitSize>16</BitSize>
-				<BitOffs>3960</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="InOut" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">Axis</Name>
-				<Type Decoration="1006BE2E" Pointer="1">_FBAXIS_REF</Type>
-				<Comment>
-					<![CDATA[Axis reference]]>
-				</Comment>
-				<BitSize>32</BitSize>
-				<BitOffs>3976</BitOffs>
-			</SubItem>
-			<FbInfo>
-				<CodeIndex>742</CodeIndex>
-				<InitIndex>743</InitIndex>
-			</FbInfo>
 		</DataType>
 		<DataType>
 			<Name Decoration="30000ACA" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">E_AX5000_P_0275_ActiveFeedbackAndMemory</Name>
@@ -16795,6 +16161,636 @@
 				<InitIndex>1241</InitIndex>
 			</FbInfo>
 		</DataType>
+		<DataType>
+			<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">T_DCTIME32</Name>
+			<Type>UDINT</Type>
+			<BitSize>32</BitSize>
+		</DataType>
+		<DataType>
+			<Name Decoration="100208DB" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">T_DCTIME</Name>
+			<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+			<BitSize>64</BitSize>
+		</DataType>
+		<DataType>
+			<Name Decoration="3000033C" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ProductCode</Name>
+			<Type>INT</Type>
+			<BitSize>16</BitSize>
+			<EnumInfo>
+				<Text>PCTYPE_XXDDDD</Text>
+				<Enum>0</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>PCTYPE_XXDDDD_DDDD</Text>
+				<Enum>1</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>PCTYPE_XXDDDD_DDDD_DDDD</Text>
+				<Enum>2</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>PCTYPE_XXDDDD_XDDD</Text>
+				<Enum>3</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>PCTYPE_XXDDDD_XDDD_DDDD</Text>
+				<Enum>4</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>PCTYPE_XXDDDD_DDDD_XDDD</Text>
+				<Enum>5</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>PCTYPE_XXDDDD_XDDD_XDDD</Text>
+				<Enum>6</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>PCTYPE_XXXDDDD</Text>
+				<Enum>7</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>PCTYPE_XXXDDDD_QDDD</Text>
+				<Enum>8</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>PCTYPE_XXXDDDD_QDDD_QDDD</Text>
+				<Enum>9</Enum>
+			</EnumInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="3000032B" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">E_EcFoeMode</Name>
+			<Type>INT</Type>
+			<BitSize>16</BitSize>
+			<EnumInfo>
+				<Text>eFoeMode_Write</Text>
+				<Enum>1</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>eFoeMode_Read</Text>
+				<Enum>2</Enum>
+			</EnumInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="3000049A" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">E_EcMbxProtType</Name>
+			<Type>INT</Type>
+			<BitSize>16</BitSize>
+			<EnumInfo>
+				<Text>eEcMbxProt_CoE</Text>
+				<Enum>3</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>eEcMbxProt_FoE</Text>
+				<Enum>4</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>eEcMbxProt_SoE</Text>
+				<Enum>5</Enum>
+			</EnumInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="30000802" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">E_EcScanSlavesCommandStatus</Name>
+			<Type>INT</Type>
+			<BitSize>16</BitSize>
+			<EnumInfo>
+				<Text>eEcScanSlavesCommandState_Completed_NoErrors_NoReply</Text>
+				<Enum>0</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>eEcScanSlavesCommandState_Completed_NoErrors_Reply</Text>
+				<Enum>1</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>eEcScanSlavesCommandState_Completed_Error_NoReply</Text>
+				<Enum>2</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>eEcScanSlavesCommandState_Completed_Error_Reply</Text>
+				<Enum>3</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>eEcScanSlavesCommandState_Completed_Reserved</Text>
+				<Enum>4</Enum>
+			</EnumInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="3000050E" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">E_EcAdressingType</Name>
+			<Type>INT</Type>
+			<BitSize>16</BitSize>
+			<EnumInfo>
+				<Text>eAdressingType_AutoInc</Text>
+				<Enum>1</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>eAdressingType_Fixed</Text>
+				<Enum>2</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>eAdressingType_Broadcast</Text>
+				<Enum>3</Enum>
+			</EnumInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="10109C9B" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">FB_EcSoEWrite</Name>
+			<BitSize>1440</BitSize>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nOffset</Name>
+				<Type>DWORD</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">fbAdsWrite</Name>
+				<Type Decoration="100CFBF1">ADSWRITE</Type>
+				<BitSize>984</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">RisingEdge</Name>
+				<Type Decoration="1003051C">R_TRIG</Type>
+				<BitSize>24</BitSize>
+				<BitOffs>1016</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">sNetId</Name>
+				<Type Decoration="40000018">STRING(23)</Type>
+				<Comment>
+					<![CDATA[AmsNetId of the EtherCAT master device.]]>
+				</Comment>
+				<BitSize>192</BitSize>
+				<BitOffs>1040</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nSlaveAddr</Name>
+				<Type>UINT</Type>
+				<Comment>
+					<![CDATA[Address of the slave device.]]>
+				</Comment>
+				<BitSize>16</BitSize>
+				<BitOffs>1232</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nIdn</Name>
+				<Type>WORD</Type>
+				<Comment>
+					<![CDATA[SoE idn.]]>
+				</Comment>
+				<BitSize>16</BitSize>
+				<BitOffs>1248</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nElement</Name>
+				<Type>BYTE</Type>
+				<Comment>
+					<![CDATA[SoE element.]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1264</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nDriveNo</Name>
+				<Type>BYTE</Type>
+				<Comment>
+					<![CDATA[Drive number]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1272</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">bCommand</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[bCommand must be set, if internal command excecution should be used]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1280</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">pSrcBuf</Name>
+				<Type>DWORD</Type>
+				<Comment>
+					<![CDATA[Contains the address of the buffer containing the data to be send.]]>
+				</Comment>
+				<BitSize>32</BitSize>
+				<BitOffs>1288</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">cbBufLen</Name>
+				<Type>UDINT</Type>
+				<Comment>
+					<![CDATA[Contains the max. number of bytes to be received.]]>
+				</Comment>
+				<BitSize>32</BitSize>
+				<BitOffs>1320</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">bExecute</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Function block execution is triggered by a rising edge at this input.]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1352</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">tTimeout</Name>
+				<Type>TIME</Type>
+				<Comment>
+					<![CDATA[States the time before the function is cancelled.]]>
+				</Comment>
+				<BitSize>32</BitSize>
+				<BitOffs>1360</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">bBusy</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1392</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">bError</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1400</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nErrId</Name>
+				<Type>UDINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>1408</BitOffs>
+			</SubItem>
+			<FbInfo>
+				<CodeIndex>626</CodeIndex>
+				<InitIndex>627</InitIndex>
+			</FbInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="10045097" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ST_DriveRef</Name>
+			<BitSize>224</BitSize>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">sNetId</Name>
+				<Type Decoration="40000018">STRING(23)</Type>
+				<Comment>
+					<![CDATA[AmsNetId of the EtherCAT master device.]]>
+				</Comment>
+				<BitSize>192</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nSlaveAddr</Name>
+				<Type>UINT</Type>
+				<Comment>
+					<![CDATA[Address of the slave device.]]>
+				</Comment>
+				<BitSize>16</BitSize>
+				<BitOffs>192</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nDriveNo</Name>
+				<Type>BYTE</Type>
+				<Comment>
+					<![CDATA[Drive number]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>208</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nDriveType</Name>
+				<Type>BYTE</Type>
+				<Comment>
+					<![CDATA[Drive type]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>216</BitOffs>
+			</SubItem>
+		</DataType>
+		<DataType>
+			<Name Decoration="10045097" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ST_SoE_DriveRef</Name>
+			<Type Decoration="10045097">ST_DriveRef</Type>
+			<BitSize>224</BitSize>
+		</DataType>
+		<DataType>
+			<Name Decoration="100EB72D" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">FB_SoEExecuteCommand_ByDriveRef</Name>
+			<BitSize>1856</BitSize>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">fbEcSoEWrite</Name>
+				<Type Decoration="10109C9B">FB_EcSoEWrite</Type>
+				<BitSize>1440</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">iErrId</Name>
+				<Type>UDINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>1440</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">iState</Name>
+				<Type>INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1472</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">bExecute_I</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1488</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">eExecuteCmd</Name>
+				<Type Decoration="300004DF">E_SoE_CmdControl</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1496</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">eCancelCmd</Name>
+				<Type Decoration="300004DF">E_SoE_CmdControl</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1512</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">stDriveRef</Name>
+				<Type Decoration="10045097">ST_DriveRef</Type>
+				<Comment>
+					<![CDATA[contains sNetID of EcMaster, nSlaveAddr of EcDrive, nDriveNo of EcDrive, either preset or read from NC]]>
+				</Comment>
+				<BitSize>224</BitSize>
+				<BitOffs>1528</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">nIdn</Name>
+				<Type>WORD</Type>
+				<Comment>
+					<![CDATA[SoE IDN: e.g. "S_0_IDN + 1" for S-0-0001 or "P_0_IDN + 23" for P-0-0023]]>
+				</Comment>
+				<BitSize>16</BitSize>
+				<BitOffs>1752</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">bExecute</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Function block execution is triggered by a rising edge at this input.]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>1768</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">tTimeout</Name>
+				<Type>TIME</Type>
+				<Comment>
+					<![CDATA[States the time before the function is cancelled.]]>
+				</Comment>
+				<BitSize>32</BitSize>
+				<BitOffs>1776</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">bBusy</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1808</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">bError</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1816</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">iAdsErrId</Name>
+				<Type>UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1824</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">iSercosErrId</Name>
+				<Type>UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1840</BitOffs>
+			</SubItem>
+			<FbInfo>
+				<CodeIndex>674</CodeIndex>
+				<InitIndex>675</InitIndex>
+			</FbInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="100B5B60" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">FB_SoEReset_ByDriveRef</Name>
+			<BitSize>2208</BitSize>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">fbEcExecuteCmd</Name>
+				<Type Decoration="100EB72D">FB_SoEExecuteCommand_ByDriveRef</Type>
+				<BitSize>1856</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">iState</Name>
+				<Type>INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1856</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">bExecute_I</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>1872</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">iReset</Name>
+				<Type>UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>1880</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">stDriveRef</Name>
+				<Type Decoration="10045097">ST_DriveRef</Type>
+				<Comment>
+					<![CDATA[contains sNetID of EcMaster, nSlaveAddr of EcDrive, nDriveNo of EcDrive, either preset or read from NC]]>
+				</Comment>
+				<BitSize>224</BitSize>
+				<BitOffs>1896</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">bExecute</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Function block execution is triggered by a rising edge at this input.]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>2120</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">tTimeout</Name>
+				<Type>TIME</Type>
+				<Comment>
+					<![CDATA[States the time before the function is cancelled. (up to 10s)]]>
+				</Comment>
+				<BitSize>32</BitSize>
+				<BitOffs>2128</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">bBusy</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>2160</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">bError</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>2168</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">iAdsErrId</Name>
+				<Type>UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2176</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcDrive.lib">iSercosErrId</Name>
+				<Type>UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2192</BitOffs>
+			</SubItem>
+			<FbInfo>
+				<CodeIndex>694</CodeIndex>
+				<InitIndex>695</InitIndex>
+			</FbInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="1012B85F" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">FB_SoEReset</Name>
+			<BitSize>4008</BitSize>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">fbEcSoEReset</Name>
+				<Type Decoration="100B5B60">FB_SoEReset_ByDriveRef</Type>
+				<BitSize>2208</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">iState</Name>
+				<Type>INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>2208</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">bExecute_I</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>2224</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">nAxisId_I</Name>
+				<Type>DWORD</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>2232</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">fbAdsRead</Name>
+				<Type Decoration="100CFCF2">ADSREAD</Type>
+				<BitSize>1016</BitSize>
+				<BitOffs>2264</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">readBuffer</Name>
+				<Type Decoration="2001014E">ARRAY [0..9] OF BYTE</Type>
+				<BitSize>80</BitSize>
+				<BitOffs>3280</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">nIds</Name>
+				<Type Decoration="2001014A">ARRAY [0..5] OF BYTE</Type>
+				<Comment>
+					<![CDATA[Ams net id as array of bytes]]>
+				</Comment>
+				<BitSize>48</BitSize>
+				<BitOffs>3360</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">stDriveRef</Name>
+				<Type Decoration="10045097">ST_DriveRef</Type>
+				<Comment>
+					<![CDATA[contains sNetID of EcMaster, nSlaveAddr of EcDrive, nDriveNo of EcDrive, either preset or read from NC]]>
+				</Comment>
+				<BitSize>224</BitSize>
+				<BitOffs>3408</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">NCIDXG_AXPARMS</Name>
+				<Type>UDINT</Type>
+				<Comment>
+					<![CDATA[Axis with ID: Parameter]]>
+				</Comment>
+				<BitSize>32</BitSize>
+				<BitOffs>3632</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">NCIDXO_AXP_HWAMSADDR</Name>
+				<Type>UDINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>3664</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">NetId</Name>
+				<Type Decoration="40000018">STRING(23)</Type>
+				<Comment>
+					<![CDATA[netID of PC with NC]]>
+				</Comment>
+				<BitSize>192</BitSize>
+				<BitOffs>3696</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">Execute</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Function block execution is triggered by a rising edge at this input.]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>3888</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">Timeout</Name>
+				<Type>TIME</Type>
+				<Comment>
+					<![CDATA[States the time before the function is cancelled. (up to 10s)]]>
+				</Comment>
+				<BitSize>32</BitSize>
+				<BitOffs>3896</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">Busy</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>3928</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">Error</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>3936</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">AdsErrId</Name>
+				<Type>UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>3944</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">SercosErrId</Name>
+				<Type>UINT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>3960</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="InOut" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcMc2Drive.lib">Axis</Name>
+				<Type Decoration="1006BE2E" Pointer="1">_FBAXIS_REF</Type>
+				<Comment>
+					<![CDATA[Axis reference]]>
+				</Comment>
+				<BitSize>32</BitSize>
+				<BitOffs>3976</BitOffs>
+			</SubItem>
+			<FbInfo>
+				<CodeIndex>742</CodeIndex>
+				<InitIndex>743</InitIndex>
+			</FbInfo>
+		</DataType>
 	</DataTypes>
 	<Functions>
 		<Function>
@@ -22298,756 +22294,6 @@
 			</FunInfo>
 		</Function>
 		<Function>
-			<Name Decoration="100CF512" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DCTIME_TO_DCTIMESTRUCT</Name>
-			<FunInfo>
-				<CodeIndex>504</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DCTIME_TO_DCTIMESTRUCT</Name>
-					<Type Decoration="100A25C3">DCTIMESTRUCT</Type>
-					<BitSize>160</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">D</Name>
-					<Type>WORD</Type>
-					<BitSize>16</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">M</Name>
-					<Type>WORD</Type>
-					<BitSize>16</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">Y</Name>
-					<Type>WORD</Type>
-					<BitSize>16</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">uiPastDays</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">uiPastYears</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">uiNsRest</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">uiMsOfLastDay</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">dwPastDays</Name>
-					<Type>DWORD</Type>
-					<BitSize>32</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">dwPastYears</Name>
-					<Type>DWORD</Type>
-					<BitSize>32</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">dwYearDays</Name>
-					<Type>DWORD</Type>
-					<BitSize>32</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">in</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
-			<Name Decoration="10048061" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DCTIME_TO_FILETIME</Name>
-			<FunInfo>
-				<CodeIndex>505</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DCTIME_TO_FILETIME</Name>
-					<Type Decoration="10020B07">T_FILETIME</Type>
-					<BitSize>64</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">dc</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">remainder</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">in</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<Comment>
-						<![CDATA[Number of nanoseconds since January 1, 2000]]>
-					</Comment>
-					<BitSize>64</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
-			<Name Decoration="1006F402" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DCTIME_TO_STRING</Name>
-			<FunInfo>
-				<CodeIndex>506</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DCTIME_TO_STRING</Name>
-					<Type Decoration="4000001E">STRING(29)</Type>
-					<BitSize>240</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">result</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">remainder</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ft</Name>
-					<Type Decoration="10020B07">T_FILETIME</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ts</Name>
-					<Type Decoration="10081BB4">TIMESTRUCT</Type>
-					<BitSize>128</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">in</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<Comment>
-						<![CDATA[Distributed clock time]]>
-					</Comment>
-					<BitSize>64</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
-			<Name Decoration="10038D8F" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DCTIME_TO_SYSTEMTIME</Name>
-			<FunInfo>
-				<CodeIndex>507</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DCTIME_TO_SYSTEMTIME</Name>
-					<Type Decoration="10081BB4">TIMESTRUCT</Type>
-					<BitSize>128</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">dct</Name>
-					<Type Decoration="100A25C3">DCTIMESTRUCT</Type>
-					<BitSize>160</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">in</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<Comment>
-						<![CDATA[Distributed clock time]]>
-					</Comment>
-					<BitSize>64</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
-			<Name Decoration="1006A1C6" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DCTIMESTRUCT_TO_DCTIME</Name>
-			<FunInfo>
-				<CodeIndex>508</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DCTIMESTRUCT_TO_DCTIME</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">tmp1</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">tmp2</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">pastDays</Name>
-					<Type>DWORD</Type>
-					<BitSize>32</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">n</Name>
-					<Type>WORD</Type>
-					<BitSize>16</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">in</Name>
-					<Type Decoration="100A25C3">DCTIMESTRUCT</Type>
-					<BitSize>160</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
-			<Name Decoration="10043C48" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_CheckVendorId</Name>
-			<FunInfo>
-				<CodeIndex>509</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_CheckVendorId</Name>
-					<Type>BOOL</Type>
-					<BitSize>8</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nVendorId</Name>
-					<Type>DWORD</Type>
-					<BitSize>32</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nMask_lower_3_byte</Name>
-					<Type>DWORD</Type>
-					<BitSize>32</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">stSlaveIdentity</Name>
-					<Type Decoration="10041158">ST_EcSlaveIdentity</Type>
-					<BitSize>128</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
-			<Name Decoration="100395B8" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvBK1120CouplerStateToString</Name>
-			<FunInfo>
-				<CodeIndex>510</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvBK1120CouplerStateToString</Name>
-					<Type Decoration="40000051">STRING(80)</Type>
-					<BitSize>648</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">sLocalString</Name>
-					<Type Decoration="40000051">STRING(80)</Type>
-					<BitSize>648</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nState</Name>
-					<Type>WORD</Type>
-					<BitSize>16</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
-			<Name Decoration="100485DA" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvExtTimeToDcTime</Name>
-			<FunInfo>
-				<CodeIndex>511</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvExtTimeToDcTime</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DcTime</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ExtTime</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DcToExtTimeOffset</Name>
-					<Type Decoration="100208DB">T_LARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
-			<Name Decoration="100394F8" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvMasterDevStateToString</Name>
-			<FunInfo>
-				<CodeIndex>512</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvMasterDevStateToString</Name>
-					<Type Decoration="40000051">STRING(80)</Type>
-					<BitSize>648</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">sLocalString</Name>
-					<Type Decoration="40000051">STRING(80)</Type>
-					<BitSize>648</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nState</Name>
-					<Type>WORD</Type>
-					<BitSize>16</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
-			<Name Decoration="1014F822" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvProductCodeToString</Name>
-			<FunInfo>
-				<CodeIndex>513</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvProductCodeToString</Name>
-					<Type Decoration="40000051">STRING(80)</Type>
-					<BitSize>648</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">sLocalString</Name>
-					<Type Decoration="40000051">STRING(80)</Type>
-					<BitSize>648</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">eTy</Name>
-					<Type Decoration="3000033C">ProductCode</Type>
-					<BitSize>16</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">stLocXXDDD</Name>
-					<Type Decoration="10060AE5">ST_TPCTYPE_CODE_XXDDD</Type>
-					<BitSize>96</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">stLocXXDDXD</Name>
-					<Type Decoration="10070CAB">ST_TPCTYPE_CODE_XXDDXD</Type>
-					<BitSize>112</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">stLocXXDXDD</Name>
-					<Type Decoration="10070CAB">ST_TPCTYPE_CODE_XXDXDD</Type>
-					<BitSize>112</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">stLocXXDXDXD</Name>
-					<Type Decoration="10080E75">ST_TPCTYPE_CODE_XXDXDXD</Type>
-					<BitSize>128</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">stLocXXXDQDQD</Name>
-					<Type Decoration="100A1275">ST_TPCTYPE_CODE_XXXDQDQD</Type>
-					<BitSize>192</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nPC_CHAR_START</Name>
-					<Type>UINT</Type>
-					<BitSize>16</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nMask_ty</Name>
-					<Type>DWORD</Type>
-					<BitSize>32</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nMask_1_to_6</Name>
-					<Type>DWORD</Type>
-					<BitSize>32</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nMask_7_to_16</Name>
-					<Type>DWORD</Type>
-					<BitSize>32</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nMask_5_to_10</Name>
-					<Type>DWORD</Type>
-					<BitSize>32</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nMask_5_to_32</Name>
-					<Type>DWORD</Type>
-					<BitSize>32</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nMask_11_to_16</Name>
-					<Type>DWORD</Type>
-					<BitSize>32</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nMask_1_to_16</Name>
-					<Type>DWORD</Type>
-					<BitSize>32</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nMask_17_to_32</Name>
-					<Type>DWORD</Type>
-					<BitSize>32</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nMask_17_to_22</Name>
-					<Type>DWORD</Type>
-					<BitSize>32</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nMask_22_to_32</Name>
-					<Type>DWORD</Type>
-					<BitSize>32</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">stSlaveIdentity</Name>
-					<Type Decoration="10041158">ST_EcSlaveIdentity</Type>
-					<BitSize>128</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
-			<Name Decoration="1003D2C4" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvSlaveStateToBits</Name>
-			<FunInfo>
-				<CodeIndex>514</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvSlaveStateToBits</Name>
-					<Type Decoration="10103D02">ST_EcSlaveStateBits</Type>
-					<BitSize>128</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">stEcSlaveStateBits</Name>
-					<Type Decoration="10103D02">ST_EcSlaveStateBits</Type>
-					<BitSize>128</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">stEcSlaveState</Name>
-					<Type Decoration="1002086B">ST_EcSlaveState</Type>
-					<BitSize>16</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
-			<Name Decoration="100268AB" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvSlaveStateToString</Name>
-			<FunInfo>
-				<CodeIndex>515</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvSlaveStateToString</Name>
-					<Type Decoration="40000051">STRING(80)</Type>
-					<BitSize>648</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">state</Name>
-					<Type Decoration="1002086B">ST_EcSlaveState</Type>
-					<BitSize>16</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
-			<Name Decoration="1003924D" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvStateToString</Name>
-			<FunInfo>
-				<CodeIndex>516</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvStateToString</Name>
-					<Type Decoration="40000051">STRING(80)</Type>
-					<BitSize>648</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">sLocalString</Name>
-					<Type Decoration="40000051">STRING(80)</Type>
-					<BitSize>648</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nState</Name>
-					<Type>WORD</Type>
-					<BitSize>16</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
-			<Name Decoration="100484D0" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvTcTimeToDcTime</Name>
-			<FunInfo>
-				<CodeIndex>517</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvTcTimeToDcTime</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DcTime</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">TcTime</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DcToTcTimeOffset</Name>
-					<Type Decoration="100208DB">T_LARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
-			<Name Decoration="1005A811" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvTcTimeToExtTime</Name>
-			<FunInfo>
-				<CodeIndex>518</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvTcTimeToExtTime</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ExtTime</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">TcTime</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DcToTcTimeOffset</Name>
-					<Type Decoration="100208DB">T_LARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DcToExtTimeOffset</Name>
-					<Type Decoration="100208DB">T_LARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
-			<Name Decoration="10022736" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_GetActualDcTime</Name>
-			<FunInfo>
-				<CodeIndex>519</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_GetActualDcTime</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">cbReturned</Name>
-					<Type>UDINT</Type>
-					<BitSize>32</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
-			<Name Decoration="10022799" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_GetCurDcTaskTime</Name>
-			<FunInfo>
-				<CodeIndex>520</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_GetCurDcTaskTime</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">cbReturned</Name>
-					<Type>UDINT</Type>
-					<BitSize>32</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
-			<Name Decoration="100589BC" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_GetCurDcTickTime</Name>
-			<FunInfo>
-				<CodeIndex>521</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_GetCurDcTickTime</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">fbGetSystemTime</Name>
-					<Type Decoration="10032948">GETSYSTEMTIME</Type>
-					<BitSize>128</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ft</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">bOV</Name>
-					<Type>BOOL</Type>
-					<BitSize>8</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">cbReturned</Name>
-					<Type>UDINT</Type>
-					<BitSize>32</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
-			<Name Decoration="1005A648" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_GetCurExtTime</Name>
-			<FunInfo>
-				<CodeIndex>522</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_GetCurExtTime</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">TcTime</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ExtTime</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DcToExtTimeOffset</Name>
-					<Type Decoration="100208DB">T_LARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DcToTcTimeOffset</Name>
-					<Type Decoration="100208DB">T_LARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
-			<Name Decoration="10020D4E" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_GetVersionTcEtherCAT</Name>
-			<FunInfo>
-				<CodeIndex>523</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_GetVersionTcEtherCAT</Name>
-					<Type>UINT</Type>
-					<BitSize>16</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nVersionElement</Name>
-					<Type>INT</Type>
-					<BitSize>16</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
-			<Name Decoration="1004623A" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">FILETIME_TO_DCTIME</Name>
-			<FunInfo>
-				<CodeIndex>632</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">FILETIME_TO_DCTIME</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ft</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">bOV</Name>
-					<Type>BOOL</Type>
-					<BitSize>8</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">in</Name>
-					<Type Decoration="10020B07">T_FILETIME</Type>
-					<Comment>
-						<![CDATA[Number of 100-nanosecond intervals since January 1, 1601]]>
-					</Comment>
-					<BitSize>64</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
-			<Name Decoration="100A0340" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">STRING_TO_DCTIME</Name>
-			<FunInfo>
-				<CodeIndex>633</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">STRING_TO_DCTIME</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">b</Name>
-					<Type Decoration="20010162">ARRAY [0..29] OF BYTE</Type>
-					<Comment>
-						<![CDATA[null delimiter]]>
-					</Comment>
-					<BitSize>240</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">dct</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ts</Name>
-					<Type Decoration="10081BB4">TIMESTRUCT</Type>
-					<BitSize>128</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ft</Name>
-					<Type Decoration="10020B07">T_FILETIME</Type>
-					<BitSize>64</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">mcs</Name>
-					<Type>DWORD</Type>
-					<BitSize>32</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">n</Name>
-					<Type>BYTE</Type>
-					<BitSize>8</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">bFmt</Name>
-					<Type>BOOL</Type>
-					<BitSize>8</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">Index7001</Name>
-					<Type>INT</Type>
-					<BitSize>16</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">in</Name>
-					<Type Decoration="4000001E">STRING(29)</Type>
-					<Comment>
-						<![CDATA[Input string, format: '2007-03-07-12:23:33.123456789']]>
-					</Comment>
-					<BitSize>240</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
-			<Name Decoration="1005A626" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">SYSTEMTIME_TO_DCTIME</Name>
-			<FunInfo>
-				<CodeIndex>634</CodeIndex>
-				<ReturnValue>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">SYSTEMTIME_TO_DCTIME</Name>
-					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
-					<BitSize>64</BitSize>
-				</ReturnValue>
-				<FunParameter>
-					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">dct</Name>
-					<Type Decoration="100A25C3">DCTIMESTRUCT</Type>
-					<BitSize>160</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">in</Name>
-					<Type Decoration="10081BB4">TIMESTRUCT</Type>
-					<Comment>
-						<![CDATA[System time as struct]]>
-					</Comment>
-					<BitSize>128</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">micro</Name>
-					<Type Decoration="50003831">WORD(0..999)</Type>
-					<Comment>
-						<![CDATA[Microseconds: 0..999]]>
-					</Comment>
-					<BitSize>16</BitSize>
-				</FunParameter>
-				<FunParameter>
-					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nano</Name>
-					<Type Decoration="50003831">WORD(0..999)</Type>
-					<Comment>
-						<![CDATA[Nanoseconds: 0..999]]>
-					</Comment>
-					<BitSize>16</BitSize>
-				</FunParameter>
-			</FunInfo>
-		</Function>
-		<Function>
 			<Name Decoration="10020A49" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcTestAndSet.lib">TestAndSet</Name>
 			<FunInfo>
 				<CodeIndex>662</CodeIndex>
@@ -25636,6 +24882,756 @@
 				</FunParameter>
 			</FunInfo>
 		</Function>
+		<Function>
+			<Name Decoration="100CF512" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DCTIME_TO_DCTIMESTRUCT</Name>
+			<FunInfo>
+				<CodeIndex>504</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DCTIME_TO_DCTIMESTRUCT</Name>
+					<Type Decoration="100A25C3">DCTIMESTRUCT</Type>
+					<BitSize>160</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">D</Name>
+					<Type>WORD</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">M</Name>
+					<Type>WORD</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">Y</Name>
+					<Type>WORD</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">uiPastDays</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">uiPastYears</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">uiNsRest</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">uiMsOfLastDay</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">dwPastDays</Name>
+					<Type>DWORD</Type>
+					<BitSize>32</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">dwPastYears</Name>
+					<Type>DWORD</Type>
+					<BitSize>32</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">dwYearDays</Name>
+					<Type>DWORD</Type>
+					<BitSize>32</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">in</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="10048061" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DCTIME_TO_FILETIME</Name>
+			<FunInfo>
+				<CodeIndex>505</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DCTIME_TO_FILETIME</Name>
+					<Type Decoration="10020B07">T_FILETIME</Type>
+					<BitSize>64</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">dc</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">remainder</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">in</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<Comment>
+						<![CDATA[Number of nanoseconds since January 1, 2000]]>
+					</Comment>
+					<BitSize>64</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="1006F402" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DCTIME_TO_STRING</Name>
+			<FunInfo>
+				<CodeIndex>506</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DCTIME_TO_STRING</Name>
+					<Type Decoration="4000001E">STRING(29)</Type>
+					<BitSize>240</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">result</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">remainder</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ft</Name>
+					<Type Decoration="10020B07">T_FILETIME</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ts</Name>
+					<Type Decoration="10081BB4">TIMESTRUCT</Type>
+					<BitSize>128</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">in</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<Comment>
+						<![CDATA[Distributed clock time]]>
+					</Comment>
+					<BitSize>64</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="10038D8F" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DCTIME_TO_SYSTEMTIME</Name>
+			<FunInfo>
+				<CodeIndex>507</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DCTIME_TO_SYSTEMTIME</Name>
+					<Type Decoration="10081BB4">TIMESTRUCT</Type>
+					<BitSize>128</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">dct</Name>
+					<Type Decoration="100A25C3">DCTIMESTRUCT</Type>
+					<BitSize>160</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">in</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<Comment>
+						<![CDATA[Distributed clock time]]>
+					</Comment>
+					<BitSize>64</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="1006A1C6" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DCTIMESTRUCT_TO_DCTIME</Name>
+			<FunInfo>
+				<CodeIndex>508</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DCTIMESTRUCT_TO_DCTIME</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">tmp1</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">tmp2</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">pastDays</Name>
+					<Type>DWORD</Type>
+					<BitSize>32</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">n</Name>
+					<Type>WORD</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">in</Name>
+					<Type Decoration="100A25C3">DCTIMESTRUCT</Type>
+					<BitSize>160</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="10043C48" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_CheckVendorId</Name>
+			<FunInfo>
+				<CodeIndex>509</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_CheckVendorId</Name>
+					<Type>BOOL</Type>
+					<BitSize>8</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nVendorId</Name>
+					<Type>DWORD</Type>
+					<BitSize>32</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nMask_lower_3_byte</Name>
+					<Type>DWORD</Type>
+					<BitSize>32</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">stSlaveIdentity</Name>
+					<Type Decoration="10041158">ST_EcSlaveIdentity</Type>
+					<BitSize>128</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="100395B8" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvBK1120CouplerStateToString</Name>
+			<FunInfo>
+				<CodeIndex>510</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvBK1120CouplerStateToString</Name>
+					<Type Decoration="40000051">STRING(80)</Type>
+					<BitSize>648</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">sLocalString</Name>
+					<Type Decoration="40000051">STRING(80)</Type>
+					<BitSize>648</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nState</Name>
+					<Type>WORD</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="100485DA" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvExtTimeToDcTime</Name>
+			<FunInfo>
+				<CodeIndex>511</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvExtTimeToDcTime</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DcTime</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ExtTime</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DcToExtTimeOffset</Name>
+					<Type Decoration="100208DB">T_LARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="100394F8" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvMasterDevStateToString</Name>
+			<FunInfo>
+				<CodeIndex>512</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvMasterDevStateToString</Name>
+					<Type Decoration="40000051">STRING(80)</Type>
+					<BitSize>648</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">sLocalString</Name>
+					<Type Decoration="40000051">STRING(80)</Type>
+					<BitSize>648</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nState</Name>
+					<Type>WORD</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="1014F822" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvProductCodeToString</Name>
+			<FunInfo>
+				<CodeIndex>513</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvProductCodeToString</Name>
+					<Type Decoration="40000051">STRING(80)</Type>
+					<BitSize>648</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">sLocalString</Name>
+					<Type Decoration="40000051">STRING(80)</Type>
+					<BitSize>648</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">eTy</Name>
+					<Type Decoration="3000033C">ProductCode</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">stLocXXDDD</Name>
+					<Type Decoration="10060AE5">ST_TPCTYPE_CODE_XXDDD</Type>
+					<BitSize>96</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">stLocXXDDXD</Name>
+					<Type Decoration="10070CAB">ST_TPCTYPE_CODE_XXDDXD</Type>
+					<BitSize>112</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">stLocXXDXDD</Name>
+					<Type Decoration="10070CAB">ST_TPCTYPE_CODE_XXDXDD</Type>
+					<BitSize>112</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">stLocXXDXDXD</Name>
+					<Type Decoration="10080E75">ST_TPCTYPE_CODE_XXDXDXD</Type>
+					<BitSize>128</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">stLocXXXDQDQD</Name>
+					<Type Decoration="100A1275">ST_TPCTYPE_CODE_XXXDQDQD</Type>
+					<BitSize>192</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nPC_CHAR_START</Name>
+					<Type>UINT</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nMask_ty</Name>
+					<Type>DWORD</Type>
+					<BitSize>32</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nMask_1_to_6</Name>
+					<Type>DWORD</Type>
+					<BitSize>32</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nMask_7_to_16</Name>
+					<Type>DWORD</Type>
+					<BitSize>32</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nMask_5_to_10</Name>
+					<Type>DWORD</Type>
+					<BitSize>32</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nMask_5_to_32</Name>
+					<Type>DWORD</Type>
+					<BitSize>32</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nMask_11_to_16</Name>
+					<Type>DWORD</Type>
+					<BitSize>32</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nMask_1_to_16</Name>
+					<Type>DWORD</Type>
+					<BitSize>32</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nMask_17_to_32</Name>
+					<Type>DWORD</Type>
+					<BitSize>32</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nMask_17_to_22</Name>
+					<Type>DWORD</Type>
+					<BitSize>32</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name Constant="1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nMask_22_to_32</Name>
+					<Type>DWORD</Type>
+					<BitSize>32</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">stSlaveIdentity</Name>
+					<Type Decoration="10041158">ST_EcSlaveIdentity</Type>
+					<BitSize>128</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="1003D2C4" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvSlaveStateToBits</Name>
+			<FunInfo>
+				<CodeIndex>514</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvSlaveStateToBits</Name>
+					<Type Decoration="10103D02">ST_EcSlaveStateBits</Type>
+					<BitSize>128</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">stEcSlaveStateBits</Name>
+					<Type Decoration="10103D02">ST_EcSlaveStateBits</Type>
+					<BitSize>128</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">stEcSlaveState</Name>
+					<Type Decoration="1002086B">ST_EcSlaveState</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="100268AB" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvSlaveStateToString</Name>
+			<FunInfo>
+				<CodeIndex>515</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvSlaveStateToString</Name>
+					<Type Decoration="40000051">STRING(80)</Type>
+					<BitSize>648</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">state</Name>
+					<Type Decoration="1002086B">ST_EcSlaveState</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="1003924D" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvStateToString</Name>
+			<FunInfo>
+				<CodeIndex>516</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvStateToString</Name>
+					<Type Decoration="40000051">STRING(80)</Type>
+					<BitSize>648</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">sLocalString</Name>
+					<Type Decoration="40000051">STRING(80)</Type>
+					<BitSize>648</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nState</Name>
+					<Type>WORD</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="100484D0" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvTcTimeToDcTime</Name>
+			<FunInfo>
+				<CodeIndex>517</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvTcTimeToDcTime</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DcTime</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">TcTime</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DcToTcTimeOffset</Name>
+					<Type Decoration="100208DB">T_LARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="1005A811" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvTcTimeToExtTime</Name>
+			<FunInfo>
+				<CodeIndex>518</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_ConvTcTimeToExtTime</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ExtTime</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">TcTime</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DcToTcTimeOffset</Name>
+					<Type Decoration="100208DB">T_LARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DcToExtTimeOffset</Name>
+					<Type Decoration="100208DB">T_LARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="10022736" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_GetActualDcTime</Name>
+			<FunInfo>
+				<CodeIndex>519</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_GetActualDcTime</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">cbReturned</Name>
+					<Type>UDINT</Type>
+					<BitSize>32</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="10022799" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_GetCurDcTaskTime</Name>
+			<FunInfo>
+				<CodeIndex>520</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_GetCurDcTaskTime</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">cbReturned</Name>
+					<Type>UDINT</Type>
+					<BitSize>32</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="100589BC" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_GetCurDcTickTime</Name>
+			<FunInfo>
+				<CodeIndex>521</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_GetCurDcTickTime</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">fbGetSystemTime</Name>
+					<Type Decoration="10032948">GETSYSTEMTIME</Type>
+					<BitSize>128</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ft</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">bOV</Name>
+					<Type>BOOL</Type>
+					<BitSize>8</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">cbReturned</Name>
+					<Type>UDINT</Type>
+					<BitSize>32</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="1005A648" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_GetCurExtTime</Name>
+			<FunInfo>
+				<CodeIndex>522</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_GetCurExtTime</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">TcTime</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ExtTime</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DcToExtTimeOffset</Name>
+					<Type Decoration="100208DB">T_LARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">DcToTcTimeOffset</Name>
+					<Type Decoration="100208DB">T_LARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="10020D4E" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_GetVersionTcEtherCAT</Name>
+			<FunInfo>
+				<CodeIndex>523</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">F_GetVersionTcEtherCAT</Name>
+					<Type>UINT</Type>
+					<BitSize>16</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nVersionElement</Name>
+					<Type>INT</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="1004623A" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">FILETIME_TO_DCTIME</Name>
+			<FunInfo>
+				<CodeIndex>632</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">FILETIME_TO_DCTIME</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ft</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">bOV</Name>
+					<Type>BOOL</Type>
+					<BitSize>8</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">in</Name>
+					<Type Decoration="10020B07">T_FILETIME</Type>
+					<Comment>
+						<![CDATA[Number of 100-nanosecond intervals since January 1, 1601]]>
+					</Comment>
+					<BitSize>64</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="100A0340" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">STRING_TO_DCTIME</Name>
+			<FunInfo>
+				<CodeIndex>633</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">STRING_TO_DCTIME</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">b</Name>
+					<Type Decoration="20010162">ARRAY [0..29] OF BYTE</Type>
+					<Comment>
+						<![CDATA[null delimiter]]>
+					</Comment>
+					<BitSize>240</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">dct</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ts</Name>
+					<Type Decoration="10081BB4">TIMESTRUCT</Type>
+					<BitSize>128</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">ft</Name>
+					<Type Decoration="10020B07">T_FILETIME</Type>
+					<BitSize>64</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">mcs</Name>
+					<Type>DWORD</Type>
+					<BitSize>32</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">n</Name>
+					<Type>BYTE</Type>
+					<BitSize>8</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">bFmt</Name>
+					<Type>BOOL</Type>
+					<BitSize>8</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">Index7001</Name>
+					<Type>INT</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">in</Name>
+					<Type Decoration="4000001E">STRING(29)</Type>
+					<Comment>
+						<![CDATA[Input string, format: '2007-03-07-12:23:33.123456789']]>
+					</Comment>
+					<BitSize>240</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="1005A626" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">SYSTEMTIME_TO_DCTIME</Name>
+			<FunInfo>
+				<CodeIndex>634</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">SYSTEMTIME_TO_DCTIME</Name>
+					<Type Decoration="100208DB">T_ULARGE_INTEGER</Type>
+					<BitSize>64</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">dct</Name>
+					<Type Decoration="100A25C3">DCTIMESTRUCT</Type>
+					<BitSize>160</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">in</Name>
+					<Type Decoration="10081BB4">TIMESTRUCT</Type>
+					<Comment>
+						<![CDATA[System time as struct]]>
+					</Comment>
+					<BitSize>128</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">micro</Name>
+					<Type Decoration="50003831">WORD(0..999)</Type>
+					<Comment>
+						<![CDATA[Microseconds: 0..999]]>
+					</Comment>
+					<BitSize>16</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\TcEtherCAT.lib">nano</Name>
+					<Type Decoration="50003831">WORD(0..999)</Type>
+					<Comment>
+						<![CDATA[Nanoseconds: 0..999]]>
+					</Comment>
+					<BitSize>16</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
 	</Functions>
 	<Programs>
 		<Program>
@@ -25858,7 +25854,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1047E012" Crc32="3923321643" LastChange="2025-01-14T11:24:34">PRG_AutoWork</Name>
+			<Name Decoration="1047E012" Crc32="3644285760" LastChange="2025-02-08T11:47:50">PRG_AutoWork</Name>
 			<PrgInfo>
 				<CodeIndex>1265</CodeIndex>
 				<ActionInfo>
@@ -26717,7 +26713,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="10054587" Crc32="3216382125" LastChange="2025-01-14T12:04:17">PRG_GoHomeTogether</Name>
+			<Name Decoration="10054587" Crc32="3375796764" LastChange="2025-02-08T13:47:34">PRG_GoHomeTogether</Name>
 			<PrgInfo>
 				<CodeIndex>1281</CodeIndex>
 				<Symbol>
